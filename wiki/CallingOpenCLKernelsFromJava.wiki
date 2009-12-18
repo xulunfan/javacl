@@ -1,4 +1,4 @@
-#summary How to call OpenCL Kernels from Java
+#summary How to call OpenCL Kernels with JavaCL
 
 = Introduction =
 
