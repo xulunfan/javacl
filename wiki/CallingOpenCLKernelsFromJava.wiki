@@ -76,6 +76,6 @@ MyProgram myProgram = new MyProgram(context);
 
 Calling the kernel :
 {{{
-// This call is statically typed :
+// This call is statically typed and thread-safe :
 CLEvent kernelCompletion = myProgram.myKernel(queue, input, output, multFactor, new int[] { dataSize }, null);
 }}}
