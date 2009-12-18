@@ -1,0 +1,38 @@
+#summary How to call OpenCL Kernels from Java
+
+= Introduction =
+
+Let's assume you wrote the following kernel :
+{{{
+__kernel void myKernel(__global const float* input, __global const float* output, float multFactor) {
+   int i = get_global_id(0);
+   output[i] = input[i] * multFactor;
+}
+}}}
+
+Then you have two ways to call it from JavaCL :  a generic dynamic way, which is loosely typed, and a hard-typed precompiled way.
+
+= Generic 'Dynamic' Call =
+
+== Creating a Kernel ==
+
+{{{
+CLContext context = ..;
+CLProgram program = context.createProgram(...).build();
+
+int dataSize = 128;
+CLFloatBuffer input = context.createFloatBuffer(CLMem.Usage.Input, dataSize);
+CLFloatBuffer input = context.createFloatBuffer(CLMem.Usage.Output, dataSize);
+
+CLKernel kernel = program.createKernel("myKernel");
+}}}
+
+== Calling the kernel == 
+
+{{{
+kernel.
+}}}
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
