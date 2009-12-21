@@ -23,3 +23,12 @@ They'll be visible to OpenCL as CLByteBuffer instances (see [http://nativelibs4j
 int vbo = ... ;
 CLByteBuffer buffer = context.createBufferFromGLBuffer(usage, vbo);
 }}}
+
+== Render Buffers == 
+See [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLContext.html#createImage2DFromGLRenderBuffer(com.nativelibs4java.opencl.CLMem.Usage,%20int) CLContext.createImage2DFromGLRenderBuffer]
+
+== 2D Textures == 
+See [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLContext.html#createImage2DFromGLTexture2D(com.nativelibs4java.opencl.CLMem.Usage,%20com.nativelibs4java.opencl.CLContext.GLTextureTarget,%20int,%20int) CLContext.createImage2DFromGLTexture2D]
+
+== 3D Textures ==
+See [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLContext.html#createImage3DFromGLTexture3D(com.nativelibs4java.opencl.CLMem.Usage,%20int,%20int) CLContext. createImage3DFromGLTexture3D]
