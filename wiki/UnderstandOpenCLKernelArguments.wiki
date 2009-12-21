@@ -14,11 +14,11 @@ Here are the different kinds of values accepted as kernel arguments :
 || double || double ||
 || size_t || NativeSize ||
 
-[http://www.khronos.org/opencl/sdk/1.0/docs/man/xhtml/vectorDataTypes.html Vector data types] :
+== [http://www.khronos.org/opencl/sdk/1.0/docs/man/xhtml/vectorDataTypes.html Vector data types] ==
 || OpenCL C type || JavaCL type ||
 || int2, int3, int4, int8... || int[] ||
 
-Array/Buffer types (including arrays of vector types ) :
+== Array/Buffer types (including arrays of vector types) ==
 || OpenCL C type || JavaCL type ||
 || __global int`*`<br/>__global uint`*`<br/>__global int2`*`<br/>... || CLIntBuffer (CLBuffer`<`IntBuffer`>`) ||
 || __global long`*` || CLLongBuffer ||
@@ -27,7 +27,7 @@ Array/Buffer types (including arrays of vector types ) :
 || __global float`*` || CLFloatBuffer ||
 || __global double`*` || CLDoubleBuffer ||
 
-Image-related types :
+== Image-related types ==
 || OpenCL C type || JavaCL type ||
 || [http://www.khronos.org/opencl/sdk/1.0/docs/man/xhtml/sampler_t.html sampler_t] || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLSampler.html CLSampler] ||
 || image2d_t || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLImage2D.html CLImage2D] ||
