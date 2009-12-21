@@ -1,0 +1,20 @@
+#summary Description of the behaviour of OpenCL kernel argument types
+
+= Introduction =
+
+Here are the different kinds of values accepted as kernel arguments :
+
+|| OpenCL type || JavaCL type || Description ||
+|| int/uint || int || ||
+|| long/ulong || long || ||
+|| short/ushort || short || ||
+|| char/uchar || byte || ||
+|| float || float || ||
+|| double || double || ||
+|| int2, int3, int4, int8... || int[] || ||
+|| __global int*<br/>__global uint*<br/>__global int2*<br/>... || CLIntBuffer (CLBuffer<IntBuffer>) || ||
+|| __global long* || CLLongBuffer || ||
+|| __global short* || CLShortBuffer || ||
+|| __global char* || CLByteBuffer || ||
+|| __global float* || CLFloatBuffer || ||
+|| __global double* || CLDoubleBuffer || ||
