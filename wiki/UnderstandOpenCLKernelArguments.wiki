@@ -12,9 +12,12 @@ Here are the different kinds of values accepted as kernel arguments :
 || float || float || ||
 || double || double || ||
 || int2, int3, int4, int8... || int[] || ||
-|| __global int*<br/>__global uint*<br/>__global int2*<br/>... || CLIntBuffer (CLBuffer<IntBuffer>) || ||
-|| __global long* || CLLongBuffer || ||
-|| __global short* || CLShortBuffer || ||
-|| __global char* || CLByteBuffer || ||
-|| __global float* || CLFloatBuffer || ||
-|| __global double* || CLDoubleBuffer || ||
+|| __global int`*`<br/>__global uint`*`<br/>__global int2*<br/>... || CLIntBuffer (CLBuffer<IntBuffer>) || ||
+|| __global long`*` || CLLongBuffer || ||
+|| __global short`*` || CLShortBuffer || ||
+|| __global char`*` || CLByteBuffer || ||
+|| __global float`*` || CLFloatBuffer || ||
+|| __global double`*` || CLDoubleBuffer || ||
+|| sampler_t || CLSampler || ||
+|| image2d_t || CLImage2D || ||
+|| image3d_t || CLImage3D || ||
