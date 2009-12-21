@@ -4,7 +4,7 @@
 
 Here are the different kinds of values accepted as kernel arguments :
 
-[http://www.khronos.org/opencl/sdk/1.0/docs/man/xhtml/scalarDataTypes.html Scalar data types] :
+== [http://www.khronos.org/opencl/sdk/1.0/docs/man/xhtml/scalarDataTypes.html Scalar data types] ==
 || OpenCL C type || JavaCL type ||
 || int/uint || int ||
 || long/ulong || long ||
