@@ -18,8 +18,8 @@ Yup, that's it.
 
 == Vertex Buffer Objects (VBO) ==
 
-They'll be visible to OpenCL as CLBuffer instances (see [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLContext.html#createBufferFromGLBuffer(com.nativelibs4java.opencl.CLMem.Usage,%20int) CLContext.createBufferFromGLBuffer(...)])
+They'll be visible to OpenCL as CLByteBuffer instances (see [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLContext.html#createBufferFromGLBuffer(com.nativelibs4java.opencl.CLMem.Usage,%20int) CLContext.createBufferFromGLBuffer(...)])
 {{{
 int vbo = ... ;
-CLBuffer buffer = context.createBufferFromGLBuffer(usage, vbo);
+CLByteBuffer buffer = context.createBufferFromGLBuffer(usage, vbo);
 }}}
