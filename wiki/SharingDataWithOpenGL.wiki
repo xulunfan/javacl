@@ -2,7 +2,7 @@
 
 = Introduction =
 
-When rendering OpenGL scenes which data comes from OpenCL computations (vertices, colors, norms, textures), it is important to make sure as little data is copied as possible.
+When rendering OpenGL scenes which data comes from OpenCL computations (vertices, colors, norms and/or textures), it is important to make sure that as little data is copied as possible.
 
 OpenCL supports an optional OpenGL interoperability, which starts to be implemented by some graphic card vendors.
 
@@ -15,3 +15,13 @@ CLContext context = JavaCL.createContextFromCurrentGL();
 }}}
 
 Yup, that's it.
+
+= What can be shared = 
+
+== Vertex Buffer Objects (VBO) ==
+
+They'll be visible to OpenCL as buffer objects (CLBuffer instances) :
+{{{
+int vbo = ... ;
+CLBuffer buffer = context.createBufferFromGLVertexBufferObject(vbo);
+}}}
