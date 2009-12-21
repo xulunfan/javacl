@@ -12,6 +12,7 @@ Primitive types :
 || char/uchar || byte || ||
 || float || float || ||
 || double || double || ||
+|| size_t || NativeSize || ||
 
 Vector types :
 || OpenCL C type || JavaCL type || Description ||
