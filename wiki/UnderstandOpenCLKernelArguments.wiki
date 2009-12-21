@@ -4,7 +4,7 @@
 
 Here are the different kinds of values accepted as kernel arguments :
 
-Primitive types :
+[http://www.khronos.org/opencl/sdk/1.0/docs/man/xhtml/scalarDataTypes.html Scalar data types] :
 || OpenCL C type || JavaCL type ||
 || int/uint || int ||
 || long/ulong || long ||
@@ -14,7 +14,7 @@ Primitive types :
 || double || double ||
 || size_t || NativeSize ||
 
-Vector types :
+[http://www.khronos.org/opencl/sdk/1.0/docs/man/xhtml/vectorDataTypes.html Vector data types] :
 || OpenCL C type || JavaCL type ||
 || int2, int3, int4, int8... || int[] ||
 
