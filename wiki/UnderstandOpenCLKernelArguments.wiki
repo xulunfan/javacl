@@ -1,10 +1,10 @@
 #summary Description of the behaviour of OpenCL kernel argument types
 
-= Introduction =
+= Mapping OpenCL C types to JavaCL =
 
 Here are the different kinds of values accepted as kernel arguments :
 
-|| OpenCL type || JavaCL type || Description ||
+|| OpenCL C type || JavaCL type || Description ||
 || int/uint || int || ||
 || long/ulong || long || ||
 || short/ushort || short || ||
