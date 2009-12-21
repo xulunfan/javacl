@@ -1,0 +1,17 @@
+#summary How and why to create OpenGL-compatible OpenCL contexts with JavaCL
+
+= Introduction =
+
+When rendering OpenGL scenes which data comes from OpenCL computations (vertices, colors, norms, textures), it is important to make sure as little data is copied as possible.
+
+OpenCL supports an optional OpenGL interoperability, which starts to be implemented by some graphic card vendors.
+
+Setting up an OpenGL-compatible OpenCL context with JavaCL is easy, but as of this writing the resulting context can very instable, depending on the version of your driver. Only experience will tell you if you really want to enable the interoperability.
+
+= Creating an OpenGL-compatible context =
+
+{{{
+CLContext context = JavaCL.createContextFromCurrentGL();
+}}}
+
+Yup, that's it.
