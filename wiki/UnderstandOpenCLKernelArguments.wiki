@@ -2,7 +2,7 @@
 
 = Mapping OpenCL C types to JavaCL =
 
-Here are the different kinds of values accepted as kernel arguments :
+Here are the different kinds of values accepted as kernel arguments in [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLKernel.html#setArgs(java.lang.Object...) CLKernel.setArgs]
 
 == [http://www.khronos.org/opencl/sdk/1.0/docs/man/xhtml/scalarDataTypes.html Scalar data types] ==
 || OpenCL C type || JavaCL type ||
