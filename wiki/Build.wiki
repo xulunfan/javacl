@@ -1,5 +1,6 @@
 #summary Instructions to build JavaCL / ScalaCL / OpenCL4Java
 
+JavaCL, ScalaCL and OpenCL4Java can be built from sources.
 
   * First, [http://maven.apache.org/download.html install Maven].
   * Then, install [http://kenai.com/projects/jogl/pages/Home JOGL 2.x] if you want automatic tests to pass. 
