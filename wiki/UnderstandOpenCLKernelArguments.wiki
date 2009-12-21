@@ -5,30 +5,30 @@
 Here are the different kinds of values accepted as kernel arguments :
 
 Primitive types :
-|| OpenCL C type || JavaCL type || Description ||
-|| int/uint || int || ||
-|| long/ulong || long || ||
-|| short/ushort || short || ||
-|| char/uchar || byte || ||
-|| float || float || ||
-|| double || double || ||
-|| size_t || NativeSize || ||
+|| OpenCL C type || JavaCL type ||
+|| int/uint || int ||
+|| long/ulong || long ||
+|| short/ushort || short ||
+|| char/uchar || byte ||
+|| float || float ||
+|| double || double ||
+|| size_t || NativeSize ||
 
 Vector types :
-|| OpenCL C type || JavaCL type || Description ||
-|| int2, int3, int4, int8... || int[] || ||
+|| OpenCL C type || JavaCL type ||
+|| int2, int3, int4, int8... || int[] ||
 
 Array/Buffer types (including arrays of vector types ) :
-|| OpenCL C type || JavaCL type || Description ||
-|| __global int`*`<br/>__global uint`*`<br/>__global int2`*`<br/>... || CLIntBuffer (CLBuffer`<`IntBuffer`>`) || ||
-|| __global long`*` || CLLongBuffer || ||
-|| __global short`*` || CLShortBuffer || ||
-|| __global char`*` || CLByteBuffer || ||
-|| __global float`*` || CLFloatBuffer || ||
-|| __global double`*` || CLDoubleBuffer || ||
+|| OpenCL C type || JavaCL type ||
+|| __global int`*`<br/>__global uint`*`<br/>__global int2`*`<br/>... || CLIntBuffer (CLBuffer`<`IntBuffer`>`) ||
+|| __global long`*` || CLLongBuffer ||
+|| __global short`*` || CLShortBuffer ||
+|| __global char`*` || CLByteBuffer ||
+|| __global float`*` || CLFloatBuffer ||
+|| __global double`*` || CLDoubleBuffer ||
 
 Image-related types :
-|| OpenCL C type || JavaCL type || Description ||
-|| sampler_t || CLSampler || ||
-|| image2d_t || CLImage2D || ||
-|| image3d_t || CLImage3D || ||
+|| OpenCL C type || JavaCL type ||
+|| [http://www.khronos.org/opencl/sdk/1.0/docs/man/xhtml/sampler_t.html sampler_t] || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLSampler.html CLSampler] ||
+|| image2d_t || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLImage2D.html CLImage2D] ||
+|| image3d_t || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLImage3D.html CLImage3D] ||
