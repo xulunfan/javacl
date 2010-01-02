@@ -20,7 +20,7 @@ CLQueue queue = ... ; // e.g. context.createDefaultQueue()
 
 int dataSize = 128;
 CLFloatBuffer input = context.createFloatBuffer(CLMem.Usage.Input, dataSize);
-CLFloatBuffer input = context.createFloatBuffer(CLMem.Usage.Output, dataSize);
+CLFloatBuffer output = context.createFloatBuffer(CLMem.Usage.Output, dataSize);
 float multFactor = 0.5f;
 }}}
 
