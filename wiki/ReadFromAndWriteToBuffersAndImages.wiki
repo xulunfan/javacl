@@ -1,12 +1,19 @@
 #summary General information on how to write data to OpenCL memory objects (Buffers and 2D/3D Images
 
-= Memory Objects and Host vs. Device allocation =
+= Intro : OpenCL Memory Objects and Host vs. Device allocation =
 
-OpenCL lets you create memory objects of three types : buffers, 2D images and 3D images.
+OpenCL lets you create memory objects of three types : buffers (1D arrays), 2D images and 3D images.
 
 These memory objects can be stored in the host memory (typically, in RAM) or in the device memory (typically, in GRAM directly on the graphic card).
 
 For host memory-stored memory objects, you can either ask OpenCL to allocate memory on its own or directly providing the pointer to some memory you allocated (and initialized) by yourself. 
+
+When using a host-allocated memory object, OpenCL might let the kernels access directly to the data from the host or instead choose to cache some of this data, in read and/or write modes. 
+What it means is that if you create a direct buffer of values and create an OpenCL buffer out of it, in "use host pointer" mode, you cannot expect your changes done on your direct buffer to be visible from OpenCL kernels using the OpenCL buffer. Before and after doing any change to or reading any data from a host pointer, you must call the CLBuffer.map / unmap methods.
+
+Lastly, OpenCL might let you read/write directly from an OpenCL memory object with the map/unmap mechanism. 
+Mapping a memory object gives a direct pointer to the memory object's data (for instance using a DMA mechanism).
+However, mapping a memory object's data is only guaranteed to work in the case of host-allocated pointers, so it should be used with caution.
 
 = Creating Memory Objects with JavaCL =
 
@@ -15,3 +22,23 @@ For host memory-stored memory objects, you can either ask OpenCL to allocate mem
 While OpenCL defines buffers as arrays of bytes, JavaCL provides support for typed buffers with 1 to 1 mapping to NIO buffers.
 
 If you use a `__global float*` argument in a kernel of yours, you can either choose to use a CLByteBuffer and do the `float <-> byte` conversion and offsets calculations on your own or directly use a CLFloatBuffer that will take care of everything.
+
+=== Host-allocated pointers ===
+
+{{{
+CLContext context = ... ;
+ByteOrder order = context.getByteOrder(); // endianness of the context (null if mismatching endianness between the context's devices)
+
+int size = 100;
+FloatBuffer buffer = ByteBuffer.allocateDirect(size * 4).byteOrder(order).asFloatBuffer();
+
+// Last 'false' argument requires that no copy of the buffer is made : keep buffer as the primary data source
+CLBuffer<FloatBuffer> clBuffer = context.createBuffer(CLMem.Usage.InputOutput, buffer, false);
+}}}
+
+=== Device-allocated pointers ===
+
+{{{
+int size = 100;
+CLBuffer<FloatBuffer> buffer = context.createFloatBuffer(CLMem.Usage.InputOutput, size);
+}}}
