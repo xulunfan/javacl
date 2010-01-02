@@ -12,7 +12,7 @@ Here are the different kinds of values accepted as kernel arguments in [http://n
 || char/uchar || byte ||
 || float || float ||
 || double || double ||
-|| size_t || NativeSize ||
+|| size_t, ptrdiff_t, intptr_t, uintptr_t || [http://jnaerator.sourceforge.net/sites/jnaerator-runtime/apidocs/com/ochafik/lang/jnaerator/runtime/NativeSize.html NativeSize] ||
 
 == [http://www.khronos.org/opencl/sdk/1.0/docs/man/xhtml/vectorDataTypes.html Vector data types] ==
 || *OpenCL C type* || *JavaCL type* ||
