@@ -20,12 +20,12 @@ Here are the different kinds of values accepted as kernel arguments in [http://n
 
 == Array/Buffer types (including arrays of vector types) ==
 || OpenCL C type || JavaCL type ||
-|| __global int`*`<br/>__global uint`*`<br/>__global int2`*`<br/>... || CLIntBuffer (CLBuffer`<`IntBuffer`>`) ||
-|| __global long`*` || CLLongBuffer ||
-|| __global short`*` || CLShortBuffer ||
-|| __global char`*` || CLByteBuffer ||
-|| __global float`*` || CLFloatBuffer ||
-|| __global double`*` || CLDoubleBuffer ||
+|| __global int`*`<br/>__global uint`*`<br/>__global int2`*`<br/>... || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLIntBuffer.html CLIntBuffer] (CLBuffer`<`IntBuffer`>`) ||
+|| __global long`*` || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLLongBuffer.html CLLongBuffer]  ||
+|| __global short`*` || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLShortBuffer.html CLShortBuffer]  ||
+|| __global char`*` || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLByteBuffer.html CLByteBuffer]  ||
+|| __global float`*` || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLFloatBuffer.html CLFloatBuffer]  ||
+|| __global double`*` || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLDoubleBuffer.html CLDoubleBuffer]  ||
 
 == Image-related types ==
 || OpenCL C type || JavaCL type ||
