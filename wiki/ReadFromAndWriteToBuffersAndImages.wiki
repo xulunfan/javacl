@@ -1,10 +1,14 @@
 #summary General information on how to write data to OpenCL memory objects (Buffers and 2D/3D Images
 
-= Intro : OpenCL Memory Objects and Host vs. Device allocation =
+= Introduction =
+
+== OpenCL Memory Objects ==
 
 OpenCL lets you create memory objects of three types : buffers (1D arrays), 2D images and 3D images.
 
 These memory objects can be stored in the host memory (typically, in RAM) or in the device memory (typically, in GRAM directly on the graphic card).
+
+== Memory allocation : host vs. device ==
 
 For host memory-stored memory objects, you can either ask OpenCL to allocate memory on its own or directly providing the pointer to some memory you allocated (and initialized) by yourself. 
 
