@@ -38,7 +38,47 @@ CLBuffer<FloatBuffer> clBuffer = context.createBuffer(CLMem.Usage.InputOutput, b
 
 === Device-allocated pointers ===
 
+Allocate a zeroed-out buffer :
 {{{
 int size = 100;
 CLBuffer<FloatBuffer> buffer = context.createFloatBuffer(CLMem.Usage.InputOutput, size);
+}}}
+
+Allocate a buffer as a copy of existing data :
+{{{
+// Last 'true' argument asks for a copy of buffer to be made in the device memory. The clBuffer will have no further link to buffer.
+CLBuffer<FloatBuffer> clBuffer = context.createBuffer(CLMem.Usage.InputOutput, buffer, true);
+}}}
+
+== Reading from / Writing to a buffer ==
+
+{{{
+CLContext context = ... ; // e.g. JavaCL.getBestContext()
+CLQueue queue = ... ; // e.g. context.createDefaultQueue()
+CLBuffer<FloatBuffer> clBuffer = ... ; // e.g. context.createFloatBuffer(CLMem.Usage.InputOutput, size)
+
+// Reading everything to a new buffer :
+FloatBuffer data = clBuffer.read(queue);
+
+// Reading elements 3 to 9 included to a new buffer :
+data = clBuffer.read(queue, 3, 7);
+
+// Reading elements 3 to 9 included to existing data buffer :
+clBuffer.read(queue, 3, 7, data, true); // 'true' : blocking operation
+}}}
+
+== Mapping a buffer for read / write operations == 
+
+Mapping a buffer is only guaranteed to work for buffers allocated from host-pointers.
+
+{{{
+CLBuffer<FloatBuffer> clBuffer = ... ; 
+
+try {
+  FloatBuffer data = clBuffer.map(queue. CLMem.MapFlags.Write);
+  data.put(0, 10f); // write something to the buffer
+  clBuffer.unmap(queue, data);
+} catch (CLException.MapFailure ex) {
+  // map didn't succeed : maybe use CLBuffer.write / read instead.
+}
 }}}
