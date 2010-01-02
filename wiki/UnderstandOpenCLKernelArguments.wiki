@@ -38,4 +38,4 @@ Here are the different kinds of values accepted as kernel arguments in [http://n
 Their memory storage is shared by all the work items in the same work group
 
 || *OpenCL C type* || *JavaCL type* ||
-|| local int* || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLKernel.LocalSize.html LocalSize] : Mere indication of the size of a local argument ||
+|| local int`*` || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLKernel.LocalSize.html LocalSize] : Mere indication of the size of a local argument ||
