@@ -32,3 +32,10 @@ Here are the different kinds of values accepted as kernel arguments in [http://n
 || [http://www.khronos.org/opencl/sdk/1.0/docs/man/xhtml/sampler_t.html sampler_t] || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLSampler.html CLSampler] ||
 || image2d_t || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLImage2D.html CLImage2D] ||
 || image3d_t || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLImage3D.html CLImage3D] ||
+
+== Local Arguments ==
+
+Their memory storage is shared by all the work items in the same work group
+
+|| *OpenCL C type* || *JavaCL type* ||
+|| local int* || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLKernel.LocalSize.html LocalSize] : Mere indication of the size of a local argument ||
