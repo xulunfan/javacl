@@ -1,13 +1,17 @@
 #summary General information on how to write data to OpenCL memory objects (Buffers and 2D/3D Images
 
-= Introduction =
+= Memory Objects and Host vs. Device allocation =
 
-Add your content here.
+OpenCL lets you create memory objects of three types : buffers, 2D images and 3D images.
 
+These memory objects can be stored in the host memory (typically, in RAM) or in the device memory (typically, in GRAM directly on the graphic card).
 
-= Details =
+For host memory-stored memory objects, you can either ask OpenCL to allocate memory on its own or directly providing the pointer to some memory you allocated (and initialized) by yourself. 
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+= Creating Memory Objects with JavaCL =
+
+== Creating Buffers == 
+
+While OpenCL defines buffers as arrays of bytes, JavaCL provides support for typed buffers with 1 to 1 mapping to NIO buffers.
+
+If you use a __global float* argument in a kernel of yours, you can either choose to use a CLByteBuffer and do the float<->byte conversion and offsets calculations on your own or directly use a CLFloatBuffer that will take care of everything.
