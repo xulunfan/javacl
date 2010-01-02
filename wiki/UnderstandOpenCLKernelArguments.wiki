@@ -16,7 +16,7 @@ Here are the different kinds of values accepted as kernel arguments in [http://n
 
 == [http://www.khronos.org/opencl/sdk/1.0/docs/man/xhtml/vectorDataTypes.html Vector data types] ==
 || OpenCL C type || JavaCL type ||
-|| int2, int3, int4, int8... || int[] ||
+|| int2, int3, int4, int8... || int`[]` ||
 
 == Array/Buffer types (including arrays of vector types) ==
 || OpenCL C type || JavaCL type ||
