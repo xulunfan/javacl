@@ -86,3 +86,13 @@ try {
   // map didn't succeed : maybe use CLBuffer.write / read instead.
 }
 }}}
+
+= Important Note on Endianness =
+
+Each OpenCL device can have a different [http://en.wikipedia.org/wiki/Endianness endianness].
+
+This makes it very hard to share the same buffers between two devices with mismatching endianness (for instance, take a little endian Intel Core device vs. a big endian Radeon 4850  GPU device on the same ATI Stream platform).
+
+CLContext.getByteOrder() can be called to check that the context has a consistent byte ordering (checks that all of its device's CLDevice.getByteOrder() methods return the same order, and returns null in case it's mismatching).
+
+All the CLBuffer read/map methods should return properly ordered NIO buffers (using the order of the queue's device.
