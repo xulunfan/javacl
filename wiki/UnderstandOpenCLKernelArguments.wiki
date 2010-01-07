@@ -5,8 +5,9 @@
 
 Here are the different kinds of values accepted as kernel arguments in [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLKernel.html#setArgs(java.lang.Object...) CLKernel.setArgs]
 
-== [http://www.khronos.org/opencl/sdk/1.0/docs/man/xhtml/scalarDataTypes.html Scalar data types] ==
-|| *OpenCL C type* || *JavaCL type* ||
+== Scalar data types ==
+
+|| *[http://www.khronos.org/opencl/sdk/1.0/docs/man/xhtml/scalarDataTypes.html OpenCL C type]* || *JavaCL type* ||
 || int/uint || int ||
 || long/ulong || long ||
 || short/ushort || short ||
@@ -15,8 +16,8 @@ Here are the different kinds of values accepted as kernel arguments in [http://n
 || double || double ||
 || size_t, ptrdiff_t, intptr_t, uintptr_t || [http://jnaerator.sourceforge.net/sites/jnaerator-runtime/apidocs/com/ochafik/lang/jnaerator/runtime/NativeSize.html NativeSize] ||
 
-== [http://www.khronos.org/opencl/sdk/1.0/docs/man/xhtml/vectorDataTypes.html Vector data types] ==
-|| *OpenCL C type* || *JavaCL type* ||
+== Vector data types ==
+|| * [http://www.khronos.org/opencl/sdk/1.0/docs/man/xhtml/vectorDataTypes.html OpenCL C type]* || *JavaCL type* ||
 || int2, int3, int4, int8... || int`[]` ||
 
 == Array/Buffer types (including arrays of vector types) ==
