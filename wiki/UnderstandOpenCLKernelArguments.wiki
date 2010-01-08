@@ -21,6 +21,9 @@ Here are the different kinds of values accepted as kernel arguments in [http://n
 || int2, int3, int4, int8... || int`[]` ||
 
 == Array/Buffer types (including arrays of vector types) ==
+
+Please also read [ReadFromAndWriteToBuffersAndImages].
+
 || *OpenCL C type* || *JavaCL type* ||
 || __global int`*`<br/>__global uint`*`<br/>__global int2`*`<br/>... || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLIntBuffer.html CLIntBuffer] (CLBuffer`<`IntBuffer`>`) ||
 || __global long`*` || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLLongBuffer.html CLLongBuffer]  ||
@@ -30,6 +33,9 @@ Here are the different kinds of values accepted as kernel arguments in [http://n
 || __global double`*` || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLDoubleBuffer.html CLDoubleBuffer]  ||
 
 == Image-related types ==
+
+Please also read [ReadFromAndWriteToBuffersAndImages].
+
 || *OpenCL C type* || *JavaCL type* ||
 || [http://www.khronos.org/opencl/sdk/1.0/docs/man/xhtml/sampler_t.html sampler_t] || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLSampler.html CLSampler] ||
 || image2d_t || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLImage2D.html CLImage2D] ||
