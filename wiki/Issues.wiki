@@ -1,0 +1,5 @@
+#summary Issue tracking
+
+For issues about the JavaCL Generator, please go to [http://code.google.com/p/jnaerator/issues/ JNAerator's issue tracker].
+
+For issues about JavaCL's runtime, please use [http://code.google.com/p/nativelibs4java/issues/ NativeLibs4Java's issue tracker]
