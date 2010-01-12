@@ -5,9 +5,9 @@ JavaCL, ScalaCL and OpenCL4Java can be built from sources.
 = Full build (first time) =
 
 This will build all of NativeLibs4Java's projects, including JNAerator.
-It will take some time, so you'll want to have a coffee during the following three steps.
+It will take some time, so you'll want to have a coffee during the build.
 
-Subsequent builds will be much quicker (see next section), and can be made from your Maven-aware IDE of choice.
+Subsequent builds will be much quicker (see next section), and can be launched from your Maven-aware IDE of choice.
 
   * First, [http://maven.apache.org/download.html install Maven].
   * Checkout [http://code.google.com/p/nativelibs4java/source/browse/#svn/trunk/libraries nativelibs4java files] :
@@ -24,9 +24,9 @@ After the build is finished, you'll find JavaCL's full self-contained JAR in `li
 
 = Incremental builds (after a first full build) =
 
-If you want JavaCL's tests to pass, you'll need to install JOGL 2.x on your system (see next section)
+Note that if you want JavaCL's tests to pass, you'll need to install JOGL 2.x on your system  first (see next section)
 
-To build JavaCL Demos, just cd to the libraries/OpenCL/Demos directory and run (works the same for any other sub-project) :
+To build JavaCL Demos, just cd to the libraries/OpenCL/Demos directory and run the following command (works the same for any other sub-project) :
 {{{
 mvn clean install
 }}}
@@ -44,7 +44,8 @@ Typically, you'll need :
   * nativewindow.all.jar
   * nativewindow_awt.dll / .so / .dylib
   * nativewindow_jvm.dll / .so / .dylib
-  Yeah, that sucks (hope they'll make an up-to-date Maven repository available soon...).
+
+Yeah, that sucks (hope they'll make an up-to-date Maven repository available soon...).
 
 = Regenerating low-level bindings =
 
