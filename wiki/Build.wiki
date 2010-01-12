@@ -5,7 +5,7 @@ JavaCL, ScalaCL and OpenCL4Java can be built from sources.
 = Full build (first time) =
 
 This will build all of NativeLibs4Java's projects, including JNAerator.
-It will take some time, so you'll want to have a coffee during the build.
+It will take some time, so you'll want to have a coffee during the build (if you've never used Maven before, this can take up to 15 minutes, so that might be enough for two coffees).
 
 Subsequent builds will be much quicker (see next section), and can be launched from your Maven-aware IDE of choice.
 
