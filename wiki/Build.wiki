@@ -20,7 +20,7 @@ cd nativelibs4java
 mvn clean install -Dmaven.test.skip=true
 }}}
 
-After the build is finished, you'll find JavaCL's full self-contained JAR in `libraries/OpenCL/JavaCL/target/javacl-xxx-shaded.jar`
+After the build is finished, you'll find JavaCL's full self-contained JAR in `OpenCL/JavaCL/target/javacl-xxx-shaded.jar`
 
 = Incremental builds (after a first full build) =
 
