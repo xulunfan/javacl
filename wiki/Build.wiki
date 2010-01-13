@@ -39,6 +39,7 @@ _This is tricky_ : you need to extract *some* of the files from the [http://down
 
 Typically, you'll need :
   * jogl.all.jar
+  * jogl_gl2.dll / .so / .dylib
   * gluegen-rt.jar
   * gluegen-rt.dll / .so / .dylib
   * nativewindow.all.jar
