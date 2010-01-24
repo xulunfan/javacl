@@ -5,7 +5,7 @@
 
 Let's assume you wrote the following kernel in file `com/mypackage/MyProgram.cl`:
 {{{
-__kernel void myKernel(__global const float* input, __global const float* output, float multFactor) {
+__kernel void myKernel(__global const float* input, __global float* output, float multFactor) {
    int i = get_global_id(0);
    output[i] = input[i] * multFactor;
 }
