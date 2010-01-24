@@ -1,0 +1,5 @@
+#summary JavaCL's source code and build instructions
+
+The source code for JavaCL, ScalaCL and OpenCL4Java is hosted on [http://code.google.com/p/nativelibs4java/source/browse/#svn/trunk/libraries/OpenCL NativeLibs4Java's SVN repository].
+
+Build instructions are on the [Build] page.
