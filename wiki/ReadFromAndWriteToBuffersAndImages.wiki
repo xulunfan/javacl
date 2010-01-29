@@ -101,12 +101,12 @@ All the CLBuffer read/map methods should return properly ordered NIO buffers (us
 
 = Garbage Collection vs. Manual Release =
 
-The lifecycle of CLBuffer instances and all JavaCL entities in general is handled by the Java garbage collector. The corresponding OpenCL entities are released when the Java objects are garbage collected.
+JavaCL maps OpenCL entities (allocated by the OpenCL driver, typically in the device memory) to Java objects (managed by the JVM's garbage collector).
 
-In many cases thouth, one needs to help JavaCL with garbage collection. Indeed, the Java memory allocation scheme is done so that when no memory is left to allocate a new Java array, the GC tries to collect all the unreferenced objects it can to reclaim enough memory to fulfill the allocation request.
+OpenCL entities are released when their Java objects counterparts are garbage collected.
 
-The issue is that the Java garbage collector is run periodically *and* when the JVM is running out of memory, but *not when the OpenCL driver is running out of memory*.
-
-When OpenCL is unable to allocate a new device-stored memory object (say, if the GRAM is full of previously allocated buffers), it just signals an error which is forwarded by JavaCL as a CLException.MemObjectAllocationFailure in JavaCL versions up to 1.0-beta-4 included.
+In many cases this can lead to serious issues : when the OpenCL driver runs out of memory, it does not tell Java to try and collect unused objects (which would release a few OpenCL entities in the process) and just fails, which makes JavaCL throw a CLException.MemObjectAllocationFailure exception.
 
 To avoid that, one can manually release an unused buffer (or any JavaCL entity) by calling CLEntity.release() (CLEntity is a base class which is inherited by CLBuffer, CLImage2D, CLProgram, CLEvent... virtually all JavaCL classes of interest).
+
+JavaCL will try to add a workaround to that issue, but it is advised to call release() everytime possible (but only once on each object, of course) in upcoming versions.
