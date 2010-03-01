@@ -1,4 +1,5 @@
 #summary How to call OpenCL Kernels with JavaCL
+#labels Featured
 <wiki:toc max_depth="3" />
 
 = Introduction =
