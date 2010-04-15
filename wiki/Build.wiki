@@ -17,7 +17,7 @@ cd nativelibs4java
 }}}
   * Run the following Maven command :
     {{{
-mvn clean install -Dmaven.test.skip=true
+mvn install -Dmaven.test.skip=true
 }}}
 
 After the build is finished, you'll find JavaCL's full self-contained JAR in `OpenCL/JavaCL/target/javacl-xxx-shaded.jar`
