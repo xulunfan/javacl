@@ -3,6 +3,10 @@
 
 <wiki:toc max_depth="3" />
 
+== How do I get started ? ==
+
+Please see the "Quick Start" section on the project's homepage.
+
 == Which platforms does JavaCL support ? ==
 
 Short answer is "all of them". Please [HardwareRequirements read details here...]
