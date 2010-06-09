@@ -3,6 +3,10 @@
 
 = Requirements =
 
+JavaCL supports any platform supported by JNA with a Khronos-compliant OpenCL implementation.
+
+In practise this means any OpenCL platform (Linux, Windows, MacOS X and so on)
+
   * Macintosh : [http://www.apple.com/macosx/ MacOS X 10.6 Snow Leopard] (CPU and/or any supported GPU)
   * Other systems : 
     * NVIDIA GPU : [http://www.nvidia.com/object/cuda_opencl.html beta OpenCL-enabled drivers]
