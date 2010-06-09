@@ -5,7 +5,9 @@
 
 == Which platforms does JavaCL support ? ==
 
-Please read [HardwareRequirements].
+Short answer is "all of them". Please [HardwareRequirements read details here...]
+
+Beware though that on Linux you'll have to alter your environment settings to avoid crashes. Please [TroubleShootingJavaCLOnLinux read details here...]
 
 == How do I build JavaCL / ScalaCL / OpenCL4Java ==
 
