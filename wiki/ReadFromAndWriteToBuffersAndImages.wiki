@@ -1,5 +1,4 @@
 #summary General information on how to write data to OpenCL memory objects (Buffers and 2D/3D Images
-#labels Featured
 
 <wiki:toc max_depth="3" />
 
