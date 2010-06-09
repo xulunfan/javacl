@@ -40,7 +40,7 @@ And some small headless demos as well :
   * com.nativelibs4java.opencl.demos.ParallelRandomDemo
   * com.nativelibs4java.opencl.demos.VectorAdd
 
-== How do I write and call OpenCL kernels from Java ==
+== How do I write and call OpenCL kernels from Java ? ==
 
 Please read [CallingOpenCLKernelsFromJava] and look at the demos source code.
 
@@ -48,7 +48,7 @@ Please read [CallingOpenCLKernelsFromJava] and look at the demos source code.
 
 JavaCL supports all OpenCL types, please see [UnderstandOpenCLKernelArguments] for type mapping details.
 
-== How do I use buffers / images in JavaCL ==
+== How do I use buffers / images in JavaCL ? ==
 
 Please read [ReadFromAndWriteToBuffersAndImages]
 
