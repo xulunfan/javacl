@@ -1,0 +1,34 @@
+#summary Frequently Asked Questions
+
+== How do I build JavaCL / ScalaCL / OpenCL4Java ==
+
+Please read [Build]
+
+== How do I run JavaCL Demos ? ==
+
+You can launch the Particles and HardwareReport JavaCL Demos from the Java Web Start links from the front page.
+
+If you've built JavaCL from the sources, you can also launch the demos directly in command line :
+
+  * Install JOGL properly as described on the [Build] page
+  * Go to libraries/OpenCL/Demos/target
+  * Launch your demo :
+{{{
+java -cp javacl-demos-1.0-SNAPSHOT-shaded.jar com.nativelibs4java.opencl.JOGLTest
+}}}
+  (in Maveneese, "shaded" means "with all dependencies included" so there's only one JAR to put in the classpath, JOGL issues left apart)
+
+== What demos are available ? ==
+
+You can find a list of demos in the source tree :
+[http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/Demos/src/main/java/com/nativelibs4java/opencl/demos]
+
+For now here are the graphical demos :
+  * com.nativelibs4java.opencl.demos.HardwareReport
+  * com.nativelibs4java.opencl.demos.MandelbrotDemo
+  * com.nativelibs4java.opencl.demos.ParticlesDemo
+  * com.nativelibs4java.opencl.demos.SobelFilterDemo (path of the image input file is hardcoded in the source, easy to change)
+
+And some small headless demos as well :
+  * com.nativelibs4java.opencl.demos.ParallelRandomDemo
+  * com.nativelibs4java.opencl.demos.VectorAdd
