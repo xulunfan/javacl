@@ -1,6 +1,8 @@
 #summary Frequently Asked Questions
 #labels Featured
 
+<wiki:toc max_depth="3" />
+
 == Which platforms does JavaCL support ? ==
 
 Please read [HardwareRequirements].
