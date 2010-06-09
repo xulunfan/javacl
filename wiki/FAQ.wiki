@@ -5,16 +5,16 @@
 
 == What is JavaCL ? ==
 
-JavaCL is an API that wraps the OpenCL library to make it available to the Java platform.
+JavaCL is an API that wraps the [http://www.khronos.org/opencl/ OpenCL] library to make it available to the Java platform.
 
-With JavaCL, Java programs can execute tasks directly on graphic cards and benefit from their massive parallel horsepower.
+*With JavaCL, Java programs can execute tasks directly on graphic cards and benefit from their massive parallel horsepower*.
 
 JavaCL comprises the following parts :
   * a low-level API that matches 1 to 1 the C OpenCL API : OpenCL4Java. _Its direct use is deprecated_
   * a nice Object-Oriented API that retains all the power of the OpenCL API without most of the C head-scratching : JavaCL Core
   * demos
   * basic utilities (parallel reduction, experimental matrix implementation for [http://www.ujmp.org/ UJMP]
-  * an experimental Scala DSL (Domain-Specific Language) : ScalaCL
+  * an experimental Scala DSL (Domain-Specific Language) : [http://code.google.com/p/scalacl/ ScalaCL]
 
 == How do I get started ? ==
 
