@@ -13,7 +13,7 @@ Short answer is "all of them". Please [HardwareRequirements read details here...
 
 Beware though that *on Linux you'll have to alter your environment settings to avoid crashes*. Please [TroubleShootingJavaCLOnLinux read details here...]
 
-== How do I build JavaCL / ScalaCL / OpenCL4Java ==
+== How do I build JavaCL / ScalaCL / OpenCL4Java ? ==
 
 Please read the [Build] page.
 
