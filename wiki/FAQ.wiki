@@ -1,6 +1,10 @@
 #summary Frequently Asked Questions
 #labels Featured
 
+== Which platforms does JavaCL support ? ==
+
+Please read [HardwareRequirements].
+
 == How do I build JavaCL / ScalaCL / OpenCL4Java ==
 
 Please read the [Build] page.
@@ -21,7 +25,7 @@ java -cp javacl-demos-1.0-SNAPSHOT-shaded.jar com.nativelibs4java.opencl.JOGLTes
 
 == What demos are available ? ==
 
-You can find a list of demos in the source tree :
+You can find a list and the source code of demos in the source tree :
 [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/Demos/src/main/java/com/nativelibs4java/opencl/demos]
 
 For now here are the graphical demos :
@@ -33,3 +37,19 @@ For now here are the graphical demos :
 And some small headless demos as well :
   * com.nativelibs4java.opencl.demos.ParallelRandomDemo
   * com.nativelibs4java.opencl.demos.VectorAdd
+
+== How do I write and call OpenCL kernels from Java ==
+
+Please read [CallingOpenCLKernelsFromJava] and look at the demos source code.
+
+== Does JavaCL support OpenCL type XXX for kernel arguments ? ==
+
+JavaCL supports all OpenCL types, please see [UnderstandOpenCLKernelArguments] for type mapping details.
+
+== How do I use buffers / images in JavaCL ==
+
+Please read [ReadFromAndWriteToBuffersAndImages]
+
+== My question is not here... How can I get some help ? ==
+
+JavaCL has a [http://groups.google.com/group/nativelibs4java user group / mailing-list] : you can search in its archive to find similar past questions or post a new message, we'll try to help the best we can.
