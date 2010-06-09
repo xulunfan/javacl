@@ -2,7 +2,7 @@
 
 == How do I build JavaCL / ScalaCL / OpenCL4Java ==
 
-Please read [Build]
+Please read the [Build] page.
 
 == How do I run JavaCL Demos ? ==
 
