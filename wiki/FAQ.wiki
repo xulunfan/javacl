@@ -13,7 +13,7 @@ If you've built JavaCL from the sources, you can also launch the demos directly 
 
   * Install JOGL properly as described on the [Build] page
   * Go to libraries/OpenCL/Demos/target
-  * Launch your demo :
+  * Launch your demo (read "What demos are available ?" on this page and pick the right demo class) :
 {{{
 java -cp javacl-demos-1.0-SNAPSHOT-shaded.jar com.nativelibs4java.opencl.JOGLTest
 }}}
