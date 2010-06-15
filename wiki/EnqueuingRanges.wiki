@@ -1,0 +1,5 @@
+#summary About enqueueNDRange
+
+= Finding the optimal local size = 
+
+  * [http://mahadevangorti.blogspot.com/2010/04/optimum-globallocal-work-size-for-given.html Optimum global/local work size for a given OpenCL kernel] (on [http://mahadevangorti.blogspot.com/ GSS MAHADEVAN'S BLOG]
