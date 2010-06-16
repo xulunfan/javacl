@@ -53,7 +53,7 @@ For now here are the graphical demos :
   * com.nativelibs4java.opencl.demos.hardware.HardwareReport
   * com.nativelibs4java.opencl.demos.mandelbrot.MandelbrotDemo
   * com.nativelibs4java.opencl.demos.particles.ParticlesDemo
-  * com.nativelibs4java.opencl.demos.sobel.SobelFilterDemo (path of the image input file is hardcoded in the source, easy to change)
+  * com.nativelibs4java.opencl.demos.sobelfilter.SobelFilterDemo (path of the image input file is hardcoded in the source, easy to change)
 
 And some small headless demos as well :
   * com.nativelibs4java.opencl.demos.ParallelRandomDemo
