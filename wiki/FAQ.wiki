@@ -40,7 +40,7 @@ If you've built JavaCL from the sources, you can also launch the demos directly 
   * Go to libraries/OpenCL/Demos/target
   * Launch your demo (read "What demos are available ?" on this page and pick the right demo class) :
 {{{
-java -cp javacl-demos-1.0-SNAPSHOT-shaded.jar com.nativelibs4java.opencl.JOGLTest
+java -cp javacl-demos-1.0-SNAPSHOT-shaded.jar com.nativelibs4java.opencl.demos.hardware.HardwareReport
 }}}
   (in Maveneese, "shaded" means "with all dependencies included" so there's only one JAR to put in the classpath, JOGL issues left apart)
 
