@@ -50,10 +50,10 @@ You can find a list and the source code of demos in the source tree :
 [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/Demos/src/main/java/com/nativelibs4java/opencl/demos]
 
 For now here are the graphical demos :
-  * com.nativelibs4java.opencl.demos.HardwareReport
-  * com.nativelibs4java.opencl.demos.MandelbrotDemo
-  * com.nativelibs4java.opencl.demos.ParticlesDemo
-  * com.nativelibs4java.opencl.demos.SobelFilterDemo (path of the image input file is hardcoded in the source, easy to change)
+  * com.nativelibs4java.opencl.demos.hardware.HardwareReport
+  * com.nativelibs4java.opencl.demos.mandelbrot.MandelbrotDemo
+  * com.nativelibs4java.opencl.demos.particles.ParticlesDemo
+  * com.nativelibs4java.opencl.demos.sobel.SobelFilterDemo (path of the image input file is hardcoded in the source, easy to change)
 
 And some small headless demos as well :
   * com.nativelibs4java.opencl.demos.ParallelRandomDemo
