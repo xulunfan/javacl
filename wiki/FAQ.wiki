@@ -3,9 +3,9 @@
 
 <wiki:toc max_depth="3" />
 
-== What is JavaCL ? ==
+= What is JavaCL / ScalaCL / OpenCL4Java ? =
 
-JavaCL is an API that wraps the [http://www.khronos.org/opencl/ OpenCL] library to make it available to the Java platform.
+JavaCL is an API that wraps the [http://www.khronos.org/opencl/ OpenCL] library to make it available to the Java platform ([http://www.khronos.org/opencl/ OpenCL] is the first open, royalty-free standard for cross-platform, parallel programming of modern processors and GPUs).
 
 *With JavaCL, Java programs can execute tasks directly on graphic cards and benefit from their massive parallel horsepower*.
 
@@ -15,6 +15,37 @@ JavaCL comprises the following parts :
   * demos
   * basic utilities (parallel reduction, experimental matrix implementation for [http://www.ujmp.org/ UJMP]
   * an experimental Scala DSL (Domain-Specific Language) : [http://code.google.com/p/scalacl/ ScalaCL]
+
+= What does it look like ? =
+
+  * JavaCL :
+  {{{
+CLContext context = JavaCL.createBestContext();
+CLProgram program = context.createProgram(myKernelSource).build();
+CLKernel kernel = program.createKernel(
+   	"myKernel", 
+    	new float[] { u, v },
+    	context.createIntBuffer(Usage.Input, inputBuffer, true),
+    	context.createFloatBuffer(Usage.Output, resultsBuffer, false)
+);
+...
+}}}
+  [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/JavaCL/src/test/java/com/nativelibs4java/opencl/OpenCL4JavaBasicTest.java See the complete example...]
+  * [http://ochafik.free.fr/blog/?p=207 ScalaCL] :
+class VectorAdd(i: Dim) extends Program(i) {
+	val a = FloatsVar
+	val b = FloatsVar
+	var result = FloatsVar
+	content = result := a + b
+}
+}}}
+  [http://nativelibs4java.googlecode.com/svn/trunk/libraries/OpenCL/ScalaCL/src/main/scala/scalacl/ScalaCLTest.scala See the complete exemple...]
+  * OpenCL4Java : [http://nativelibs4java.googlecode.com/svn/trunk/libraries/OpenCL/target/site/apidocs/com/nativelibs4java/opencl/OpenCLLibrary.html C-style wrappings] auto-JNAerated by [http://jnaerator.googlecode.com/ JNAerator] (they use [http://jna.dev.java.net/ JNA] to make the glue with native code)
+  {{{		
+cl_device_id[] ids = new cl_device_id[nDevs];
+OpenCLLibrary.INSTANCE.clGetDeviceIDs(null, CL_DEVICE_TYPE_GPU | CL_DEVICE_TYPE_CPU, nDevs, ids, pCount));
+...
+}}}
 
 == How do I get started ? ==
 
