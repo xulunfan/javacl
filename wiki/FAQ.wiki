@@ -32,6 +32,7 @@ CLKernel kernel = program.createKernel(
 }}}
   [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/JavaCL/src/test/java/com/nativelibs4java/opencl/OpenCL4JavaBasicTest.java See the complete example...]
   * [http://ochafik.free.fr/blog/?p=207 ScalaCL] :
+{{{
 class VectorAdd(i: Dim) extends Program(i) {
 	val a = FloatsVar
 	val b = FloatsVar
