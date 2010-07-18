@@ -1,4 +1,5 @@
 #summary Instructions to build JavaCL / ScalaCL / OpenCL4Java
+#labels Featured
 
 JavaCL, ScalaCL and OpenCL4Java can be built from sources (also with JNAerator)
 
