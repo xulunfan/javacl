@@ -3,7 +3,7 @@
 
 <wiki:toc max_depth="3" />
 
-= What is JavaCL / ScalaCL / OpenCL4Java ? =
+== What is JavaCL / ScalaCL / OpenCL4Java ? ==
 
 JavaCL is an API that wraps the [http://www.khronos.org/opencl/ OpenCL] library to make it available to the Java platform ([http://www.khronos.org/opencl/ OpenCL] is the first open, royalty-free standard for cross-platform, parallel programming of modern processors and GPUs).
 
@@ -16,7 +16,7 @@ JavaCL comprises the following parts :
   * basic utilities (parallel reduction, experimental matrix implementation for [http://www.ujmp.org/ UJMP]
   * an experimental Scala DSL (Domain-Specific Language) : [http://code.google.com/p/scalacl/ ScalaCL]
 
-= What does it look like ? =
+== What does it look like ? ==
 
   * JavaCL :
   {{{
