@@ -1,0 +1,4 @@
+#summary How to use JavaCL with Maven
+#labels Featured
+
+Please read the [http://code.google.com/p/nativelibs4java/wiki/Maven NativeLibs4Java's Maven page] 
