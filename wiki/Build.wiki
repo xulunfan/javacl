@@ -1,7 +1,7 @@
 #summary Instructions to build JavaCL / ScalaCL / OpenCL4Java
 #labels Featured
 
-JavaCL, ScalaCL and OpenCL4Java can be built from sources (also with JNAerator)
+JavaCL, ScalaCL, OpenCL4Java and JNAerator can be built from sources.
 
 = Full build (first time) =
 
