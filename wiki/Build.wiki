@@ -1,7 +1,12 @@
 #summary Instructions to build JavaCL / ScalaCL / OpenCL4Java
 #labels Featured
 
-JavaCL, ScalaCL, OpenCL4Java and JNAerator can be built from sources.
+All NativeLibs4Java's sub-project can be built from sources in one step.
+This includes :
+  * [http://code.google.com/p/javacl/ JavaCL, ScalaCL and OpenCL4Java]
+  * [http://code.google.com/p/jnaerator/ JNAerator]
+  * [http://code.google.com/p/bridj/ BridJ]
+  * [http://code.google.com/p/nativelibs4java/wiki/Mono Mono4Java]
 
 = Full build (first time) =
 
