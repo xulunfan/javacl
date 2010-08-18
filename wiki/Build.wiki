@@ -57,6 +57,8 @@ Typically, you'll need :
 
 Yeah, that sucks (hope they'll make an up-to-date Maven repository available soon...).
 
+[http://cs.gmu.edu/~jchen/graphics/jogl/notes/joglSetup.html More infos here].
+
 = Regenerating low-level bindings =
 
 This is *not advised*, *not supported* and *reserved to experienced users*.
