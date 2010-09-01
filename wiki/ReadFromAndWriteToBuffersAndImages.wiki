@@ -105,7 +105,7 @@ JavaCL maps OpenCL entities (allocated by the OpenCL driver, typically in the de
 
 OpenCL entities are released when their Java objects counterparts are garbage collected.
 
-In many cases this can lead to serious issues : when the OpenCL driver runs out of memory, it does not tell Java to try and collect unused objects (which would release a few OpenCL entities in the process) and just fails, which makes JavaCL throw a CLException.MemObjectAllocationFailure exception.
+In many cases this can lead to serious issues : when the OpenCL driver runs out of memory, it does not tell Java to try and collect unused objects (which would release a few OpenCL entities in the process) and just fails, which makes JavaCL throw a CLException.MemObjectAllocationFailure or OutOfResources exception.
 
 To avoid that, one can manually release an unused buffer (or any JavaCL entity) by calling CLEntity.release() (CLEntity is a base class which is inherited by CLBuffer, CLImage2D, CLProgram, CLEvent... virtually all JavaCL classes of interest).
 
