@@ -9,6 +9,7 @@
     * [CallingOpenCLKernelsFromJava]
     * [UnderstandOpenCLKernelArguments]
     * [ReadFromAndWriteToBuffersAndImages]
+    * [UsingImages]
     * [EnqueuingRanges]
     * [SharingDataWithOpenGL]
     * [TroubleShootingJavaCLOnLinux]
