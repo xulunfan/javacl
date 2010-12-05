@@ -1,5 +1,6 @@
 #summary Examples of use of JavaCL
 #labels Featured
+#sidebar TOCWiki
 
 = Particles = 
 
