@@ -1,4 +1,5 @@
 #summary About enqueueNDRange
+#sidebar TOCWiki
 
 = Finding the optimal local size = 
 
