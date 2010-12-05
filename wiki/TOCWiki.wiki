@@ -1,9 +1,9 @@
   * [FAQ]
+  * [SamplesAndDemos]
   * Project
     * [Build]
     * [Maven]
     * [Sources]
-    * [SamplesAndDemos]
     * [HardwareRequirements]
   * Documentation
     * [CallingOpenCLKernelsFromJava]
