@@ -17,19 +17,19 @@ for (CLImageFormat format : formats)
 }}}
 
 The [http://www.khronos.org/registry/cl/sdk/1.0/docs/man/xhtml/clGetSupportedImageFormats.html OpenCL specification] guarantees that the following formats are available on all OpenCL implementations :
-  * RGBA, UNormInt8
-  * RGBA, UNormInt16
-  * RGBA, SignedInt8
-  * RGBA, SignedInt16
-  * RGBA, SignedInt32
-  * RGBA, UnsignedInt8
-  * RGBA, UnsignedInt16
-  * RGBA, UnsignedInt32
-  * RGBA, HalfFloat
-  * RGBA, Float
-  * BGRA, UNormInt8
+  * `RGBA, UNormInt8`
+  * `RGBA, UNormInt16`
+  * `RGBA, SignedInt8`
+  * `RGBA, SignedInt16`
+  * `RGBA, SignedInt32`
+  * `RGBA, UnsignedInt8`
+  * `RGBA, UnsignedInt16`
+  * `RGBA, UnsignedInt32`
+  * `RGBA, HalfFloat`
+  * `RGBA, Float`
+  * `BGRA, UNormInt8`
 
-This means that an OpenCL implementation may not support any grayscale image type natively, for instance, but JavaCL still offers easy ways to handle BufferedImages of the TYPE_BYTE_GRAY and TYPE_USHORT_GRAY types (see below).
+This means that an OpenCL implementation may not support any grayscale image type natively, but JavaCL still offers easy ways to handle [http://download.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html BufferedImages] of the `TYPE_BYTE_GRAY` and `TYPE_USHORT_GRAY` types (see below).
 
 = Details =
 
