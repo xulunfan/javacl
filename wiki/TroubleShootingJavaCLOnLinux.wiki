@@ -1,4 +1,5 @@
 #summary How to solve random crashes of JavaCL on Linux
+#sidebar TOCWiki
 
 See [http://groups.google.com/group/nativelibs4java/browse_thread/thread/d4b93879ceaaf6e9/e56ecb566bfcbb6a this thread on NativeLibs4Java's mailing list]
 
