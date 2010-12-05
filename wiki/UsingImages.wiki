@@ -38,13 +38,15 @@ This means that an OpenCL implementation may not support any grayscale image typ
 JavaCL supports reading and writing images directly to and from BufferedImage instances, using the methods `CLImage2D.read(CLQueue)` and `CLImage2D.write(CLQueue, BufferedImage)`.
 
 Only the following BufferedImage types are supported :
-  * TYPE_INT_ARGB : can be written to CLImage2D instances with format :
+  * `TYPE_INT_ARGB` : can be written to CLImage2D instances with format :
     * `(BGRA, UNormInt8)`
     * `(RGBA, UNormInt8)`
-  * TYPE_USHORT_GRAY : can be written to CLImage2D instances with format :
+  * `TYPE_USHORT_GRAY` : can be written to CLImage2D instances with format :
     * `(LUMINANCE, UnsignedInt16)`
     * `(RGBA, UNormInt16)` : when writing to the CLImage2D, the luminance value of the BufferedImage is written to the Red, Green and Blue channels while the Alpha channel is given the opaque `0xffff` value. When reading, the luminance is computed by averaging the Red, Green and Blue channels while ignoring the Alpha channel.
+  * `TYPE_BYTE_GRAY` : can be written to CLImage2D instances with format :
+    * `(LUMINANCE, UnsignedInt8)`
 
 == The hard way : direct data ==
 
-
+One has to know the exact memory layout of the OpenCL image when reading or writing the image data directly.
