@@ -45,7 +45,7 @@ To avoid launching tests, you can append a `-Dmaven.test.skip=true` argument to 
 
 = Installing JOGL 2.x =
 
-_This is tricky_ : you need to extract *some* of the files from the [http://download.java.net/media/jogl/builds/nightly/ archive that matches your platform] to the extension directory of your JRE (jre6/lib/ext), but not all of them (otherwise JOGL will present you black screens without explanation).
+_This is tricky_ : you need to extract *some* of the files from the [http://jogamp.org/deployment/archive/master/jogl-old-1.1.1/ archive that matches your platform] to the extension directory of your JRE (jre6/lib/ext), but not all of them (otherwise JOGL will present you black screens without explanation).
 
 Typically, you'll need :
   * jogl.all.jar
