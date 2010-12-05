@@ -50,3 +50,6 @@ Only the following BufferedImage types are supported :
 == The hard way : direct data ==
 
 One has to know the exact memory layout of the OpenCL image when reading or writing the image data directly.
+
+Please refer to the OpenCL documentation :
+  * [http://www.khronos.org/registry/cl/sdk/1.0/docs/man/xhtml/cl_image_format.html cl_image_format]
