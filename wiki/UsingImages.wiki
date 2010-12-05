@@ -42,10 +42,10 @@ Only the following BufferedImage types are supported :
     * `(BGRA, UNormInt8)`
     * `(RGBA, UNormInt8)`
   * `TYPE_USHORT_GRAY` : can be written to CLImage2D instances with format :
-    * `(LUMINANCE, UnsignedInt16)`
+    * `(LUMINANCE, UnsignedInt16)` : this format is not be supported by many platforms as of this writing
     * `(RGBA, UNormInt16)` : when writing to the CLImage2D, the luminance value of the BufferedImage is written to the Red, Green and Blue channels while the Alpha channel is given the opaque `0xffff` value. When reading, the luminance is computed by averaging the Red, Green and Blue channels while ignoring the Alpha channel.
   * `TYPE_BYTE_GRAY` : can be written to CLImage2D instances with format :
-    * `(LUMINANCE, UnsignedInt8)`
+    * `(LUMINANCE, UnsignedInt8)` : this format is not be supported by many platforms as of this writing
 
 == The hard way : direct data ==
 
