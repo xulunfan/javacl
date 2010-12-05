@@ -1,0 +1,26 @@
+#summary How to use images with JavaCL
+
+= Introduction =
+
+OpenCL supports 2D and 3D images as first-class entities within computation kernels.
+
+= Image Formats =
+
+It's very easy to query an OpenCL implementation for supported image formats using `CLContext.getSupportedImageFormats` :
+{{{
+import com.nativelibs4java.opencl.*;
+
+CLContext context = JavaCL.createBestContext();
+CLImageFormat[] formats = context.getSupportedImageFormats(CLMem.Flags.ReadWrite, CLMem.ObjectType.Image2D);
+for (CLImageFormat format : formats)
+    System.out.println("Supported format : " + format);
+}}}
+
+JavaCL offers 
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
