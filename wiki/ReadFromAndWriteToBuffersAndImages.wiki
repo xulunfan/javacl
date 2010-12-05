@@ -5,6 +5,8 @@
 
 = Introduction =
 
+This page describes common properties and principles of buffers and images, but another page is dedicated to image-specific features : [UsingImages].
+
 == OpenCL Memory Objects ==
 
 OpenCL lets you create memory objects of three types : buffers (1D arrays), 2D images and 3D images.
