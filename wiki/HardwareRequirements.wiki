@@ -1,4 +1,5 @@
 #summary Hardware Requirements for JavaCL / ScalaCL / OpenCL4Java
+#sidebar TOCWiki
 
 = Requirements =
 
