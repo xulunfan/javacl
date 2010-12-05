@@ -31,9 +31,20 @@ The [http://www.khronos.org/registry/cl/sdk/1.0/docs/man/xhtml/clGetSupportedIma
 
 This means that an OpenCL implementation may not support any grayscale image type natively, but JavaCL still offers easy ways to handle [http://download.oracle.com/javase/6/docs/api/java/awt/image/BufferedImage.html BufferedImages] of the `TYPE_BYTE_GRAY` and `TYPE_USHORT_GRAY` types (see below).
 
-= Details =
+= Reading and Writing to CLImage(2D/3D) =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+== The easy way : BufferedImage ==
+
+JavaCL supports reading and writing images directly to and from BufferedImage instances, using the methods `CLImage2D.read(CLQueue)` and `CLImage2D.write(CLQueue, BufferedImage)`.
+
+Only the following BufferedImage types are supported :
+  * TYPE_INT_ARGB : can be written to CLImage2D instances with format :
+    * `(BGRA, UNormInt8)`
+    * `(RGBA, UNormInt8)`
+  * TYPE_USHORT_GRAY : can be written to CLImage2D instances with format :
+    * `(LUMINANCE, UnsignedInt16)`
+    * `(RGBA, UNormInt16)` : when writing to the CLImage2D, the luminance value of the BufferedImage is written to the Red, Green and Blue channels while the Alpha channel is given the opaque `0xffff` value. When reading, the luminance is computed by averaging the Red, Green and Blue channels while ignoring the Alpha channel.
+
+== The hard way : direct data ==
+
+
