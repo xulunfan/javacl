@@ -5,12 +5,13 @@
 
 The current mainstream release of JavaCL / OpenCL4Java / ScalaCL uses JNA as a way of calling C functions from Java.
 
-However, the author of JavaCL and JNAerator (used to automatically generate JNA wrappers out of C headers) also created an alternative to JNA, designed for better usability, compatibility with C++ and performance : [#sidebar TOCWiki
- BridJ].
+However, the author of JavaCL and JNAerator (used to automatically generate JNA wrappers out of C headers) also created an alternative to JNA, designed for better usability, compatibility with C++ and performance : [http://code.google.com/p/bridj/ BridJ].
 
 The promises of BridJ, relative to JavaCL, are :
   * much faster structs
   * much lower low-level calls overhead
+  * smaller and leaner low-level bindings
+  * better-looking bindings with the JavaCL Generator
 
 = JNA direct mode vs. BridJ =
 
