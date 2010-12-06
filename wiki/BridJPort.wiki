@@ -15,7 +15,7 @@ The promises of BridJ, relative to JavaCL, are :
 
 = JNA direct mode vs. BridJ =
 
-JNA supports a direct call mode, which is faster than the "normal" (reflection-intensive) mode currently used by JavaCL.
+JNA supports a direct call mode (see [http://code.google.com/p/bridj/wiki/Design BridJ Design], which is faster than the "normal" (reflection-intensive) mode currently used by JavaCL.
 
 However, JNA's direct mode does not support many constructs that are highly needed by JavaCL (typed pointers, for instance).
 
