@@ -54,3 +54,7 @@ One has to know the exact memory layout of the OpenCL image when reading or writ
 
 Please refer to the OpenCL documentation :
   * [http://www.khronos.org/registry/cl/sdk/1.0/docs/man/xhtml/cl_image_format.html cl_image_format]
+
+== Examples ==
+
+Please look at the [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/Core/src/test/java/com/nativelibs4java/opencl/ImageTest.java ImageTest] class.
