@@ -1,6 +1,8 @@
 #summary How to use images with JavaCL
 #sidebar TOCWiki
 
+<wiki:toc max_depth="3" />
+
 = Introduction =
 
 OpenCL supports 2D and 3D images as first-class entities within computation kernels.
