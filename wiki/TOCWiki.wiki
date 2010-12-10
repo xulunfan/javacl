@@ -1,6 +1,7 @@
   * [FAQ]
   * [SamplesAndDemos]
   * Project
+    * [http://code.google.com/p/bridj/wiki/CreditsAndLicense Credits and License]
     * [Build]
     * [Maven]
     * [Sources]
