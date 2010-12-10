@@ -1,3 +1,4 @@
 #summary Credits and License
+#sidebar TOCWiki
 
 [http://code.google.com/p/bridj/wiki/CreditsAndLicense Click here to see Credits and License details]
