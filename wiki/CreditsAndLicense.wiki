@@ -1,0 +1,3 @@
+#summary Credits and License
+
+[http://code.google.com/p/bridj/wiki/CreditsAndLicense Click here to see Credits and License details]
