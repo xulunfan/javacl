@@ -21,10 +21,10 @@ Download executable JAR (no Web Start link yet) :
   * [http://code.google.com/p/javacl/downloads/detail?name=javacl-interactive-image-demo-1.0-SNAPSHOT-shaded.jar JavaCL Interactive Image Transform Demo].
 
 Browse sources :
-  * [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/InteractiveImageDemo/src/main/java/com/nativelibs4java/opencl/demos/interactiveimage/InteractiveImageDemo.java InteractiveImageDemo.java]
   * [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/InteractiveImageDemo/src/main/resources/examples/Blur.cl Blur.cl]
   * [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/InteractiveImageDemo/src/main/resources/examples/SobelFilter.cl SobelFilter.cl]
   * [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/InteractiveImageDemo/src/main/resources/examples/Greyifier.cl Greyifier.cl]
+  * [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/InteractiveImageDemo/src/main/java/com/nativelibs4java/opencl/demos/interactiveimage/InteractiveImageDemo.java InteractiveImageDemo.java]
 
 = Mandelbrot = 
 
@@ -36,12 +36,6 @@ Launch via Java Web Start :
 Browse sources : 
   * [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/Demos/src/main/opencl/com/nativelibs4java/opencl/demos/mandelbrot/Mandelbrot.cl Mandelbrot.cl]
   * [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/Demos/src/main/java/com/nativelibs4java/opencl/demos/mandelbrot/MandelbrotDemo.java MandelbrotDemo.java]
-
-= Sobel Filter =
-
-Browse sources : 
-  * [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/Demos/src/main/opencl/com/nativelibs4java/opencl/demos/sobelfilter/SimpleSobel.cl SimpleSobel.cl]
-  * [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/Demos/src/main/java/com/nativelibs4java/opencl/demos/sobelfilter/SobelFilterDemo.java SobelFilterDemo.java]
 
 = Hardware Report = 
 
