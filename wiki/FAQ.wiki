@@ -83,18 +83,12 @@ java -cp javacl-demos-1.0-SNAPSHOT-shaded.jar com.nativelibs4java.opencl.demos.h
 
 == What demos are available ? ==
 
-You can find a list and the source code of demos in the source tree :
-[http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/Demos/src/main/java/com/nativelibs4java/opencl/demos]
+[SamplesAndDemos JavaCL's most notable demos] are :
+  * Particles Demo : shows a particles system animated in real time
+  * Interactive Image Transform Demo : lets you edit image transformation kernels and run them on the fly (with examples provided)
+  * Hardware Report : displays information about the available OpenCL implementations detected on your setup, with details on each device.
 
-For now here are the graphical demos :
-  * com.nativelibs4java.opencl.demos.hardware.HardwareReport
-  * com.nativelibs4java.opencl.demos.mandelbrot.MandelbrotDemo
-  * com.nativelibs4java.opencl.demos.particles.ParticlesDemo
-  * com.nativelibs4java.opencl.demos.sobelfilter.SobelFilterDemo (path of the image input file is hardcoded in the source, easy to change)
-
-And some small headless demos as well :
-  * com.nativelibs4java.opencl.demos.ParallelRandomDemo
-  * com.nativelibs4java.opencl.demos.VectorAdd
+For more details, please visit [SamplesAndDemos].
 
 == How do I write and call OpenCL kernels from Java ? ==
 
