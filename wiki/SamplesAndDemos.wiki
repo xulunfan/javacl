@@ -6,35 +6,49 @@
 
 [http://nativelibs4java.sourceforge.net/webstart/OpenCL/ParticlesDemo.jnlp http://nativelibs4java.googlecode.com/svn/wiki/JavaCLLemonParticles.PNG]
 
-Launch via Java Web Start : [http://nativelibs4java.sourceforge.net/webstart/OpenCL/ParticlesDemo.jnlp Particles Demo]
+Launch via Java Web Start : 
+  * [http://nativelibs4java.sourceforge.net/webstart/OpenCL/ParticlesDemo.jnlp Particles Demo]
 
-Browse sources : [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/Demos/src/main/opencl/com/nativelibs4java/opencl/demos/particles/ParticlesDemoProgram.c ParticlesDemoProgram.cl], [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/Demos/src/main/java/com/nativelibs4java/opencl/demos/particles/ParticlesDemo.java ParticlesDemo.java]
+Browse sources : 
+  * [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/Demos/src/main/opencl/com/nativelibs4java/opencl/demos/particles/ParticlesDemoProgram.c ParticlesDemoProgram.cl]
+  * [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/Demos/src/main/java/com/nativelibs4java/opencl/demos/particles/ParticlesDemo.java ParticlesDemo.java]
 
 = Interactive Image Transform =
 
 [http://code.google.com/p/javacl/downloads/detail?name=javacl-interactive-image-demo-1.0-SNAPSHOT-shaded.jar http://nativelibs4java.googlecode.com/svn/wiki/SobelBirdSnake.png]
 
-Download executable JAR (no Web Start link yet) : [http://code.google.com/p/javacl/downloads/detail?name=javacl-interactive-image-demo-1.0-SNAPSHOT-shaded.jar JavaCL Interactive Image Transform Demo].
+Download executable JAR (no Web Start link yet) : 
+  * [http://code.google.com/p/javacl/downloads/detail?name=javacl-interactive-image-demo-1.0-SNAPSHOT-shaded.jar JavaCL Interactive Image Transform Demo].
 
 Browse sources :
-http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/InteractiveImageDemo/src/main/java/com/nativelibs4java/opencl/demos/interactiveimage/InteractiveImageDemo.java InteractiveImageDemo.java], [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/InteractiveImageDemo/src/main/resources/examples/Blur.cl Blur.cl], [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/InteractiveImageDemo/src/main/resources/examples/SobelFilter.cl SobelFilter.cl], [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/InteractiveImageDemo/src/main/resources/examples/Greyifier.cl Greyifier.cl]
+  * [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/InteractiveImageDemo/src/main/java/com/nativelibs4java/opencl/demos/interactiveimage/InteractiveImageDemo.java InteractiveImageDemo.java]
+  * [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/InteractiveImageDemo/src/main/resources/examples/Blur.cl Blur.cl]
+  * [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/InteractiveImageDemo/src/main/resources/examples/SobelFilter.cl SobelFilter.cl]
+  * [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/InteractiveImageDemo/src/main/resources/examples/Greyifier.cl Greyifier.cl]
 
 = Mandelbrot = 
 
 [http://nativelibs4java.sourceforge.net/webstart/OpenCL/MandelbrotDemo.jnlp http://nativelibs4java.googlecode.com/svn/wiki/JavaCLMandelbrot.png]
 
-Launch via Java Web Start : [http://nativelibs4java.sourceforge.net/webstart/OpenCL/MandelbrotDemo.jnlp Mandelbrot Demo]
+Launch via Java Web Start : 
+  * [http://nativelibs4java.sourceforge.net/webstart/OpenCL/MandelbrotDemo.jnlp Mandelbrot Demo]
 
-Browse sources : [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/Demos/src/main/opencl/com/nativelibs4java/opencl/demos/mandelbrot/Mandelbrot.cl Mandelbrot.cl], [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/Demos/src/main/java/com/nativelibs4java/opencl/demos/mandelbrot/MandelbrotDemo.java MandelbrotDemo.java]
+Browse sources : 
+  * [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/Demos/src/main/opencl/com/nativelibs4java/opencl/demos/mandelbrot/Mandelbrot.cl Mandelbrot.cl]
+  * [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/Demos/src/main/java/com/nativelibs4java/opencl/demos/mandelbrot/MandelbrotDemo.java MandelbrotDemo.java]
 
 = Sobel Filter =
 
-Browse sources : [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/Demos/src/main/opencl/com/nativelibs4java/opencl/demos/sobelfilter/SimpleSobel.cl SimpleSobel.cl], [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/Demos/src/main/java/com/nativelibs4java/opencl/demos/sobelfilter/SobelFilterDemo.java SobelFilterDemo.java]
+Browse sources : 
+  * [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/Demos/src/main/opencl/com/nativelibs4java/opencl/demos/sobelfilter/SimpleSobel.cl SimpleSobel.cl]
+  * [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/Demos/src/main/java/com/nativelibs4java/opencl/demos/sobelfilter/SobelFilterDemo.java SobelFilterDemo.java]
 
 = Hardware Report = 
 
 [http://nativelibs4java.sourceforge.net/webstart/OpenCL/HardwareReport.jnlp http://nativelibs4java.googlecode.com/svn/wiki/JavaCLHardwareReport.png]
 
-Launch via Java Web Start : [http://nativelibs4java.sourceforge.net/webstart/OpenCL/HardwareReport.jnlp Launch the Hardware Report]
+Launch via Java Web Start : 
+  * [http://nativelibs4java.sourceforge.net/webstart/OpenCL/HardwareReport.jnlp Hardware Report]
 
-Browse sources : [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/Demos/src/main/java/com/nativelibs4java/opencl/demos/hardware/HardwareReport.java HardwareReport.java]
+Browse sources : 
+  * [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/Demos/src/main/java/com/nativelibs4java/opencl/demos/hardware/HardwareReport.java HardwareReport.java]
