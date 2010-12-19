@@ -58,3 +58,37 @@ Please refer to the OpenCL documentation :
 == Examples ==
 
 Please look at the [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/Core/src/test/java/com/nativelibs4java/opencl/ImageTest.java ImageTest] class.
+
+= Sample Image Transform Program =
+
+Here it is :
+{{{
+import com.nativelibs4java.opencl.*;
+import java.io.*;
+import java.awt.image.*;
+
+public class ImageSample {
+	public static void main(String[] args) throws Exception {
+		String inputFile = "input.jpg", outputFile = "output.jpg", kernelFile = "kernel.cl";
+		
+		CLContext context = JavaCL.createBestContext();
+		
+		BufferedImage bufferedImage = ImageIO.read(new File(inputFile));
+		
+		CLQueue queue = context.createDefaultQueue();
+		CLProgram program = context.createProgram(ReadText.readText(new File(kernelFile)));
+		CLKernel kernels = program.createKernel("myTransform");
+		
+		int width = bufferedImage.getWidth(), height = bufferedImage.getHeight(); 
+		CLImage2D imageIn = context.createImage2D(CLMem.Usage.Input, bufferedImage, false);
+		CLImage2D imageOut = context.createImage2D(CLMem.Usage.Output, imageIn.getFormat(), width, height);
+		
+		kernel.setArgs(imageIn, imageOut);
+		CLEvent evt = kernel.enqueueNDRange(queue, new int[] { width, height });
+		
+		BufferedImage result = imageOut.read(queue, evt);
+		
+		ImageIO.write(result, "jpeg", new File(outputFile));
+	}
+}
+}}}
