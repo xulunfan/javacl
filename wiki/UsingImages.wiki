@@ -69,28 +69,28 @@ import java.awt.image.*;
 import com.ochafik.io.ReadText;
 
 public class ImageSample {
-	public static void main(String[] args) throws Exception {
-		String inputFile = "input.jpg", outputFile = "output.jpg";
-		
-		CLContext context = JavaCL.createBestContext();
-		
-		BufferedImage bufferedImage = ImageIO.read(new File(inputFile));
-		
-		CLQueue queue = context.createDefaultQueue();
-		CLProgram program = context.createProgram(sourceTextArea.getText());
-		CLKernel kernels = program.createKernels()[0];
-		
-		int width = bufferedImage.getWidth(), height = bufferedImage.getHeight(); 
-		CLImage2D imageIn = context.createImage2D(CLMem.Usage.Input, bufferedImage, false);
-		CLImage2D imageOut = context.createImage2D(CLMem.Usage.Output, imageIn.getFormat(), width, height);
-		
-		kernel.setArgs(imageIn, imageOut);
-		CLEvent evt = kernel.enqueueNDRange(queue, new int[] { width, height });
-		
-		BufferedImage result = imageOut.read(queue, evt);
-		
-		ImageIO.write(result, "jpeg", new File(outputFile));
-	}
+        public static void main(String[] args) throws Exception {
+                String inputFile = "input.jpg", outputFile = "output.jpg", kernelFile = "kernel.cl";
+                
+                CLContext context = JavaCL.createBestContext();
+                
+                BufferedImage bufferedImage = ImageIO.read(new File(inputFile));
+                
+                CLQueue queue = context.createDefaultQueue();
+                CLProgram program = context.createProgram(ReadText.readText(new File(kernelFile)));
+                CLKernel kernel = program.createKernels()[0];
+                
+                int width = bufferedImage.getWidth(), height = bufferedImage.getHeight(); 
+                CLImage2D imageIn = context.createImage2D(CLMem.Usage.Input, bufferedImage, false);
+                CLImage2D imageOut = context.createImage2D(CLMem.Usage.Output, imageIn.getFormat(), width, height);
+                
+                kernel.setArgs(imageIn, imageOut);
+                CLEvent evt = kernel.enqueueNDRange(queue, new int[] { width, height });
+                
+                BufferedImage result = imageOut.read(queue, evt);
+                
+                ImageIO.write(result, "jpeg", new File(outputFile));
+        }
 }
 }}}
 
