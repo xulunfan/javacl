@@ -21,9 +21,7 @@ Launch via Java Web Start :
   * [http://nativelibs4java.sourceforge.net/webstart/OpenCL/InteractiveImageTransformDemo.jnlp JavaCL Interactive Image Transform Demo].
 
 Browse sources :
-  * [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/InteractiveImageDemo/src/main/resources/examples/Blur.cl Blur.cl]
-  * [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/InteractiveImageDemo/src/main/resources/examples/SobelFilter.cl SobelFilter.cl]
-  * [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/InteractiveImageDemo/src/main/resources/examples/Greyifier.cl Greyifier.cl]
+  * [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/InteractiveImageDemo/src/main/resources/examples/ Kernel Samples]
   * [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/InteractiveImageDemo/src/main/java/com/nativelibs4java/opencl/demos/interactiveimage/InteractiveImageDemo.java InteractiveImageDemo.java]
 
 = Mandelbrot = 
