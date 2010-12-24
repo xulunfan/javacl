@@ -1,4 +1,7 @@
 #summary How to include files from OpenCL kernels in JavaCL
+#sidebar TOCWiki
+
+<wiki:toc max_depth="3" />
 
 In C (and in OpenCL's C dialect), it is possible to include C files into a source file.
 
