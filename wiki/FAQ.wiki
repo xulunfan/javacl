@@ -98,6 +98,12 @@ Please read [CallingOpenCLKernelsFromJava] and look at the demos source code.
 
 JavaCL supports all OpenCL types, please see [UnderstandOpenCLKernelArguments] for type mapping details.
 
+== Can I include headers / source files from OpenCL kernels ? ==
+
+Sure ! You can even include files that are in the Java classpath.
+
+Please read [IncludesInKernels] for more details.
+
 == How do I use buffers / images in JavaCL ? ==
 
 Please read [ReadFromAndWriteToBuffersAndImages]
