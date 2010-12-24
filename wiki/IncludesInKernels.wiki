@@ -1,0 +1,11 @@
+#summary How to include files from OpenCL kernels in JavaCL
+
+In C (and in OpenCL's C dialect), it is possible to include C files into a source file.
+
+This is done by the C preprocessor and requires a list of include paths, which usually contain the current directory of the process.
+
+JavaCL provides two ways to include files easily from your OpenCL kernels :
+  * Any Java resource can be included without any further work. Say the file `MyCLLib/someHeader.h` is visible in the classpath (maybe inside a JAR, for instance), then the `#include "MyCLLib/someHeader.h` statement in any OpenCL kernel passed to JavaCL will just work as expected !
+  * `CLProgram.addInclude(path)` adds a directory or an URL to the list of include paths
+
+Additionally, the JavaCL Project contains a new library called LibCL, which aims at gathering useful includes for OpenCL kernels. It is bundled as a plain old JAR and contains resources.
