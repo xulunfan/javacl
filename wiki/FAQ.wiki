@@ -57,6 +57,13 @@ Please see the "Quick Start" section on the project's homepage.
 
 Please read [TroubleShootingJavaCLOnLinux] for a workaround.
 
+== I get a weird InvalidCommandQueue exception, why ? ==
+
+Command queues can become invalid after some errors that can go unnoticed by default.
+To see all errors, please set the environment variable `CL_LOG_ERRORS` to `stdout` :
+  * On Windows : `set CL_LOG_ERRORS=stdout`
+  * On Unix / Linux / Mac OS X : `export CL_LOG_ERRORS=stdout`
+
 == Which platforms does JavaCL support ? ==
 
 Short answer is "all of them". Please [HardwareRequirements read details here...]
