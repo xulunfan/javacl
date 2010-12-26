@@ -64,7 +64,7 @@ To see all errors, please set the environment variable `CL_LOG_ERRORS` to `stdou
   * On Windows : `set CL_LOG_ERRORS=stdout`
   * On Unix / Linux / Mac OS X : `export CL_LOG_ERRORS=stdout`
 
-See [http://www.macresearch.org/opencl_episode4#comment-15801 this thread on macresearch.org] for more details.
+See [http://www.macresearch.org/opencl_episode4#comment-15801 this thread on macresearch.org] or [http://www.khronos.org/message_boards/viewtopic.php?f=28&t=2061 that thread on khronos.org] for more details.
 
 == Which platforms does JavaCL support ? ==
 
