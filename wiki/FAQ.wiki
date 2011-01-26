@@ -32,16 +32,17 @@ CLKernel kernel = program.createKernel(
 ...
 }}}
   [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/JavaCL/src/test/java/com/nativelibs4java/opencl/OpenCL4JavaBasicTest.java See the complete example...]
-  * [http://ochafik.free.fr/blog/?p=207 ScalaCL] :
+  * [http://code.google.com/p/scalacl/ ScalaCL] :
 {{{
-class VectorAdd(i: Dim) extends Program(i) {
-	val a = FloatsVar
-	val b = FloatsVar
-	var result = FloatsVar
-	content = result := a + b
-}
+val a = (1000 to 100000).toCLArray
+
+val f = a.filter(v => (v % 2) != 0)
+val r = f.zip(f.map(_ * 2f)).zipWithIndex.map(t => {
+    val ((a, b) i) = t
+    (exp(a).toFloat + b + i, a)
+  })
 }}}
-  [http://nativelibs4java.googlecode.com/svn/trunk/libraries/OpenCL/ScalaCL/src/main/scala/scalacl/ScalaCLTest.scala See the complete exemple...]
+  [http://code.google.com/p/scalacl/wiki/FAQ Learn More...]
   * OpenCL4Java : [http://nativelibs4java.googlecode.com/svn/trunk/libraries/OpenCL/target/site/apidocs/com/nativelibs4java/opencl/OpenCLLibrary.html C-style wrappings] auto-JNAerated by [http://jnaerator.googlecode.com/ JNAerator] (they use [http://jna.dev.java.net/ JNA] to make the glue with native code)
   {{{		
 cl_device_id[] ids = new cl_device_id[nDevs];
