@@ -52,9 +52,20 @@ To avoid launching tests, you can append a `-Dmaven.test.skip=true` argument to 
     * Linux [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-linux-i586-latest.zip 32 bits] | [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-linux-amd64-latest.zip 64 bits]
     * [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-macosx-universal-latest.zip MacOS X]
   * Extract the zip and put its content in your Java Runtime Environment "lib/ext" directory
-    * On Linux, this could be `/usr/lib/jvm/java-6-sun-1.6.0.20/jre/lib/ext/` or `/usr/lib/jvm/java-1.6.0-openjdk/jre/lib/ext/`
-    * On Windows, this could be `C:\Program Files\Java\jre-1.6.0\lib\ext`
-    * On MacOS X this is `~/Library/Java/Extensions` (the `~` is your user home directory ; you can create these directories if they don't exist, but make sure to do it in a Terminal, as there might be translations in the Finder, for instance `~/Library` being visible as `Bibliothèque` in French)
+    * On Linux, this is a path like one of these :
+{{{
+/usr/lib/jvm/java-6-sun-1.6.0.20/jre/lib/ext/
+/usr/lib/jvm/java-1.6.0-openjdk/jre/lib/ext/
+}}}
+    * On Windows, this looks like :
+{{{
+C:\Program Files\Java\jre-1.6.0\lib\ext
+}}}
+    * On MacOS X this is :
+{{{
+~/Library/Java/Extensions
+}}}
+    (the `~` is your user home directory ; you can create these directories if they don't exist, but make sure to do it in a Terminal, as there might be translations in the Finder, for instance `~/Library` being visible as `Bibliothèque` in French)
 
 = Regenerating low-level bindings =
 
