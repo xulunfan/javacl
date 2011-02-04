@@ -45,7 +45,7 @@ mvn clean install
 
 To avoid launching tests, you can append a `-Dmaven.test.skip=true` argument to that command.
 
-= Installing JOGL 2.x =
+= Installing JOGL 2.x (updated !) =
 
   * Download the NativeLibs4Java-assembled JOGL package for your architecture + operating system :
     * Windows [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-windows-i586-latest.zip 32 bits] | [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-windows-amd64-latest.zip 64 bits]
