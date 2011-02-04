@@ -54,8 +54,15 @@ To avoid launching tests, you can append a `-Dmaven.test.skip=true` argument to 
   * Extract the zip and put its content in your Java Runtime Environment "lib/ext" directory
     * On Linux, this is a path like one of these :
 {{{
-/usr/lib/jvm/java-6-sun-1.6.0.20/jre/lib/ext/
-/usr/lib/jvm/java-1.6.0-openjdk/jre/lib/ext/
+/usr/lib/jvm/java-6-sun/jre/lib/ext/
+/usr/lib/jvm/java-6-openjdk/jre/lib/ext/
+}}}
+    So you might install JOGL like this (download included, shown here for i586 architecture) :
+{{{
+cd /usr/lib/jvm/java-6-openjdk/jre/lib/ext/
+sudo wget http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-linux-i586-latest.zip
+sudo unzip jogl-linux*.zip
+sudo rm jogl-linux*.zip
 }}}
     * On Windows, this looks like :
 {{{
