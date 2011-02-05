@@ -47,7 +47,7 @@ To avoid launching tests, you can append a `-Dmaven.test.skip=true` argument to 
 
 = Installing JOGL 2.x (updated !) =
 
-Two files in JavaCL's sources rely on the Jogamp JOGL OpenGL bindings (ParticlesDemo.java and JOGLTest.java). It should be easy to use the [http://www.lwjgl.org/ Lightweight Java Game Library (LWJGL)] library instead, any contribution in that direction would be welcome.
+Two files in JavaCL's sources rely on the Jogamp JOGL OpenGL bindings (`ParticlesDemo.java` and `JOGLTest.java`). It should be easy to use the [http://www.lwjgl.org/ Lightweight Java Game Library (LWJGL)] library instead, any contribution in that direction would be welcome.
 
 To proceed with the build, you can delete these files or install JOGL manually.
 
