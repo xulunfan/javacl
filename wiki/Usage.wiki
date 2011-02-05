@@ -61,7 +61,8 @@ C:\Program Files\Java\jre-1.6.0\lib\ext
 
 The JavaCL plugin can be used with [http://maven.apache.org/ Maven], simply edit your `pom.xml` as follows :
 {{{
-...
+<project>
+  ...
   <repositories>
     ...
     <repository>
@@ -78,7 +79,8 @@ The JavaCL plugin can be used with [http://maven.apache.org/ Maven], simply edit
       <version>1.0-beta-6</version>
     </dependency>
   </dependencies>
-...
+  ...
+</project>
 }}}
 
 == With sbt (simple-build-tool) ==
