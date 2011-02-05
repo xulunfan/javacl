@@ -13,36 +13,41 @@ If you wish to use the [ScalaCLCollections OpenCL-backed collections], ensure yo
   * [http://www.nvidia.com/object/cuda_opencl_new.html NVIDIA drivers] for NVIDIA cards
   * [http://software.intel.com/en-us/articles/intel-opencl-sdk/ Intel OpenCL SDK] for Intel CPUs on Windows 7 32 bits (alpha version !)
 
-== Optional : JOGL (OpenGL) ==
+== Optional : OpenGL bindings ==
 
-* Download the NativeLibs4Java-assembled JOGL package for your architecture + operating system :
-  * Windows [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-windows-i586-latest.zip 32 bits] | [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-windows-amd64-latest.zip 64 bits]
-  * Linux [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-linux-i586-latest.zip 32 bits] | [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-linux-amd64-latest.zip 64 bits]
-  * [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-macosx-universal-latest.zip MacOS X]
-* Extract the zip and put its content in your Java Runtime Environment "lib/ext" directory
-  * On Linux, this is a path like one of these :
+If you want to share data between OpenCL and OpenGL, you'll need an OpenGL library such as JOGL or [http://lwjgl.org/ LWJGL].
+
+=== Jogamp JOGL ===
+
+Here's how to install the latest version of JOGL : 
+  * Download the NativeLibs4Java-assembled JOGL package for your architecture + operating system :
+    * Windows [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-windows-i586-latest.zip 32 bits] | [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-windows-amd64-latest.zip 64 bits]
+    * Linux [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-linux-i586-latest.zip 32 bits] | [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-linux-amd64-latest.zip 64 bits]
+    * [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-macosx-universal-latest.zip MacOS X]
+  * Extract the zip and put its content in your Java Runtime Environment "lib/ext" directory
+    * On Linux, this is a path like one of these :
 {{{
 /usr/lib/jvm/java-6-sun/jre/lib/ext/
 /usr/lib/jvm/java-6-openjdk/jre/lib/ext/
 }}}
-    So you might install JOGL like this (download included, shown here for i586 architecture) :
+      So you might install JOGL like this (download included, shown here for i586 architecture) :
 {{{
 cd /usr/lib/jvm/java-6-openjdk/jre/lib/ext/
 sudo wget http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-linux-i586-latest.zip
 sudo unzip jogl-linux*.zip
 sudo rm jogl-linux*.zip
 }}}
-  * On Windows, this looks like :
+    * On Windows, this looks like :
 {{{
 C:\Program Files\Java\jre-1.6.0\lib\ext
 }}}
-  * On MacOS X this is :
+    * On MacOS X this is :
 {{{
 ~/Library/Java/Extensions
 }}}
-  (the `~` is your user home directory ; you can create these directories if they don't exist, but make sure to do it in a Terminal, as there might be translations in the Finder, for instance `~/Library` being visible as `Bibliothèque` in French)
+    (the `~` is your user home directory ; you can create these directories if they don't exist, but make sure to do it in a Terminal, as there might be translations in the Finder, for instance `~/Library` being visible as `Bibliothèque` in French)
 
-= Use in a project =
+= Use JavaCL in a project =
 
 == With Maven ==
 
