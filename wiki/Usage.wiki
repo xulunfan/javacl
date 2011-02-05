@@ -106,3 +106,7 @@ Run the code (replace the semi-colon ';' by ':' on Unix systems) :
 {{{
 java -cp javacl-1.0-beta-6-shaded.jar;. MyTest
 }}}
+
+= Install / Build from sources =
+
+Please read the [Build] page.
