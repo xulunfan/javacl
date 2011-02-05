@@ -17,10 +17,18 @@ If you wish to use the [ScalaCLCollections OpenCL-backed collections], ensure yo
 
 If you want to share data between OpenCL and OpenGL, you'll need an OpenGL library such as JOGL or [http://lwjgl.org/ LWJGL].
 
+=== Lightweight Java Game Library (LWJGL) ===
+
+The excellent [http://lwjgl.org/ Lightweight Java Game Library (LWJGL)] is a premier choice for OpenGL and OpenAL cross-platform programming in Java, providing a fast close-to-metal API.
+
+It [http://www.lwjgl.org/wiki/index.php?title=Main_Page#Getting_started can be installed in many various ways, including Maven].
+
 === Jogamp JOGL ===
 
-Here's how to install the latest version of JOGL : 
-  * Download the NativeLibs4Java-assembled JOGL package for your architecture + operating system :
+After a long radio silence, fresh forces are injected again into JOGL (now hosted at [http://jogamp.org/ jogamp.org]), with even alternative OpenCL bindings.
+
+As the jogamp OpenGL bindings are still a bit uneasy to install, here's a simplified install procedure to get the latest version of JOGL : 
+  * Download the `NativeLibs4Java-assembled` JOGL package for your architecture + operating system :
     * Windows [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-windows-i586-latest.zip 32 bits] | [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-windows-amd64-latest.zip 64 bits]
     * Linux [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-linux-i586-latest.zip 32 bits] | [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-linux-amd64-latest.zip 64 bits]
     * [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-macosx-universal-latest.zip MacOS X]
