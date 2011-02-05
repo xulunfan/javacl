@@ -47,32 +47,11 @@ To avoid launching tests, you can append a `-Dmaven.test.skip=true` argument to 
 
 = Installing JOGL 2.x (updated !) =
 
-  * Download the NativeLibs4Java-assembled JOGL package for your architecture + operating system :
-    * Windows [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-windows-i586-latest.zip 32 bits] | [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-windows-amd64-latest.zip 64 bits]
-    * Linux [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-linux-i586-latest.zip 32 bits] | [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-linux-amd64-latest.zip 64 bits]
-    * [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-macosx-universal-latest.zip MacOS X]
-  * Extract the zip and put its content in your Java Runtime Environment "lib/ext" directory
-    * On Linux, this is a path like one of these :
-{{{
-/usr/lib/jvm/java-6-sun/jre/lib/ext/
-/usr/lib/jvm/java-6-openjdk/jre/lib/ext/
-}}}
-    So you might install JOGL like this (download included, shown here for i586 architecture) :
-{{{
-cd /usr/lib/jvm/java-6-openjdk/jre/lib/ext/
-sudo wget http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-linux-i586-latest.zip
-sudo unzip jogl-linux*.zip
-sudo rm jogl-linux*.zip
-}}}
-    * On Windows, this looks like :
-{{{
-C:\Program Files\Java\jre-1.6.0\lib\ext
-}}}
-    * On MacOS X this is :
-{{{
-~/Library/Java/Extensions
-}}}
-    (the `~` is your user home directory ; you can create these directories if they don't exist, but make sure to do it in a Terminal, as there might be translations in the Finder, for instance `~/Library` being visible as `Bibliothèque` in French)
+Two files in JavaCL's sources rely on the Jogamp JOGL OpenGL bindings (ParticlesDemo.java and JOGLTest.java). It should be easy to use the [http://www.lwjgl.org/ Lightweight Java Game Library (LWJGL)] library instead, any contribution in that direction would be welcome.
+
+To proceed with the build, you can delete these files or install JOGL manually.
+
+The JOGL paragraph of the [Usage Install] page explains *how to install the latest version of Jogamp's JOGL on your system in a few seconds*.
 
 = Regenerating low-level bindings =
 
