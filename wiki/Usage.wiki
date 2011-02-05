@@ -90,3 +90,17 @@ Add these two lines to your project file :
   val nativelibs4javaRepo = "NativeLibs4Java Repository" at "http://nativelibs4java.sourceforge.net/maven/"
   val javacl = compilerPlugin("com.nativelibs4java" % "javacl" % "1.0-beta-6")
 }}}
+
+== Raw download ==
+
+If you're not using Maven, Gradle, sbt or any other build manager, you can proceed to the [http://code.google.com/p/javacl/downloads/list downloads section] and add the [http://code.google.com/p/javacl/downloads/detail?name=javacl-1.0-beta-6-shaded.jar javacl-1.0-beta-6-shaded.jar] to your classpath manually :
+
+Compile some code :
+{{{
+javac -cp javacl-1.0-beta-6-shaded.jar MyTest.java
+}}}
+
+Run the code (replace the semi-colon ';' by ':' on Unix systems) :
+{{{
+java -cp javacl-1.0-beta-6-shaded.jar;. MyTest
+}}}
