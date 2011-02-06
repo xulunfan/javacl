@@ -94,7 +94,7 @@ import sbt._
 class MyProject(info: ProjectInfo) extends DefaultProject(info)
 {
   val nativelibs4javaRepo = "NativeLibs4Java Repository" at "http://nativelibs4java.sourceforge.net/maven/"
-  val javacl = compilerPlugin("com.nativelibs4java" % "javacl" % "1.0-beta-6")
+  val javacl = "com.nativelibs4java" % "javacl" % "1.0-beta-6"
 }
 }}}
 
