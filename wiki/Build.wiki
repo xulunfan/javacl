@@ -24,11 +24,8 @@ Subsequent builds will be much quicker (see next section), and can be launched f
 svn checkout http://nativelibs4java.googlecode.com/svn/trunk/libraries nativelibs4java
 cd nativelibs4java
 }}}
-  * Run the following Maven commands :
+  * Run the following Maven command :
     {{{
-cd Parent
-mvn install
-cd ..
 mvn install -Dmaven.test.skip=true
 }}}
 
