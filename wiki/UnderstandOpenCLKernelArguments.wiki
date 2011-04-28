@@ -8,7 +8,7 @@ Here are the different kinds of values accepted as kernel arguments in [http://n
 
 == Scalar data types ==
 
-|| *[http://www.khronos.org/opencl/sdk/1.0/docs/man/xhtml/scalarDataTypes.html OpenCL C type]* || *JavaCL type* ||
+|| *[http://www.khronos.org/registry/cl/sdk/1.0/docs/man/xhtml/scalarDataTypes.html OpenCL C type]* || *JavaCL type* ||
 || int/uint || int ||
 || long/ulong || long ||
 || short/ushort || short ||
@@ -18,7 +18,7 @@ Here are the different kinds of values accepted as kernel arguments in [http://n
 || size_t, ptrdiff_t, intptr_t, uintptr_t || [http://jnaerator.sourceforge.net/sites/jnaerator-runtime/apidocs/com/ochafik/lang/jnaerator/runtime/NativeSize.html NativeSize] ||
 
 == Vector data types ==
-|| * [http://www.khronos.org/opencl/sdk/1.0/docs/man/xhtml/vectorDataTypes.html OpenCL C type]* || *JavaCL type* ||
+|| * [http://www.khronos.org/registry/cl/sdk/1.0/docs/man/xhtml/vectorDataTypes.html OpenCL C type]* || *JavaCL type* ||
 || int2, int3, int4, int8... || int`[]` ||
 
 == Array/Buffer types (including arrays of vector types) ==
@@ -38,7 +38,7 @@ Please also read [ReadFromAndWriteToBuffersAndImages].
 Please also read [ReadFromAndWriteToBuffersAndImages].
 
 || *OpenCL C type* || *JavaCL type* ||
-|| [http://www.khronos.org/opencl/sdk/1.0/docs/man/xhtml/sampler_t.html sampler_t] || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLSampler.html CLSampler] ||
+|| [http://www.khronos.org/registry/cl/sdk/1.0/docs/man/xhtml/sampler_t.html sampler_t] || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLSampler.html CLSampler] ||
 || image2d_t || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLImage2D.html CLImage2D] ||
 || image3d_t || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLImage3D.html CLImage3D] ||
 
