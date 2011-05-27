@@ -34,7 +34,9 @@ CLKernel kernel = program.createKernel(
   [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/JavaCL/src/test/java/com/nativelibs4java/opencl/OpenCL4JavaBasicTest.java See the complete example...]
   * [http://code.google.com/p/scalacl/ ScalaCL] :
 {{{
-val a = (1000 to 100000).toCLArray
+import scalacl._
+import scala.math._
+val a = (1000 to 100000).cl
 
 val f = a.filter(v => (v % 2) != 0)
 val r = f.zip(f.map(_ * 2f)).zipWithIndex.map(t => {
