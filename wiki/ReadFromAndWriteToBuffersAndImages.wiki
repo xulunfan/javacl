@@ -73,7 +73,12 @@ FloatBuffer data = clBuffer.read(queue);
 data = clBuffer.read(queue, 3, 7);
 
 // Reading elements 3 to 9 included to existing data buffer :
+// (note that while indirect buffers will work, direct buffers will provide much better performance)
+data = NIOUtils.directFloats(7, context.getByteOrder());
 clBuffer.read(queue, 3, 7, data, true); // 'true' : blocking operation
+
+float
+data = FloatBuffer.wrap(new
 }}}
 
 == Mapping a buffer for read / write operations == 
