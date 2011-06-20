@@ -114,4 +114,4 @@ In many cases this can lead to serious issues : when the OpenCL driver runs out 
 
 To avoid that, one can manually release an unused buffer (or any JavaCL entity) by calling CLEntity.release() (CLEntity is a base class which is inherited by CLBuffer, CLImage2D, CLProgram, CLEvent... virtually all JavaCL classes of interest).
 
-JavaCL will try to add a workaround to that issue soon, but it is advised to call release() everytime possible (but only once on each object, of course).
+JavaCL features a workaround for allocations that fail due to lack of OpenCL memory (it then calls the Java Garbage Collector and waits a while before retrying), but it is advised to call release() everytime possible (but only once on each object, of course).
