@@ -26,12 +26,12 @@ Here are the different kinds of values accepted as kernel arguments in [http://n
 Please also read [ReadFromAndWriteToBuffersAndImages].
 
 || *OpenCL C type* || *JavaCL type* ||
-|| __global int`*`<br/>__global uint`*`<br/>__global int2`*`<br/>... || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLIntBuffer.html CLIntBuffer] (CLBuffer`<`IntBuffer`>`) ||
-|| __global long`*` || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLLongBuffer.html CLLongBuffer]  ||
-|| __global short`*` || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLShortBuffer.html CLShortBuffer]  ||
-|| __global char`*` || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLByteBuffer.html CLByteBuffer]  ||
-|| __global float`*` || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLFloatBuffer.html CLFloatBuffer]  ||
-|| __global double`*` || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLDoubleBuffer.html CLDoubleBuffer]  ||
+|| __global int`*`<br/>__global uint`*`<br/>__global int2`*`<br/>... || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLBuffer.html CLBuffer<Integer>] ||
+|| __global long`*` || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLBuffer.html CLBuffer<Long>]  ||
+|| __global short`*` || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLBuffer.html CLBuffer<Short>]  ||
+|| __global char`*` || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLBuffer.html CLBuffer<Byte>]  ||
+|| __global float`*` || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLBuffer.html CLBuffer<Float>]  ||
+|| __global double`*` || [http://nativelibs4java.sourceforge.net/sites/javacl/apidocs/com/nativelibs4java/opencl/CLBuffer.html CLBuffer<Double>]  ||
 
 == Image-related types ==
 

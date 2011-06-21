@@ -21,8 +21,8 @@ CLContext context = ... ; // e.g. JavaCL.createBestContext()
 CLQueue queue = ... ; // e.g. context.createDefaultQueue()
 
 int dataSize = 128;
-CLFloatBuffer input = context.createFloatBuffer(CLMem.Usage.Input, dataSize);
-CLFloatBuffer output = context.createFloatBuffer(CLMem.Usage.Output, dataSize);
+CLBuffer<Float> input = context.createFloatBuffer(CLMem.Usage.Input, dataSize);
+CLBuffer<Float> output = context.createFloatBuffer(CLMem.Usage.Output, dataSize);
 float multFactor = 0.5f;
 }}}
 
