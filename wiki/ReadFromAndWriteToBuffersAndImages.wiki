@@ -30,7 +30,7 @@ However, mapping a memory object's data is only guaranteed to work in the case o
 
 While OpenCL defines buffers as arrays of bytes, JavaCL provides support for typed buffers with 1 to 1 mapping to NIO buffers.
 
-If you use a `__global float*` argument in a kernel of yours, you can either choose to use a CLBuffer<Byte> and do the `float <-> byte` conversion and offsets calculations on your own or directly use a CLBuffer<Float> that will take care of everything.
+If you use a `__global float*` argument in a kernel of yours, you can either choose to use a `CLBuffer<Byte>` and do the `float <-> byte` conversion and offsets calculations on your own or directly use a `CLBuffer<Float>` that will take care of everything.
 
 === Host-allocated pointers ===
 
