@@ -68,7 +68,8 @@ CLBuffer<Float> buffer = context.createFloatBuffer(CLMem.Usage.InputOutput, size
 
 Allocate a buffer as a copy of existing data :
 {{{
-// Last 'true' argument asks for a copy of ptr to be made in the device memory. The clBuffer will have no further link to ptr.
+// Last 'true' argument asks for a copy of ptr to be made in the device memory. 
+// The clBuffer will have no further link to ptr.
 CLBuffer<Float> clBuffer = context.createBuffer(CLMem.Usage.InputOutput, ptr, true);
 }}}
 
