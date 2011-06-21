@@ -37,23 +37,23 @@ If you use a `__global float*` argument in a kernel of yours, you can either cho
 <table><tr><th>JavaCL / BridJ</th><th>JavaCL / JNA</th></tr><tr><td>
 {{{
 CLContext context = ... ;
-ByteOrder order = context.getByteOrder(); // endianness of the context (null if mismatching endianness between the context's devices)
 
 int size = 100;
-Pointer<Float> ptr = Pointer.allocateFloats(size).order(order);
+Pointer<Float> ptr = Pointer.allocateFloats(size).order(context.getByteOrder());
 
-// Last 'false' argument requires that no copy of the pointer is made : keep ptr as the primary data source
+// Last 'false' argument requires that no copy of the pointer is made : 
+// keep ptr as the primary data source
 CLBuffer<Float> clBuffer = context.createBuffer(CLMem.Usage.InputOutput, ptr, false);
 }}}
 </td><td>
 {{{
 CLContext context = ... ;
-ByteOrder order = context.getByteOrder(); // endianness of the context (null if mismatching endianness between the context's devices)
 
 int size = 100;
-FloatBuffer ptr = ByteBuffer.allocateDirect(size * 4).byteOrder(order).asFloatBuffer();
+FloatBuffer ptr = ByteBuffer.allocateDirect(size * 4).byteOrder(context.getByteOrder()).asFloatBuffer();
 
-// Last 'false' argument requires that no copy of the pointer is made : keep ptr as the primary data source
+// Last 'false' argument requires that no copy of the pointer is made : 
+// keep ptr as the primary data source
 CLBuffer<FloatBuffer> clBuffer = context.createBuffer(CLMem.Usage.InputOutput, ptr, false);
 }}}
 </td></tr></table>
