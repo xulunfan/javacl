@@ -30,33 +30,46 @@ However, mapping a memory object's data is only guaranteed to work in the case o
 
 While OpenCL defines buffers as arrays of bytes, JavaCL provides support for typed buffers with 1 to 1 mapping to NIO buffers.
 
-If you use a `__global float*` argument in a kernel of yours, you can either choose to use a CLByteBuffer and do the `float <-> byte` conversion and offsets calculations on your own or directly use a CLFloatBuffer that will take care of everything.
+If you use a `__global float*` argument in a kernel of yours, you can either choose to use a CLBuffer<Byte> and do the `float <-> byte` conversion and offsets calculations on your own or directly use a CLBuffer<Float> that will take care of everything.
 
 === Host-allocated pointers ===
 
+<table><tr><th>JavaCL / BridJ</th><th>JavaCL / JNA</th></tr><tr><td>
 {{{
 CLContext context = ... ;
 ByteOrder order = context.getByteOrder(); // endianness of the context (null if mismatching endianness between the context's devices)
 
 int size = 100;
-FloatBuffer buffer = ByteBuffer.allocateDirect(size * 4).byteOrder(order).asFloatBuffer();
+Pointer<Float> ptr = Pointer.allocateFloats(size).order(order);
 
-// Last 'false' argument requires that no copy of the buffer is made : keep buffer as the primary data source
-CLBuffer<FloatBuffer> clBuffer = context.createBuffer(CLMem.Usage.InputOutput, buffer, false);
+// Last 'false' argument requires that no copy of the pointer is made : keep ptr as the primary data source
+CLBuffer<Float> clBuffer = context.createBuffer(CLMem.Usage.InputOutput, ptr, false);
 }}}
+</td><td>
+{{{
+CLContext context = ... ;
+ByteOrder order = context.getByteOrder(); // endianness of the context (null if mismatching endianness between the context's devices)
+
+int size = 100;
+FloatBuffer ptr = ByteBuffer.allocateDirect(size * 4).byteOrder(order).asFloatBuffer();
+
+// Last 'false' argument requires that no copy of the pointer is made : keep ptr as the primary data source
+CLBuffer<FloatBuffer> clBuffer = context.createBuffer(CLMem.Usage.InputOutput, ptr, false);
+}}}
+</td></tr></table>
 
 === Device-allocated pointers ===
 
 Allocate a zeroed-out buffer :
 {{{
 int size = 100;
-CLBuffer<FloatBuffer> buffer = context.createFloatBuffer(CLMem.Usage.InputOutput, size);
+CLBuffer<Float> buffer = context.createFloatBuffer(CLMem.Usage.InputOutput, size);
 }}}
 
 Allocate a buffer as a copy of existing data :
 {{{
-// Last 'true' argument asks for a copy of buffer to be made in the device memory. The clBuffer will have no further link to buffer.
-CLBuffer<FloatBuffer> clBuffer = context.createBuffer(CLMem.Usage.InputOutput, buffer, true);
+// Last 'true' argument asks for a copy of ptr to be made in the device memory. The clBuffer will have no further link to ptr.
+CLBuffer<Float> clBuffer = context.createBuffer(CLMem.Usage.InputOutput, ptr, true);
 }}}
 
 == Reading from / Writing to a buffer ==
@@ -64,8 +77,22 @@ CLBuffer<FloatBuffer> clBuffer = context.createBuffer(CLMem.Usage.InputOutput, b
 {{{
 CLContext context = ... ; // e.g. JavaCL.getBestContext()
 CLQueue queue = ... ; // e.g. context.createDefaultQueue()
-CLBuffer<FloatBuffer> clBuffer = ... ; // e.g. context.createFloatBuffer(CLMem.Usage.InputOutput, size)
+CLBuffer<Float> clBuffer = ... ; // e.g. context.createFloatBuffer(CLMem.Usage.InputOutput, size)
+}}}
+<table><tr><th>JavaCL / BridJ</th><th>JavaCL / JNA</th></tr><tr><td>
+{{{
+// Reading everything to a new native memory location :
+Pointer<Float> data = clBuffer.read(queue);
 
+// Reading elements 3 to 9 included to a new native memory location :
+data = clBuffer.read(queue, 3, 7);
+
+// Reading elements 3 to 9 included to existing data memory location :
+data = Pointer.allocateFloats(7).order(context.getByteOrder());
+clBuffer.read(queue, 3, 7, data, true); // 'true' : blocking operation
+}}}
+</td><td>
+{{{
 // Reading everything to a new buffer :
 FloatBuffer data = clBuffer.read(queue);
 
@@ -77,13 +104,27 @@ data = clBuffer.read(queue, 3, 7);
 data = NIOUtils.directFloats(7, context.getByteOrder());
 clBuffer.read(queue, 3, 7, data, true); // 'true' : blocking operation
 }}}
+</td></tr></table>
 
 == Mapping a buffer for read / write operations == 
 
 Mapping a buffer is only guaranteed to work for buffers allocated from host-pointers.
 
+<table><tr><th>JavaCL / BridJ</th><th>JavaCL / JNA</th></tr><tr><td>
 {{{
-CLBuffer<FloatBuffer> clBuffer = ... ; 
+CLBuffer<Float> clBuffer = ... ; 
+
+try {
+  Pointer<Float> data = clBuffer.map(queue. CLMem.MapFlags.Write);
+  data.set(10f); // write something to the buffer
+  clBuffer.unmap(queue, data);
+} catch (CLException.MapFailure ex) {
+  // map didn't succeed : maybe use CLBuffer.write / read instead.
+}
+}}}
+</td><td>
+{{{
+CLBuffer<Float> clBuffer = ... ; 
 
 try {
   FloatBuffer data = clBuffer.map(queue. CLMem.MapFlags.Write);
@@ -93,6 +134,7 @@ try {
   // map didn't succeed : maybe use CLBuffer.write / read instead.
 }
 }}}
+</td></tr></table>
 
 = Important Note on Endianness =
 
