@@ -78,7 +78,7 @@ The JavaCL plugin can be used with [http://maven.apache.org/ Maven], simply edit
     <dependency>
       <groupId>com.nativelibs4java</groupId>
       <artifactId>javacl</artifactId>
-      <version>1.0-beta-6</version>
+      <version>1.0.0-RC1</version>
     </dependency>
   </dependencies>
   ...
@@ -93,22 +93,22 @@ import sbt._
 class MyProject(info: ProjectInfo) extends DefaultProject(info)
 {
   val nativelibs4javaRepo = "NativeLibs4Java Repository" at "http://nativelibs4java.sourceforge.net/maven/"
-  val javacl = "com.nativelibs4java" % "javacl" % "1.0-beta-6"
+  val javacl = "com.nativelibs4java" % "javacl" % "1.0.0-RC1"
 }
 }}}
 
 == Raw download ==
 
-If you're not using Maven, Gradle, sbt or any other build manager, you can proceed to the [http://code.google.com/p/javacl/downloads/list downloads section] and add the [http://code.google.com/p/javacl/downloads/detail?name=javacl-1.0-beta-6-shaded.jar javacl-1.0-beta-6-shaded.jar] to your classpath manually :
+If you're not using Maven, Gradle, sbt or any other build manager, you can proceed to the [http://code.google.com/p/javacl/downloads/list downloads section] and add `javacl-x.x.x-shaded.jar` to your classpath manually :
 
 Compile some code :
 {{{
-javac -cp javacl-1.0-beta-6-shaded.jar MyTest.java
+javac -cp javacl-x.x.x-shaded.jar MyTest.java
 }}}
 
 Run the code (replace the semi-colon ';' by ':' on Unix systems) :
 {{{
-java -cp javacl-1.0-beta-6-shaded.jar;. MyTest
+java -cp javacl-x.x.x-shaded.jar;. MyTest
 }}}
 
 = Install / Build from sources =
