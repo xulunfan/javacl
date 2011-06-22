@@ -56,6 +56,10 @@ OpenCLLibrary.INSTANCE.clGetDeviceIDs(null, CL_DEVICE_TYPE_GPU | CL_DEVICE_TYPE_
 
 Please see the "Quick Start" section on the project's homepage.
 
+== My old 1.0-beta code broke with 1.0-RC and later ! =
+
+Please read [MigratingFromJNAToBridJ].
+
 == JavaCL Crashes on Linux (including demos) ==
 
 Please read [TroubleShootingJavaCLOnLinux] for a workaround.
