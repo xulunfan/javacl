@@ -161,3 +161,5 @@ You actually need nothing more than the `pom.xml` to use the generator, so you c
 }}}
 
 Simple, isn't it ?
+
+The program wrappers will be regenerated automatically at each compilation, so they'll keep in sync with your OpenCL kernels !
