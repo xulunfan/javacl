@@ -2,7 +2,7 @@
 
 = Changes needed =
 
-  * Replace `CLXXXBuffer` by `CLBuffer<XXX>` : `CLIntBuffer` -> `CLBuffer<Integer>`, `CLFloatBuffer` -> `CLBuffer<Float>`
+  * Replace `CLXXXBuffer` by `CLBuffer<XXX>`
   * Replace `XXXBuffer.allocate(int)` and `NIOUtils.directXXXs(int)` by `Pointer.allocateXXXs(int)`
   * Replace `XXXBuffer.wrap(xxx[])` by `Pointer.pointerToXXXs(xxx[])`
   * Replace `XXXBuffer` by `Pointer<XXX>`
