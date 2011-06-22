@@ -1,6 +1,6 @@
 #summary How to migrate existing pre-1.0.0-RC1 JavaCL/JNA code to JavaCL/BridJ
 
-|| Regexp pattern ||  Replace expression in jEdit ||
+| *Regexp pattern* |  *Replace expression in jEdit* |
 | `\bReductor<(\w*)Buffer>` | `"Reductor<" + _1 + ">"` |
 | `\bCLIntBuffer\b` | `"CLBuffer<Integer>"` |
 | `\bCLCharBuffer\b` | `"CLBuffer<Character>"` |
