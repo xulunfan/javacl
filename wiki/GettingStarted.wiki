@@ -196,7 +196,7 @@ And change your Java code as follows :
             b = context.createFloatBuffer(Usage.InputOutput, n),
             out = context.createFloatBuffer(Usage.Output, n);
 
-        // Instantiate the auto-generated program wrapper and call the kernel :
+        // Instantiate the auto-generated program wrapper and chain calls to the two kernel :
         TutorialKernels kernels = new TutorialKernels(context);
 
         CLEvent fillEvt = kernels.fill_in_values(queue, new int[] { n }, a, b, n);
