@@ -57,6 +57,7 @@ The preferred way of creating a JavaCL project is using Maven.
   * Create the following file hierarchy :
   {{{
 JavaCLPlugin
+|__ pom.xml
 |__ src/
      |__ test 
      |__ main/
@@ -64,14 +65,15 @@ JavaCLPlugin
           |    |__ tutorial/
           |         |__ JavaCLTutorial.java
           |__ opencl/
-               |__ TutorialKernels.cl
+               |__ tutorial/
+                    |__ TutorialKernels.cl
 }}}
 
 = A simple addition OpenCL kernel =
 
 This is the OpenCL equivalent of the traditional Hello-world example.
 
-Edit `JavaCLPlugin/src/main/opencl/TutorialKernels.cl` as follows :
+Edit `JavaCLPlugin/src/main/opencl/tutorial/TutorialKernels.cl` as follows :
 {{{
 kernel void add_floats(global const float* a, global const float* b, global float* out, int n) 
 {
@@ -115,7 +117,7 @@ public class JavaCLTutorial {
         CLBuffer<Float> out = context.createFloatBuffer(Usage.Output, n);
 
         // Read the program sources and compile them :
-        String src = IOUtils.readText(JavaCLTutorial.class.getClassLoader().getResource("TutorialKernels.cl"));
+        String src = IOUtils.readText(JavaCLTutorial.class.getResource("TutorialKernels.cl"));
         CLProgram program = context.createProgram(src);
 
         // Get and call the kernel :
@@ -132,3 +134,27 @@ public class JavaCLTutorial {
     }
 }
 }}}
+
+= Use the generated kernel wrapper =
+
+Saw that "javacl-generator" config in the `pom.xml` file ?
+
+It's a tool that parses any `.cl` file present in `src/main/opencl` and creates a wrapper class that only accepts the correct argument types and numbers, instead of the all-accepting [http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/CLKernel.html#setArgs(java.lang.Object...) CLKernel.setArgs(Object...)].
+
+You actually need nothing more than the `pom.xml` to use the generator, so you can remove the following lines :
+{{{
+        // // Read the program sources and compile them :
+        // String src = IOUtils.readText(JavaCLTutorial.class.getResource("TutorialKernels.cl"));
+        // CLProgram program = context.createProgram(src);
+
+        // // Get and call the kernel :
+        // CLKernel addFloatsKernel = program.createKernel("add_floats");
+        // addFloatsKernel.setArgs(a, b, out, n);
+        // CLEvent evt = addFloatsKernel.enqueueNDRange(queue, new int[] { n });
+        
+        // Instantiate the auto-generated program wrapper and call the kernel :
+        TutorialKernels kernels = new TutorialKernels(context);
+        CLEvent evt = kernels.addFloatsKernel(queue, new int[] { n }, a, b, out, n);
+}}}
+
+Simple, isn't it ?
