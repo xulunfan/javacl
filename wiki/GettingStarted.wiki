@@ -95,18 +95,22 @@ import com.nativelibs4java.opencl.*;
 import com.nativelibs4java.util.*;
 import org.bridj.Pointer;
 import static org.bridj.Pointer.*;
+import static java.lang.Math.*;
 
 public class JavaCLTutorial {
     public static void main(String[] args) {
         CLContext context = JavaCL.createBestContext();
         CLQueue queue = context.createDefaultQueue();
 
-        int n = 1024 * 1024;
+        int n = 1024;
         Pointer<Float>
             aPtr = allocateFloats(n),
             bPtr = allocateFloats(n);
 
-        // aPtr and bPtr are currently blank...
+        for (int i = 0; i < n; i++) {
+            aPtr.set(i, (float)cos(i));
+            bPtr.set(i, (float)sin(i));
+        }
 
         // Create OpenCL input buffers (using the native memory pointers aPtr and bPtr) :
         CLBuffer<Float> 
@@ -123,9 +127,9 @@ public class JavaCLTutorial {
         // Get and call the kernel :
         CLKernel addFloatsKernel = program.createKernel("add_floats");
         addFloatsKernel.setArgs(a, b, out, n);
-        CLEvent evt = addFloatsKernel.enqueueNDRange(queue, new int[] { n });
+        CLEvent addEvt = addFloatsKernel.enqueueNDRange(queue, new int[] { n });
         
-        Pointer<Float> outPtr = out.read(queue, evt); // blocks until evt finished
+        Pointer<Float> outPtr = out.read(queue, addEvt); // blocks until add_floats finished
 
         // Print the first 10 output values :
         for (int i = 0; i < 10 && i < n; i++)
@@ -157,9 +161,50 @@ You actually need nothing more than the `pom.xml` to use the generator, so you c
 
         // Instantiate the auto-generated program wrapper and call the kernel :
         TutorialKernels kernels = new TutorialKernels(context);
-        CLEvent evt = kernels.addFloatsKernel(queue, new int[] { n }, a, b, out, n);
+        CLEvent addEvt = kernels.add_floats(queue, new int[] { n }, a, b, out, n);
+
+        Pointer<Float> outPtr = out.read(queue, addEvt); // blocks until add_floats finished
+
 }}}
 
 Simple, isn't it ?
 
 The program wrappers will be regenerated automatically at each compilation, so they'll keep in sync with your OpenCL kernels !
+
+= Put more calculations in OpenCL =
+
+In the code above, we've initialized the `a` and `b` buffers with pointers to memory that we've filled by hand in Java... Why not fill it straight in OpenCL (i.e. on the GPU, if the context uses a GPU device) ?
+
+Add the following kernel to `JavaCLPlugin/src/main/opencl/tutorial/TutorialKernels.cl` :
+{{{
+kernel void fill_in_values(global float* a, global float* b, int n) 
+{
+    int i = get_global_id(0);
+    if (i >= n)
+        return;
+
+    a[i] = cos((float)i);
+    b[i] = sin((float)i);
+}
+}}}
+
+And change your Java code as follows :
+{{{
+        // Create OpenCL input and output buffers :
+        CLBuffer<Float> 
+            a = context.createFloatBuffer(Usage.InputOutput, n), // a and b are now read AND written to
+            b = context.createFloatBuffer(Usage.InputOutput, n),
+            out = context.createFloatBuffer(Usage.Output, n);
+
+        // Instantiate the auto-generated program wrapper and call the kernel :
+        TutorialKernels kernels = new TutorialKernels(context);
+
+        CLEvent fillEvt = kernels.fill_in_values(queue, new int[] { n }, a, b, n);
+        CLEvent addEvt = kernels.add_floats(queue, new int[] { n }, a, b, out, n, fillEvt);
+
+        Pointer<Float> outPtr = out.read(queue, addEvt); // blocks until add_floats finished
+}}}
+
+See how we've chained events that : 
+  * the add_floats kernel execution must wait for the fill_in_values execution to finish
+  * the out.read operation must wait for the add_floats execution to finish.
