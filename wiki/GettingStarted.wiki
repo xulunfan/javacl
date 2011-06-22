@@ -72,11 +72,11 @@ JavaCLPlugin
 }}}
   On an Unix system, this can be achieved with the following commands :
   {{{
-mkdir -p JavaCLPlugin/src/main/java/tutorial/
-touch JavaCLPlugin/src/main/java/tutorial/JavaCLTutorial.java
+mkdir -p JavaCLTutorial/src/main/java/tutorial/
+touch JavaCLTutorial/src/main/java/tutorial/JavaCLTutorial.java
 
-mkdir -p JavaCLPlugin/src/main/opencl/tutorial/
-touch JavaCLPlugin/src/main/opencl/tutorial/TutorialKernels.cl
+mkdir -p JavaCLTutorial/src/main/opencl/tutorial/
+touch JavaCLTutorial/src/main/opencl/tutorial/TutorialKernels.cl
 }}}
 
 = A very simple OpenCL addition program =
