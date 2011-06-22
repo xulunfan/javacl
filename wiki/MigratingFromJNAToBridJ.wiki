@@ -20,6 +20,7 @@ As you'll notice by changing the JavaCL JAR or Maven dependency from a 1.0-beta 
   * Replace `XXXBuffer.wrap(xxx[])` by `Pointer.pointerToXXXs(xxx[])`
   * Replace `XXXBuffer` by `Pointer<XXX>`
   * Replace `Reductor<XXXBuffer>` by `Reductor<XXX>`
+  * Replace `import java.nio.*;` by `import org.bridj.*;`
  
 = Mechanical changes =
 
