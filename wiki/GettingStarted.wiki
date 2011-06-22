@@ -70,6 +70,14 @@ JavaCLPlugin
                |__ tutorial/
                     |__ TutorialKernels.cl
 }}}
+  On an Unix system, this can be achieved with the following commands :
+  {{{
+mkdir -p JavaCLPlugin/src/main/java/tutorial/
+touch JavaCLPlugin/src/main/java/tutorial/JavaCLTutorial.java
+
+mkdir -p JavaCLPlugin/src/main/opencl/tutorial/
+touch JavaCLPlugin/src/main/opencl/tutorial/TutorialKernels.cl
+}}}
 
 = A very simple OpenCL addition program =
 
