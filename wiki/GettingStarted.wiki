@@ -54,7 +54,7 @@ The preferred way of creating a JavaCL project is using Maven.
   </build>
 </project>
 }}}
-  * Create the following file hierarchy :
+  * Create the following file hierarchy (see below for the .java and .cl files) :
   {{{
 JavaCLPlugin
 |__ pom.xml
