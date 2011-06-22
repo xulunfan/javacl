@@ -2,6 +2,7 @@
 
 = Changes needed =
 
+As you'll notice by changing the JavaCL JAR or Maven dependency from a 1.0-beta version to a version 1.0-RC or later, there are a few changes to perform in the code to fix the compilation :
   * Replace `CLXXXBuffer` by `CLBuffer<XXX>`
   * Replace `XXXBuffer.allocate(int)` and `NIOUtils.directXXXs(int)` by `Pointer.allocateXXXs(int)`
   * Replace `XXXBuffer.wrap(xxx[])` by `Pointer.pointerToXXXs(xxx[])`
