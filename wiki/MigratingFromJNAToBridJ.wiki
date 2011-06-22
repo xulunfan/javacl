@@ -2,16 +2,20 @@
 
 = Changes needed =
 
-  * `CLXXXBuffer` becomes `CLBuffer<XXX>` : `CLIntBuffer` -> `CLBuffer<Integer>`, `CLFloatBuffer` -> `CLBuffer<Float>`
-  * 
-
+  * Replace `CLXXXBuffer` by `CLBuffer<XXX>` : `CLIntBuffer` -> `CLBuffer<Integer>`, `CLFloatBuffer` -> `CLBuffer<Float>`
+  * Replace `XXXBuffer.allocate(int)` and `NIOUtils.directXXXs(int)` by `Pointer.allocateXXXs(int)`
+  * Replace `XXXBuffer.wrap(xxx[])` by `Pointer.pointerToXXXs(xxx[])`
+  * Replace `XXXBuffer` by `Pointer<XXX>`
+  * Replace `Reductor<XXXBuffer>` by `Reductor<XXX>`
+ 
 = Mechanical changes =
 
-You can apply the following replaces in [http://www.jedit.org/ jEdit] to get almost all of the migration done :
+Migrating large JavaCL code bases by hand can be tedious, and doing it with text replacement can be error-prone (especially with the `Int` vs. `Integer` naming exceptions).
+
+To ease up the migration, we've prepared the regular expressions you'll need to get almost all of the migration done (the syntax below assumes you're using [http://www.jedit.org/ jEdit], but should be easy to adapt) :
 
 <table>
 <tr><th> Regular Expressions </th><th>  Beanshell replace snippets in jEdit </th></tr>
-<tr><td> `\bReductor<(\w*)Buffer>`</td><td>`"Reductor<" + _1 + ">"` </td></tr>
 <tr><td> `\bCLIntBuffer\b`</td><td>`"CLBuffer<Integer>"` </td></tr>
 <tr><td> `\bCLCharBuffer\b`</td><td>`"CLBuffer<Character>"` </td></tr>
 <tr><td> `\bCL(Long||Short||Double||Float||Byte)Buffer\b`</td><td>`"CLBuffer<" + _1 + ">"` </td></tr>
@@ -21,4 +25,5 @@ You can apply the following replaces in [http://www.jedit.org/ jEdit] to get alm
 <tr><td> `\bIntBuffer\b`</td><td>`"Pointer<Integer>"` </td></tr>
 <tr><td> `\bCharBuffer\b`</td><td>`"Pointer<Character>"` </td></tr>
 <tr><td> `\b(Long||Short||Double||Float||Byte)Buffer\b`</td><td>`"Pointer<" + _1 + ">"` </td></tr>
+<tr><td> `\bReductor<(\w*)Buffer>`</td><td>`"Reductor<" + _1 + ">"` </td></tr>
 </table>
