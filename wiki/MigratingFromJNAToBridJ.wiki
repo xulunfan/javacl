@@ -1,7 +1,16 @@
 #summary How to migrate existing pre-1.0.0-RC1 JavaCL/JNA code to JavaCL/BridJ
 
+= Changes needed =
+
+  * `CLXXXBuffer` becomes `CLBuffer<XXX>` : `CLIntBuffer` -> `CLBuffer<Integer>`, `CLFloatBuffer` -> `CLBuffer<Float>`
+  * 
+
+= Mechanical changes =
+
+You can apply the following replaces in [http://www.jedit.org/ jEdit] to get almost all of the migration done :
+
 <table>
-<tr><th> Regexp pattern </th><th>  Replace expression in jEdit </th></tr>
+<tr><th> Regular Expressions </th><th>  Beanshell replace snippets in jEdit </th></tr>
 <tr><td> `\bReductor<(\w*)Buffer>`</td><td>`"Reductor<" + _1 + ">"` </td></tr>
 <tr><td> `\bCLIntBuffer\b`</td><td>`"CLBuffer<Integer>"` </td></tr>
 <tr><td> `\bCLCharBuffer\b`</td><td>`"CLBuffer<Character>"` </td></tr>
