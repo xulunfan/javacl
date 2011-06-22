@@ -1,5 +1,7 @@
 #summary How to start with JavaCL
 
+<wiki:toc max_depth="3" />
+
 This quick tutorial will get you through setting up a JavaCL project.
 
 = Setup =
