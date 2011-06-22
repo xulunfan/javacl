@@ -212,7 +212,7 @@ You actually need nothing more than the `pom.xml` to use the generator, so you c
 
         // Instantiate the auto-generated program wrapper and call the kernel :
         TutorialKernels kernels = new TutorialKernels(context);
-        CLEvent addEvt = kernels.add_floats(queue, a, b, out, n, new int[] { n });
+        CLEvent addEvt = kernels.add_floats(queue, a, b, out, n, new int[] { n }, null);
 
         Pointer<Float> outPtr = out.read(queue, addEvt); // blocks until add_floats finished
 
@@ -250,8 +250,8 @@ And change your Java code as follows :
         // Instantiate the auto-generated program wrapper and chain calls to the two kernel :
         TutorialKernels kernels = new TutorialKernels(context);
 
-        CLEvent fillEvt = kernels.fill_in_values(queue, a, b, n, new int[] { n });
-        CLEvent addEvt = kernels.add_floats(queue, a, b, out, n, new int[] { n }, fillEvt);
+        CLEvent fillEvt = kernels.fill_in_values(queue, a, b, n, new int[] { n }, null);
+        CLEvent addEvt = kernels.add_floats(queue, a, b, out, n, new int[] { n }, null, fillEvt);
 
         Pointer<Float> outPtr = out.read(queue, addEvt); // blocks until add_floats finished
 }}}
