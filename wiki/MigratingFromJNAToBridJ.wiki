@@ -1,13 +1,13 @@
 #summary How to migrate existing pre-1.0.0-RC1 JavaCL/JNA code to JavaCL/BridJ
 
-| *Regexp pattern* |  *Replace expression in jEdit* |
-| `\bReductor<(\w*)Buffer>` | `"Reductor<" + _1 + ">"` |
-| `\bCLIntBuffer\b` | `"CLBuffer<Integer>"` |
-| `\bCLCharBuffer\b` | `"CLBuffer<Character>"` |
-| `\bCL(Long|Short|Double|Float|Byte)Buffer\b` | `"CLBuffer<" + _1 + ">"` |
-| `\b(Int|Char|Long|Short|Double|Float|Byte)Buffer\.allocate\(\b` | `"Pointer.allocate" + _1 + "s("` |
-| `\bNIOUtils\.direct(Int|Char|Long|Short|Double|Float|Byte)s\(\b` | `"Pointer.allocate" + _1 + "s("` |
-| `\b(Int|Char|Long|Short|Double|Float|Byte)Buffer\.wrap\(\b` | `"Pointer.pointerTo" + _1 + "s("` |
-| `\bIntBuffer\b` | `"Pointer<Integer>"` |
-| `\bCharBuffer\b` | `"Pointer<Character>"` |
-| `\b(Long|Short|Double|Float|Byte)Buffer\b` | `"Pointer<" + _1 + ">"` |
+|| *Regexp pattern* ||  *Replace expression in jEdit* ||
+|| `\bReductor<(\w*)Buffer>` || `"Reductor<" + _1 + ">"` ||
+|| `\bCLIntBuffer\b` || `"CLBuffer<Integer>"` ||
+|| `\bCLCharBuffer\b` || `"CLBuffer<Character>"` ||
+|| `\bCL(Long||Short||Double||Float||Byte)Buffer\b` || `"CLBuffer<" + _1 + ">"` ||
+|| `\b(Int||Char||Long||Short||Double||Float||Byte)Buffer\.allocate\(\b` || `"Pointer.allocate" + _1 + "s("` ||
+|| `\bNIOUtils\.direct(Int||Char||Long||Short||Double||Float||Byte)s\(\b` || `"Pointer.allocate" + _1 + "s("` ||
+|| `\b(Int||Char||Long||Short||Double||Float||Byte)Buffer\.wrap\(\b` || `"Pointer.pointerTo" + _1 + "s("` ||
+|| `\bIntBuffer\b` || `"Pointer<Integer>"` ||
+|| `\bCharBuffer\b` || `"Pointer<Character>"` ||
+|| `\b(Long||Short||Double||Float||Byte)Buffer\b` || `"Pointer<" + _1 + ">"` ||
