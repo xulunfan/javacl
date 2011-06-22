@@ -62,18 +62,67 @@ JavaCLPlugin
      |__ main/
           |__ java/
           |    |__ tutorial/
-          |         |___ JavaCLTutorial.java
+          |         |__ JavaCLTutorial.java
           |__ opencl/
-               |__ TestAdd.cl
+               |__ TutorialKernels.cl
 }}}
 
 = A simple addition OpenCL kernel =
 
 This is the OpenCL equivalent of the traditional Hello-world example.
 
-Edit `JavaCLPlugin/src/main/opencl/TestAdd.cl` as follows :
+Edit `JavaCLPlugin/src/main/opencl/TutorialKernels.cl` as follows :
 {{{
+kernel void add_floats(global const float* a, global const float* b, global float* out, int n) 
+{
+    int i = get_global_id(0);
+    if (i >= n)
+        return;
 
+    out[i] = a[i] + b[i];
+}
 }}}
 
 = A simple JavaCL host program =
+
+Edit `JavaCLPlugin/src/main/java/tutorial/JavaCLTutorial.java` as follows :
+{{{
+package tutorial;
+
+import com.nativelibs4java.opencl.*;
+import com.nativelibs4java.util.*;
+import org.bridj.Pointer;
+import static org.bridj.Pointer.*;
+
+public class JavaCLTutorial {
+    public static void main(String[] args) {
+        CLContext context = JavaCL.createBestContext();
+        CLQueue queue = context.createDefaultQueue();
+
+        int n = 1024 * 1024;
+        Pointer<Float>
+            aPtr = allocateFloats(n),
+            bPtr = allocateFloats(n);
+
+        // aPtr and bPtr are currently blank...
+
+        // Create OpenCL input buffers (using the native memory pointers aPtr and bPtr) :
+        CLBuffer<Float> 
+            a = context.createFloatBuffer(Usage.Input, aPtr),
+            b = context.createFloatBuffer(Usage.Input, bPtr);
+
+        // Create an OpenCL output buffer :
+        CLBuffer<Float> out = context.createFloatBuffer(Usage.Output, n);
+
+        // Read the program sources and compile them :
+        String src = IOUtils.readText(JavaCLTutorial.class.getClassLoader().getResource("TutorialKernels.cl"));
+        CLProgram program = context.createProgram(src);
+
+        // Get and call the kernel :
+        CLKernel addFloatsKernel = program.createKernel("add_floats");
+        addFloatsKernel.setArgs(a, b, out, n);
+        CLEvent evt = addFloatsKernel.enqueueNDRange(queue, new int[] { n });
+        
+        Pointer<Float> outPtr = out.read(queue, evt); // blocks until evt finished
+    }
+}
