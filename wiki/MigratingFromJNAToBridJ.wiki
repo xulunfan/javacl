@@ -2,14 +2,14 @@
 
 <table>
 <tr><th> Regexp pattern </th><th>  Replace expression in jEdit </th></tr>
-<tr><td> `\bReductor<(\w*)Buffer>` </td><td> `"Reductor<" + _1 + ">"` </td></tr>
-<tr><td> `\bCLIntBuffer\b` </td><td> `"CLBuffer<Integer>"` </td></tr>
-<tr><td> `\bCLCharBuffer\b` </td><td> `"CLBuffer<Character>"` </td></tr>
-<tr><td> `\bCL(Long</td><td>Short</td><td>Double</td><td>Float</td><td>Byte)Buffer\b` </td><td> `"CLBuffer<" + _1 + ">"` </td></tr>
-<tr><td> `\b(Int</td><td>Char</td><td>Long</td><td>Short</td><td>Double</td><td>Float</td><td>Byte)Buffer\.allocate\(\b` </td><td> `"Pointer.allocate" + _1 + "s("` </td></tr>
-<tr><td> `\bNIOUtils\.direct(Int</td><td>Char</td><td>Long</td><td>Short</td><td>Double</td><td>Float</td><td>Byte)s\(\b` </td><td> `"Pointer.allocate" + _1 + "s("` </td></tr>
-<tr><td> `\b(Int</td><td>Char</td><td>Long</td><td>Short</td><td>Double</td><td>Float</td><td>Byte)Buffer\.wrap\(\b` </td><td> `"Pointer.pointerTo" + _1 + "s("` </td></tr>
-<tr><td> `\bIntBuffer\b` </td><td> `"Pointer<Integer>"` </td></tr>
-<tr><td> `\bCharBuffer\b` </td><td> `"Pointer<Character>"` </td></tr>
-<tr><td> `\b(Long</td><td>Short</td><td>Double</td><td>Float</td><td>Byte)Buffer\b` </td><td> `"Pointer<" + _1 + ">"` </td></tr>
+<tr><td> `\bReductor<(\w*)Buffer>`</td><td>`"Reductor<" + _1 + ">"` </td></tr>
+<tr><td> `\bCLIntBuffer\b`</td><td>`"CLBuffer<Integer>"` </td></tr>
+<tr><td> `\bCLCharBuffer\b`</td><td>`"CLBuffer<Character>"` </td></tr>
+<tr><td> `\bCL(Long||Short||Double||Float||Byte)Buffer\b`</td><td>`"CLBuffer<" + _1 + ">"` </td></tr>
+<tr><td> `\b(Int||Char||Long||Short||Double||Float||Byte)Buffer\.allocate\(\b`</td><td>`"Pointer.allocate" + _1 + "s("` </td></tr>
+<tr><td> `\bNIOUtils\.direct(Int||Char||Long||Short||Double||Float||Byte)s\(\b`</td><td>`"Pointer.allocate" + _1 + "s("` </td></tr>
+<tr><td> `\b(Int||Char||Long||Short||Double||Float||Byte)Buffer\.wrap\(\b`</td><td>`"Pointer.pointerTo" + _1 + "s("` </td></tr>
+<tr><td> `\bIntBuffer\b`</td><td>`"Pointer<Integer>"` </td></tr>
+<tr><td> `\bCharBuffer\b`</td><td>`"Pointer<Character>"` </td></tr>
+<tr><td> `\b(Long||Short||Double||Float||Byte)Buffer\b`</td><td>`"Pointer<" + _1 + ">"` </td></tr>
 </table>
