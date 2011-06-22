@@ -100,6 +100,7 @@ Edit `JavaCLPlugin/src/main/java/tutorial/JavaCLTutorial.java` as follows :
 package tutorial;
 
 import com.nativelibs4java.opencl.*;
+import com.nativelibs4java.opencl.util.*;
 import com.nativelibs4java.util.*;
 import org.bridj.Pointer;
 import static org.bridj.Pointer.*;
@@ -149,7 +150,7 @@ public class JavaCLTutorial {
 
 = Refining that simple code... =
 
-= Use the JavaCL program wrapper generator to make the code even simpler ! =
+== Use the JavaCL program wrapper generator to make the code even simpler ! ==
 
 Saw that "javacl-generator" config in the `pom.xml` file ?
 
@@ -218,5 +219,3 @@ And change your Java code as follows :
 See how we've chained dependent operations through events (operations are executed asynchronously from the Java program) : 
   * the add_floats kernel execution must wait for the fill_in_values execution to finish
   * the out.read operation must wait for the add_floats execution to finish.
-
-== Use some goodies (parallel random number generation...) ==
