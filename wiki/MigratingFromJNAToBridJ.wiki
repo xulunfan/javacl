@@ -6,10 +6,11 @@ JavaCL 1.0-RC and later use BridJ as the underlying Java/C interoperability runt
 
 The JNA-powered version of JavaCL is still available as a separate download (and as a Maven artifact that has the `-jna` suffix, like `javacl-jna` or `javacl-core-jna`), but you are advised to migrate for some key reasons :
   * Lower native call overhead (BridJ beats out JNA in performance)
+  * BSD-licensed (the JNA version is LGPL-licensed)
   * Nicer API, with generic `CLBuffer<T>` instead of typed buffer classes (`CLIntBuffer` is now `CLBuffer<Integer>`)
   * All new features will only be introduced into the BridJ version, and some are already specific :
     * the OpenCL-backed [http://www.ujmp.org/ UJMP] matrix implementation (in the `javacl-blas` Maven artifact)
-    * ScalaCL uses the BridJ port
+    * [http://code.google.com/p/scalacl/ ScalaCL]
 
 = Changes needed =
 
