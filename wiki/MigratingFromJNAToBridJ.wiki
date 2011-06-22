@@ -26,7 +26,9 @@ As you'll notice by changing the JavaCL JAR or Maven dependency from a 1.0-beta 
 
 Migrating large JavaCL code bases by hand can be tedious, and doing it with text replacement can be error-prone (especially with the `Int` vs. `Integer` naming exceptions).
 
-To ease up the migration, we've prepared the regular expressions you'll need to get almost all of the migration done (the syntax below assumes you're using [http://www.jedit.org/ jEdit], but should be easy to adapt) :
+To ease up the migration, we've prepared the regular expressions you'll need to get almost all of the migration done (the syntax below assumes you're using [http://www.jedit.org/ jEdit], but should be easy to adapt).
+
+*Be sure to make a backup of your files and local changes before performing these replacements.*
 
 <table>
 <tr><th> Regular Expressions </th><th>  Beanshell replace snippets in jEdit </th></tr>
@@ -40,4 +42,5 @@ To ease up the migration, we've prepared the regular expressions you'll need to 
 <tr><td> `\bCharBuffer\b`</td><td>`"Pointer<Character>"` </td></tr>
 <tr><td> `\b(Long||Short||Double||Float||Byte)Buffer\b`</td><td>`"Pointer<" + _1 + ">"` </td></tr>
 <tr><td> `\bReductor<(\w*)Buffer>`</td><td>`"Reductor<" + _1 + ">"` </td></tr>
+<tr><td> `import java.nio.*;`</td><td>`"import org.bridj.*;"` </td></tr>
 </table>
