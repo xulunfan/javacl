@@ -171,7 +171,7 @@ public class JavaCLTutorial {
 
 Type this in the shell in the folder `JavaCLTutorial` :
 {{{
-mvn exec:java -Dexec.mainClass=tutorial.JavaCLTutorial
+mvn compile exec:java -Dexec.mainClass=tutorial.JavaCLTutorial
 }}}
 
 The end of the output will look like this (please allow some time the first time Maven runs : it will download *many* files, but won't do it again ;-)) :
