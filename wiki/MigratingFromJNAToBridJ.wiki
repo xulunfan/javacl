@@ -1,39 +1,13 @@
 #summary How to migrate existing pre-1.0.0-RC1 JavaCL/JNA code to JavaCL/BridJ
 
-<table>
-<tr>
-<th>Regexp pattern</th>
-<th>Replace expression in jEdit</th>
-</tr>
-<tr>
-<td>\bReductor&lt;(\w*)Buffer&gt;</td><td>"Reductor&lt;" + _1 + "&gt;"</td>
-</tr>
-<tr>
-<td>\bCLIntBuffer\b</td><td>CLBuffer&lt;Integer&gt;</td>
-</tr>
-<tr>
-<td>\bCLCharBuffer\b</td><td>CLBuffer&lt;Character&gt;</td>
-</tr>
-<tr>
-<td>\bCL(Long|Short|Double|Float|Byte)Buffer\b</td><td>"CLBuffer&lt;" + _1 + "&gt;"</td>
-</tr>
-<tr>
-<td>
-\b(Int|Char|Long|Short|Double|Float|Byte)Buffer\.allocate\(\b</td><td>"Pointer.allocate" + _1 + "s("</td>
-</tr>
-<tr>
-<td>\bNIOUtils\.direct(Int|Char|Long|Short|Double|Float|Byte)s\(\b</td><td>"Pointer.allocate" + _1 + "s("</td>
-</tr>
-<tr>
-<td>\b(Int|Char|Long|Short|Double|Float|Byte)Buffer\.wrap\(\b</td><td>"Pointer.pointerTo" + _1 + "s("</td>
-</tr>
-<tr>
-<td>\bIntBuffer\b</td><td>Pointer&lt;Integer&gt;</td>
-</tr>
-<tr>
-<td>\bCharBuffer\b</td><td>Pointer&lt;Character&gt;</td>
-</tr>
-<tr>
-<td>\b(Long|Short|Double|Float|Byte)Buffer\b</td><td>"Pointer&lt;" + _1 + "&gt;"</td>
-</tr>
-</table>
+|| Regexp pattern ||  Replace expression in jEdit ||
+| `\bReductor<(\w*)Buffer>` | `"Reductor<" + _1 + ">"` |
+| `\bCLIntBuffer\b` | `"CLBuffer<Integer>"` |
+| `\bCLCharBuffer\b` | `"CLBuffer<Character>"` |
+| `\bCL(Long|Short|Double|Float|Byte)Buffer\b` | `"CLBuffer<" + _1 + ">"` |
+| `\b(Int|Char|Long|Short|Double|Float|Byte)Buffer\.allocate\(\b` | `"Pointer.allocate" + _1 + "s("` |
+| `\bNIOUtils\.direct(Int|Char|Long|Short|Double|Float|Byte)s\(\b` | `"Pointer.allocate" + _1 + "s("` |
+| `\b(Int|Char|Long|Short|Double|Float|Byte)Buffer\.wrap\(\b` | `"Pointer.pointerTo" + _1 + "s("` |
+| `\bIntBuffer\b` | `"Pointer<Integer>"` |
+| `\bCharBuffer\b` | `"Pointer<Character>"` |
+| `\b(Long|Short|Double|Float|Byte)Buffer\b` | `"Pointer<" + _1 + ">"` |
