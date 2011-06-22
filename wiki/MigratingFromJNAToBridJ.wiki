@@ -28,7 +28,7 @@ Migrating large JavaCL code bases by hand can be tedious, and doing it with text
 
 To ease up the migration, we've prepared the regular expressions you'll need to get almost all of the migration done (the syntax below assumes you're using [http://www.jedit.org/ jEdit], but should be easy to adapt).
 
-*Be sure to make a backup of your files and local changes before performing these replacements.* (accidents often happen with regexps ;-))
+*Be sure to make a backup of your files and local changes before performing these replacements.*
 
 <table>
 <tr><th> Regular Expressions </th><th>  Beanshell replace snippets in jEdit </th></tr>
