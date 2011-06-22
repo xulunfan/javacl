@@ -205,6 +205,6 @@ And change your Java code as follows :
         Pointer<Float> outPtr = out.read(queue, addEvt); // blocks until add_floats finished
 }}}
 
-See how we've chained events that : 
+See how we've chained dependent operations through events (operations are executed asynchronously from the Java program) : 
   * the add_floats kernel execution must wait for the fill_in_values execution to finish
   * the out.read operation must wait for the add_floats execution to finish.
