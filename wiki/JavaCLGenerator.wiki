@@ -12,7 +12,7 @@ The _JavaCL Generator_ is a Maven plugin that automatically parses any OpenCL so
 
 == Example OpenCL source file ==
 
-Let's consider the following kernels (from the [GettingStarted tutorial]), saved in `src/main/opencl/tutorial/TutorialKernels.cl`:
+In the rest of this page, we'll consider the following kernels (from the [GettingStarted tutorial]), saved in the file `src/main/opencl/tutorial/TutorialKernels.cl`:
 {{{
 __kernel void add_floats(__global const float* a, __global const float* b, __global float* out, int n) 
 {
