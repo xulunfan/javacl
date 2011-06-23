@@ -14,3 +14,8 @@ It is pretty similar to Apache Common's [http://commons.apache.org/math/api-2.1/
 JavaCL even features a *slower* general Fourier Transform that works with input sizes that aren't powers of two :
   * [http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/util/fft/FloatDFT.html FloatDFT]
   * [http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/util/fft/DoubleDFT.html DoubleDFT]
+
+The following code computes an FFT and the reverse FFT in a few lines :
+{{{
+
+}}}
