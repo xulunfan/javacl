@@ -46,20 +46,23 @@ while (true) {
 }
 }}}
 
-= Parallel Reduction =
+= Parallel Reduction (min, max, sum, product) =
 
 It's very easy to perform many parallel operations in OpenCL, but exploiting its parallel horse-power to aggregate the results is a bit harder.
 
-JavaCL ships with the [http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/util/ReductionUtils.html ReductionUtils] class, which can help you aggregate OpenCL data using simple associative and symmetrical operations :
+JavaCL ships with the [http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/util/ReductionUtils.html ReductionUtils] class, which aggregates OpenCL data using simple associative and symmetrical operations :
   * min
   * max
   * sum
   * product
 
+If you have a vector of float2 and need to compute the min of all its values, separating the x and y components, then you can even ask for a 2-channels reductor ! (reduction takes place independently on each channel)
+
 Here's how :
 {{{
 CLContext context = JavaCL.createBestContext();
 CLQueue queue = context.createDefaultQueue();
+// Create a one-channel int "min" reductor :
 Reductor<Integer> reductor = ReductionUtils.createReductor(context, ReductionUtils.Operation.Min, OpenCLType.Int, 1);
 
 CLBuffer<Integer> input = context.createIntBuffer(Usage.Input, 1024);
