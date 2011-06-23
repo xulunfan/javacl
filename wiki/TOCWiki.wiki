@@ -13,10 +13,10 @@
     * [Tutorials]
     * OpenCL Runtime
       * [CallingOpenCLKernelsFromJava Calling Kernels]
-      * [EnqueuingRanges Range Executions]
       * [UnderstandOpenCLKernelArguments Understanding Arguments]
       * [ReadFromAndWriteToBuffersAndImages Buffers IO]
       * [UsingImages Images]
+      * [EnqueuingRanges Execution Finetuning]
     * [IncludesInKernels Including files in kernels]
     * [JavaCLGenerator JavaCL Generator]
     * [SharingDataWithOpenGL OpenGL Sharing]
