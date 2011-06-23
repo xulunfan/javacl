@@ -1,8 +1,8 @@
 #summary Credits and License
 #sidebar TOCWiki
 
-[http://code.google.com/p/bridj/wiki/CreditsAndLicense Click here to see Credits and License details]
-
 Long story short : 
   * JavaCL is licensed under the [http://code.google.com/p/bridj/wiki/CreditsAndLicense#BridJ_&_ScalaCL_License_(3-clauses_BSD-like) BSD license] (as [http://code.google.com/p/bridj/ BridJ])
   * JavaCL/JNA (was the default release prior to version 1.0-RC1) is licensed under the LGPL license (as JNA).
+
+[http://code.google.com/p/bridj/wiki/CreditsAndLicense Click here to see Credits & License details] (on BridJ's wiki).
