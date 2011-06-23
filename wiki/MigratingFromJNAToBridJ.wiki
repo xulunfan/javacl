@@ -17,7 +17,7 @@ The JNA-powered version of JavaCL is still available as a separate download (and
 As you'll notice by changing the JavaCL JAR or Maven dependency from a 1.0-beta version to a version 1.0-RC or later, there are a few changes to perform in the code to fix the compilation due to the migration from JNA to BridJ :
   * Replace `CLXXXBuffer` by `CLBuffer<XXX>`
   * Replace `XXXBuffer.allocate(int)` and `NIOUtils.directXXXs(int)` by [http://nativelibs4java.sourceforge.net/bridj/api/stable/org/bridj/Pointer.html Pointer].`allocateXXXs(int)`
-  * Replace `XXXBuffer.wrap(xxx[])` by [http://nativelibs4java.sourceforge.net/bridj/api/stable/org/bridj/Pointer.html Pointer].`Pointer.pointerToXXXs(xxx[])`
+  * Replace `XXXBuffer.wrap(xxx[])` by [http://nativelibs4java.sourceforge.net/bridj/api/stable/org/bridj/Pointer.html Pointer].`pointerToXXXs(xxx[])`
   * Replace `XXXBuffer` by `Pointer<XXX>`
   * Replace `Reductor<XXXBuffer>` by `Reductor<XXX>`
   * Replace `import java.nio.*;` by `import org.bridj.*;`
