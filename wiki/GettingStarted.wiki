@@ -264,3 +264,13 @@ With the following changes in the Java code (see `JavaCLTutorial3.java`) :
 See how we've chained dependent operations through events (operations are executed asynchronously from the Java program) : 
   * the add_floats kernel execution must wait for the fill_in_values execution to finish
   * the out.read operation must wait for the add_floats execution to finish.
+
+= Wrap up =
+
+That's it !
+
+Want to see more ? Give a look a some [SamplesAndDemos samples and demos].
+
+Need more info on how to write kernels ? Make sure to read the official [http://www.khronos.org/registry/cl/sdk/1.0/docs/man/xhtml/ OpenCL 1.0 Reference Pages].
+
+Something not clear / got questions ? Join the [http://groups.google.com/group/nativelibs4java NativeLibs4Java Community's mailing-list] !
