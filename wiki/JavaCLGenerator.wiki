@@ -32,7 +32,7 @@ __kernel void fill_in_values(__global float* a, __global float* b, int n)
 }
 }}}
 
-This is the configuration needed in your `pom.xml` to make use of the generator :
+This is the configuration needed in your `pom.xml` to make use of the generator (it adds up to the [http://code.google.com/p/javacl/wiki/Usage#With_Maven JavaCL dependency and NativeLibs4Java repository configuration]) :
 {{{
 <project>
   ...
