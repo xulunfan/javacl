@@ -38,7 +38,7 @@ These FFT classes can also operate directly on user-provided input and output [h
 
 JavaCL ships with a [http://en.wikipedia.org/wiki/Xorshift Xorshift] random numbers generator, adapted to work in parallel (using a warmup phase).
 
-[http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/util/ParallelRandom.html com.nativelibs4java.opencl.util.ParallelRandom] was designed as a drop-in replacement for [http://download.oracle.com/javase/6/docs/api/java/util/Random.html java.util.Random] (albeit with a more limited API) :
+[http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/util/ParallelRandom.html ParallelRandom] was designed as a drop-in replacement for [http://download.oracle.com/javase/6/docs/api/java/util/Random.html java.util.Random] (albeit with a more limited API) :
 {{{
 ParallelRandom r = new ParallelRandom();
 while (true) {
