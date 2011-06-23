@@ -11,6 +11,7 @@
     * [MigratingFromJNAToBridJ Migrating from the JNA to the BridJ version]
   * Documentation
     * [CallingOpenCLKernelsFromJava]
+    * [JavaCLGenerator JavaCL Generator]
     * [UnderstandOpenCLKernelArguments]
     * [ReadFromAndWriteToBuffersAndImages]
     * [UsingImages]
