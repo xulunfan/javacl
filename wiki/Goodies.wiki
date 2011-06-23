@@ -50,7 +50,7 @@ while (true) {
 
 It's very easy to perform many parallel operations in OpenCL, but exploiting its parallel horse-power to aggregate the results is a bit harder.
 
-JavaCL ships with reduction utilities that can help you aggregate OpenCL data using simple associative and symmetrical operations :
+JavaCL ships with the [http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/util/ReductionUtils.html ReductionUtils] class, which can help you aggregate OpenCL data using simple associative and symmetrical operations :
   * min
   * max
   * sum
