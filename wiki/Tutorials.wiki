@@ -1,4 +1,13 @@
 #summary Tutorials available for JavaCL
 
+Official tutorials :
   * Simple [GettingStarted Getting Started] tutorial : will guide you through calling OpenCL kernels with and without the [JavaCLGenerator JavaCL Generator]
   * [http://ochafik.com/blog/?p=501 Write your first OpenCL Discrete Fourier Transform with JavaCL in 15 minutes] : uses the old JNA version of JavaCL (see the [MigratingFromJNAToBridJ migration page])
+
+Blog entries and related thirdparty projects :
+  * [http://gitorious.org/javaclpp/pages/Home JavaCL Parallel Primitives (from Kazó Csaba)]
+  * [http://mahadevangorti.blogspot.com/search/label/JavaCL GSS MAHADEVAN'S blog]
+  * [http://www.pixelnerve.com/v/2009/10/30/opencl-4-java/ JavaCL from within Processing 1.0]
+  * [http://bbboblog.blogspot.com/2009/10/gpgpu-mandelbrot-with-opencl-and-java.html GPGPU Mandelbrot with OpenCL and Java]
+  * [http://ochafik.free.fr/blog/?p=190 OpenCL4Java: Build high-performance OpenCL code with Java (and stay calm)]
+  * [http://ochafik.free.fr/blog/?p=207 ScalaCL: Reap OpenCL’s benefits without learning its syntax (Scala DSL for transparently parallel computations)]
