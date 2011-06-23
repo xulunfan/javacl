@@ -1,6 +1,8 @@
 #summary A few words on the JavaCL Generator Maven plugin
 
-is a powerful tool that can make your kernels programming experience a lot safer and more enjoyable (see below) :
+<wiki:toc max_depth="3" />
+
+If you're doing OpenCL stuff from Java, you don't want to miss out on the JavaCL Generator : it integrates your OpenCL code to your Java code seamlessly !
 
 The _JavaCL Generator_ is a Maven plugin that automatically parses any OpenCL source file present in `src/main/opencl` and generates a Java wrapper class that lets you call the kernel very easily from Java.
 
@@ -107,14 +109,14 @@ CLEvent addEvt = kernels.add_floats(queue, a, b, out, n, globalSizes, null, fill
 // Read the program sources and compile them :
 String src = IOUtils.readText(JavaCLTutorial1.class.getResource("TutorialKernels.cl"));
 CLProgram program = context.createProgram(src);
+CLKernel fillValuesKernel = program.createKernel("fill_in_values");
+CLKernel addFloatsKernel = program.createKernel("add_floats");
 
 // Get and call the kernel :
 int[] globalSizes = new int[] { n };
-CLKernel fillValuesKernel = program.createKernel("fill_in_values");
 fillValuesKernel.setArgs(a, b, n);
 CLEvent fillEvt = fillValuesKernel.enqueueNDRange(queue, globalSizes);
 
-CLKernel addFloatsKernel = program.createKernel("add_floats");
 addFloatsKernel.setArgs(a, b, out, n);
 CLEvent addEvt = addFloatsKernel.enqueueNDRange(queue, globalSizes, fillEvt);
 }}}
