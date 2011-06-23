@@ -45,3 +45,18 @@ while (true) {
     System.out.println(r.nextDouble());
 }
 }}}
+
+= Parallel Reduction =
+
+It's very easy to perform many parallel operations in OpenCL, but exploiting its parallel horse-power to aggregate the results is a bit harder.
+
+JavaCL ships with reduction utilities that can help you aggregate OpenCL data using simple associative and symmetrical operations :
+  * min
+  * max
+  * sum
+  * product
+
+Here's how :
+{{{
+
+}}}
