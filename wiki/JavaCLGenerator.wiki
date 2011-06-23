@@ -95,16 +95,25 @@ public class TutorialKernels extends CLAbstractUserProgram {
 
 = Why using the Generator ? =
 
-Because :
-  * You get to write less boilerplate code. 
-  Compare this :
+== Type-safety of Java-to-OpenCL-kernels calls ==
+
+With the generator, you get compile-time checks of the argument types of your kernels, with complete synchronization with your OpenCL sources.
+
+The alternative is to call [http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/CLKernel.html#setArgs(java.lang.Object...) CLKernel.setArgs(Object...)] on your kernels prior to enqueuing them for execution, and it's dangerous for you might not be using the correct number of arguments or the correct argument types  : your program will then crash at runtime or just be buggy and make you cry.
+
+Remember why you're using Java/Scala instead of Php/Ruby ? Get the free compile-time checks now ;-)
+
+== Less boilerplate code ==
+
+Compare this (*with* the generator) :
 {{{
 TutorialKernels kernels = new TutorialKernels(context);
 int[] globalSizes = new int[] { n };
 CLEvent fillEvt = kernels.fill_in_values(queue, a, b, n, globalSizes, null);
 CLEvent addEvt = kernels.add_floats(queue, a, b, out, n, globalSizes, null, fillEvt);
 }}}
-  To that :
+
+To that (*without* the generator) :
 {{{
 // Read the program sources and compile them :
 String src = IOUtils.readText(JavaCLTutorial1.class.getResource("TutorialKernels.cl"));
@@ -120,4 +129,3 @@ CLEvent fillEvt = fillValuesKernel.enqueueNDRange(queue, globalSizes);
 addFloatsKernel.setArgs(a, b, out, n);
 CLEvent addEvt = addFloatsKernel.enqueueNDRange(queue, globalSizes, fillEvt);
 }}}
-  * You get compile-time checks of the argument types of your kernels, with complete synchronization with your OpenCL sources : calling [http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/CLKernel.html#setArgs(java.lang.Object...) CLKernel.setArgs(Object...)] by hand is dangerous, as you might not be using the correct number of arguments or the correct argument types (your program will then crash at runtime or just be buggy and make you cry)
