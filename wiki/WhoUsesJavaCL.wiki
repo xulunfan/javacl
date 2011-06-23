@@ -1,0 +1,11 @@
+#summary List of projects known to use JavaCL
+
+== JavaCL Parallel Primitives ==
+
+The [http://gitorious.org/javaclpp/pages/Home JavaCL Parallel Primitives] (from [http://kazocsaba.blogspot.com/ Kazó Csaba], who also [http://code.google.com/p/bridj/wiki/CreditsAndLicense contributes to JavaCL]) provides reduction and scan utilities that go beyond [Goodies those provided in JavaCL], and more...
+
+== ScalaCL ==
+
+[http://code.google.com/p/scalacl/ ScalaCL] (BSD-licensed) is an optimizing Scala compiler plugin + GPU-backed collections.
+
+It uses JavaCL, which is still accessible directly if needed.
