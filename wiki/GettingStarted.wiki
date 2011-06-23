@@ -6,7 +6,7 @@ This quick tutorial will get you through setting up a JavaCL project.
 
 = Setup a JavaCL Maven project =
 
-== Create the tutorial project with Netbeans 7.0 ==
+== With Netbeans ==
 
 You can either create a plain Maven project by hand and modify its `pom.xml` as below, or use the fully automated way that uses a Maven archetype :
   * Create a new project
@@ -22,7 +22,7 @@ You can either create a plain Maven project by hand and modify its `pom.xml` as 
   * Select the custom archetype you've just created and click on `Next`, then `Finish` :
   [http://javacl.googlecode.com/svn/wiki/images/NetbeansArchetype-CustomArchetype.png]
 
-== Create the tutorial project with IntelliJ IDEA ==
+== With IntelliJ IDEA ==
 
 This will work with the open source Community Edition as well as with the Ultimate Edition. If you haven't tried it yet, [http://www.jetbrains.com/idea/ IntelliJ IDEA] is a great IDE to work with...
 
@@ -41,7 +41,7 @@ It's very easy to create the sources for this tutorial with IDEA :
   [http://javacl.googlecode.com/svn/wiki/images/IdeaArchetype-AddArchetype.png]
   * Click `Ok` and `Finish` : you're done
 
-== Command-line setup ==
+== With Maven in command-line ==
 
 First, please make sure you've properly installed [http://maven.apache.org/ Maven].
 
@@ -69,21 +69,18 @@ myArtifactId
 
 The three versions of the JavaCLTutorial class correspond to the progression of this tutorial, as you'll see below.
 
-== Creating the project by hand ==
+= A very simple OpenCL addition program =
 
-  * Create a `JavaCLTutorial` directory 
-  * Create the following `pom.xml` file in that directory :
-  {{{
-<project xmlns="http://maven.apache.org/POM/4.0.0"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
- <modelVersion>4.0.0</modelVersion>
-  <groupId>com.nativelibs4java</groupId>
-  <artifactId>javacl-tutorial</artifactId>
-  <name>JavaCL Tutorial</name>
-  <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
-  
+This is the OpenCL equivalent of the traditional Hello-world example : we're just going to perform parallel piece-wise additions on two float vectors, storing the results on a third float vector.
+
+It contains two parts :
+  * an OpenCL source code that will be compiled at run-time and run on an OpenCL device (CPU or GPU)
+  * a Java host program that sets up the JavaCL context, reads and compiles the OpenCL source code and calls it with appropriately initialized arguments.
+
+== The Maven `pom.xml` project file ==
+
+Any JavaCL Maven project must include the `javacl` artifact :
+{{{
   <repositories>
     <repository>
       <id>nativelibs4java</id>
@@ -99,7 +96,10 @@ The three versions of the JavaCLTutorial class correspond to the progression of 
 	  <version>1.0.0-RC1</version>
 	</dependency>
   </dependencies>
+}}}
 
+Additionally, the JavaCL Generator is a powerful tool that can make your kernels programming experience a lot safer and more enjoyable (see below) :
+{{{
   <build>
   	<plugins>
 			<plugin>
@@ -128,42 +128,11 @@ The three versions of the JavaCLTutorial class correspond to the progression of 
 			</plugin>
 	</plugins>
   </build>
-</project>
-}}}
-  * Create the following file hierarchy (see below for the .java and .cl files) :
-  {{{
-JavaCLPlugin
-|__ pom.xml
-|__ src/
-     |__ test 
-     |__ main/
-          |__ java/
-          |    |__ tutorial/
-          |         |__ JavaCLTutorial.java
-          |__ opencl/
-               |__ tutorial/
-                    |__ TutorialKernels.cl
-}}}
-  On an Unix system, this can be achieved with the following commands :
-  {{{
-mkdir -p JavaCLTutorial/src/main/java/tutorial/
-touch JavaCLTutorial/src/main/java/tutorial/JavaCLTutorial.java
-
-mkdir -p JavaCLTutorial/src/main/opencl/tutorial/
-touch JavaCLTutorial/src/main/opencl/tutorial/TutorialKernels.cl
 }}}
 
-= A very simple OpenCL addition program =
+== The `add_floats` OpenCL kernel ==
 
-This is the OpenCL equivalent of the traditional Hello-world example : we're just going to perform parallel piece-wise additions on two float vectors, storing the results on a third float vector.
-
-It contains two parts :
-  * an OpenCL source code that will be compiled at run-time and run on an OpenCL device (CPU or GPU)
-  * a Java host program that sets up the JavaCL context, reads and compiles the OpenCL source code and calls it with appropriately initialized arguments.
-
-== Writing the OpenCL kernel ==
-
-Edit `JavaCLPlugin/src/main/opencl/tutorial/TutorialKernels.cl` as follows :
+Here's our first kernel in `src/main/opencl/tutorial/TutorialKernels.cl` :
 {{{
 __kernel void add_floats(__global const float* a, __global const float* b, __global float* out, int n) 
 {
@@ -175,9 +144,11 @@ __kernel void add_floats(__global const float* a, __global const float* b, __glo
 }
 }}}
 
-== Writing the JavaCL host program ==
+It's very simple : it takes the global id of this execution (it will be executed many times in parallel, with only the global id differing between two executions) and adds values found in `a` and `b` at index `i`, storing the result in `out` at index `i`.
 
-Edit `JavaCLPlugin/src/main/java/tutorial/JavaCLTutorial.java` as follows :
+== The JavaCL host program ==
+
+Here's the contents of `src/main/java/tutorial/JavaCLTutorial1.java` :
 {{{
 package tutorial;
 
@@ -188,7 +159,7 @@ import org.bridj.Pointer;
 import static org.bridj.Pointer.*;
 import static java.lang.Math.*;
 
-public class JavaCLTutorial {
+public class JavaCLTutorial1 {
     public static void main(String[] args) {
         CLContext context = JavaCL.createBestContext();
         CLQueue queue = context.createDefaultQueue();
@@ -212,7 +183,7 @@ public class JavaCLTutorial {
         CLBuffer<Float> out = context.createFloatBuffer(Usage.Output, n);
 
         // Read the program sources and compile them :
-        String src = IOUtils.readText(JavaCLTutorial.class.getResource("TutorialKernels.cl"));
+        String src = IOUtils.readText(JavaCLTutorial1.class.getResource("TutorialKernels.cl"));
         CLProgram program = context.createProgram(src);
 
         // Get and call the kernel :
@@ -232,9 +203,9 @@ public class JavaCLTutorial {
 
 == Running ==
 
-Type this in the shell in the folder `JavaCLTutorial` :
+If you're using Maven in command-line, type this in the shell in project's folder (otherwise, click on `Run` in your IDE of choice ;-)) :
 {{{
-mvn compile exec:java -Dexec.mainClass=tutorial.JavaCLTutorial
+mvn compile exec:java -Dexec.mainClass=tutorial.JavaCLTutorial1
 }}}
 
 The end of the output will look like this (please allow some time the first time Maven runs : it will download *many* files, but won't do it again ;-)) :
@@ -255,11 +226,11 @@ out[9] = -0.49901175
 
 == Use the JavaCL program wrapper generator to make the code even simpler ! ==
 
-Saw that "javacl-generator" config in the `pom.xml` file ?
+Saw that "javacl-generator" plugin configuration in the `pom.xml` file ?
 
-It's a tool that parses any `.cl` file present in `src/main/opencl` and creates a wrapper class that only accepts the correct argument types and numbers, instead of the all-forgiving [http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/CLKernel.html#setArgs(java.lang.Object...) CLKernel.setArgs(Object...)] that might make your program crash at runtime if you used an incorrect argument type (or missed an argument).
+[JavaCL Generator] is a tool that parses any `.cl` file present in `src/main/opencl` and creates a wrapper class that only accepts the correct argument types and numbers, instead of the all-forgiving [http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/CLKernel.html#setArgs(java.lang.Object...) CLKernel.setArgs(Object...)] that might make your program crash at runtime if you used an incorrect argument type (or missed an argument).
 
-You actually need nothing more than the `pom.xml` to use the generator, so you can modify the host code as follows :
+You actually need nothing more than the `pom.xml` to use the generator, so you can modify the host code as follows (see `JavaCLTutorial2.java`):
 {{{
         /* 
         This code is no longer needed :
@@ -289,9 +260,9 @@ The program wrappers will be regenerated automatically at each compilation, so t
 
 In the code above, we've initialized the `a` and `b` buffers with pointers to memory that we've filled by hand in Java... Why not fill it straight in OpenCL (i.e. on the GPU, if the context uses a GPU device) ?
 
-Add the following kernel to `JavaCLPlugin/src/main/opencl/tutorial/TutorialKernels.cl` :
+Let's consider this other kernel in `src/main/opencl/TutorialKernels.cl` :
 {{{
-kernel void fill_in_values(global float* a, global float* b, int n) 
+__kernel void fill_in_values(__global float* a, __global float* b, int n) 
 {
     int i = get_global_id(0);
     if (i >= n)
@@ -302,7 +273,7 @@ kernel void fill_in_values(global float* a, global float* b, int n)
 }
 }}}
 
-And change your Java code as follows :
+With the following changes in the Java code (see `JavaCLTutorial3.java`) :
 {{{
         // Create OpenCL input and output buffers :
         CLBuffer<Float> 
