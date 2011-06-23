@@ -38,7 +38,7 @@ It's very easy to create the sources for this tutorial with IDEA :
     * Archetype Id = `javacl-simple-tutorial`
     * Version = `1.0.0-RC1`
     * Repository = `http://nativelibs4java.sourceforge.net/maven`
-  [http://javacl.googlecode.com/svn/wiki/images/IdeaArchetype-AddAchetype.png]
+  [http://javacl.googlecode.com/svn/wiki/images/IdeaArchetype-AddArchetype.png]
   * Click `Ok` and `Finish` : you're done
 
 == Command-line setup ==
