@@ -10,6 +10,8 @@ The _JavaCL Generator_ is a Maven plugin that automatically parses any OpenCL so
 
 = Simple example =
 
+== Example OpenCL source file ==
+
 Let's consider the following kernels (from the [GettingStarted tutorial]), saved in `src/main/opencl/tutorial/TutorialKernels.cl`:
 {{{
 __kernel void add_floats(__global const float* a, __global const float* b, __global float* out, int n) 
@@ -31,6 +33,8 @@ __kernel void fill_in_values(__global float* a, __global float* b, int n)
     b[i] = sin((float)i);
 }
 }}}
+
+== Maven configuration for the JavaCL Generator ==
 
 This is the configuration needed in your `pom.xml` to make use of the generator (it adds up to the [http://code.google.com/p/javacl/wiki/Usage#With_Maven JavaCL dependency and NativeLibs4Java repository configuration]) :
 {{{
@@ -58,7 +62,9 @@ This is the configuration needed in your `pom.xml` to make use of the generator 
 </project>
 }}}
 
-Then at each Maven compilation, the plugin will automatically generate the following wrapper as `target/generated-sources/main/java/tutorial/TutorialKernels.java` :
+== Generated code ==
+
+At each Maven compilation, the JavaCL Generator plugin will automatically generate the following wrapper as `target/generated-sources/main/java/tutorial/TutorialKernels.java` :
 {{{
 package com.mycompany;
 import com.nativelibs4java.opencl.CLAbstractUserProgram;
