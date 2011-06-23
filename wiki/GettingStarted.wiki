@@ -6,7 +6,7 @@ This quick tutorial will get you through setting up a JavaCL project.
 
 = Setup a JavaCL Maven project =
 
-== Create a project with Netbeans 7.0 ==
+== Open/create the tutorial project with Netbeans 7.0 ==
 
 You can either create a plain Maven project by hand and modify its `pom.xml` as below, or use the fully automated way that uses a Maven archetype :
   * Create a new project
