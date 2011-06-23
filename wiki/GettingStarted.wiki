@@ -46,14 +46,14 @@ It's very easy to create the sources for this tutorial with IDEA :
 
 First, please make sure you've properly installed [http://maven.apache.org/ Maven].
 
-Then simply type the following commands in a shell (replace myGroupId and myArtifactId by your own group and artifact ids) :
+Then simply type the following commands in a shell :
 {{{
 mvn archetype:generate -DarchetypeGroupId=com.nativelibs4java -DarchetypeArtifactId=javacl-simple-tutorial -DarchetypeVersion=1.0.0-RC1 -DremoteRepositories=http://nativelibs4java.sourceforge.net/maven
 }}}
 
 This will generate a directory with the following layout :
   {{{
-myArtifactId
+JavaCLTutorial
 |__ pom.xml
 |__ src/
      |__ test 
@@ -206,7 +206,7 @@ public class JavaCLTutorial1 {
 
 If you're using Maven in command-line, type this in the shell in project's folder (otherwise, click on `Run` in your IDE of choice ;-)) :
 {{{
-mvn compile exec:java -Dexec.mainClass=tutorial.JavaCLTutorial1
+mvn compile exec:java -Dexec.mainClass=com.mycompany.JavaCLTutorial1
 }}}
 
 The end of the output will look like this (please allow some time the first time Maven runs : it will download *many* files, but won't do it again ;-)) :
