@@ -1,0 +1,53 @@
+#summary A few words on the JavaCL Generator Maven plugin
+
+is a powerful tool that can make your kernels programming experience a lot safer and more enjoyable (see below) :
+
+The _JavaCL Generator_ is a Maven plugin that automatically parses any OpenCL source file present in `src/main/opencl` and generates a Java wrapper class that lets you call the kernel very easily from Java.
+
+= Simple example =
+
+Let's consider the following kernel (from the [GettingStarted tutorial]), saved as `src/main/opencl/tutorial/TutorialKernels.cl`:
+{{{
+__kernel void add_floats(__global const float* a, __global const float* b, __global float* out, int n) 
+{
+    int i = get_global_id(0);
+    if (i >= n)
+        return;
+
+    out[i] = a[i] + b[i];
+}
+}}}
+
+This is the configuration needed in your `pom.xml` to make use of the generator :
+{{{
+<project>
+  ...
+  <build>
+    <plugins>
+        ...
+      <plugin>
+        <groupId>com.nativelibs4java</groupId>
+        <artifactId>javacl-generator</artifactId>
+        <version>1.0.0-RC1</version>
+        <executions>
+        <execution>
+          <phase>generate-sources</phase>
+          <goals>
+            <goal>compile</goal>
+          </goals>
+        </execution>
+        </executions>
+      </plugin>
+	  
+    </plugins>
+  </build>
+</project>
+}}}
+
+Then at each Maven compilation, the plugin will automatically generate the following wrapper as `target/generated-sources/java/tutorial/TutorialKernels.java` :
+{{{
+
+}}}
+
+
+ that only accepts the correct argument types and numbers, instead of the all-forgiving [http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/CLKernel.html#setArgs(java.lang.Object...) CLKernel.setArgs(Object...)] that might make your program crash at runtime if you used an incorrect argument type (or missed an argument).
