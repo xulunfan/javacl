@@ -6,15 +6,29 @@ This quick tutorial will get you through setting up a JavaCL project.
 
 = Setup a JavaCL Maven project =
 
-The preferred way of creating a JavaCL project is using [http://maven.apache.org/ Maven].
+== Create a project with Netbeans 7.0 ==
 
-== Using the Simple JavaCL Tutorial Maven archetype ==
+You can either create a plain Maven project by hand and modify its `pom.xml` as below, or use the fully automated way that uses a Maven archetype :
+  * Create a new project
+  [http://javacl.googlecode.com/svn/wiki/images/NetbeansArchetype-NewProject.png]
+  * Choose `Maven / Project from Archetype` :
+  [http://javacl.googlecode.com/svn/wiki/images/NetbeansArchetype-ChooseProject.png]
+  * In the `Maven Archetype` screen, click on `Add`, fill-in the details then click on `Ok` :
+    * Group Id = `com.nativelibs4java`
+    * Archetype Id = `javacl-simple-tutorial`
+    * Version = `1.0.0-RC1`
+    * Repository = `http://nativelibs4java.sourceforge.net/maven`
+  [http://javacl.googlecode.com/svn/wiki/images/NetbeansArchetype-AchetypeDetails.png]
+  * Select the custom archetype you've just created and click on `Next`, then `Finish` :
+  [http://javacl.googlecode.com/svn/wiki/images/NetbeansArchetype-CustomArchetype.png]
 
-The easiest way to follow this tutorial is to use the Maven archetype we've prepared for you.
+== Command-line setup ==
 
-Simply type the following commands in a shell (replace myGroupId and myArtifactId by your own group and artifact ids) :
+First, please make sure you've properly installed [http://maven.apache.org/ Maven].
+
+Then simply type the following commands in a shell (replace myGroupId and myArtifactId by your own group and artifact ids) :
 {{{
-mvn archetype:create -DarchetypeGroupId=com.nativelibs4java -DarchetypeArtifactId=javacl-simple-tutorial -DarchetypeVersion=1.0.0-RC1 -DremoteRepositories=http://nativelibs4java.sourceforge.net/maven -DgroupId=myGroupId  -DartifactId=myArtifactId
+mvn archetype:generate -DarchetypeGroupId=com.nativelibs4java -DarchetypeArtifactId=javacl-simple-tutorial -DarchetypeVersion=1.0.0-RC1 -DremoteRepositories=http://nativelibs4java.sourceforge.net/maven
 }}}
 
 This will generate a directory with the following layout :
