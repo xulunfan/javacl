@@ -103,7 +103,7 @@ With the generator, you get *compile-time checks* of the argument types of your 
 
 The alternative is to call [http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/CLKernel.html#setArgs(java.lang.Object...) CLKernel.setArgs(Object...)] on your kernels prior to enqueuing them for execution, and it's dangerous for you might not be using the correct number of arguments or the correct argument types  : your program will then crash at runtime or just be buggy and make you cry.
 
-Remember why you're using Java/Scala instead of Php/Ruby ? Get the free compile-time checks now ;-)
+Remember why you're using Java/Scala instead of Php/Ruby ? Get the free compile-time checks for OpenCL now ;-)
 
 == Less boilerplate code ==
 
