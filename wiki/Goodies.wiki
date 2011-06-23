@@ -70,7 +70,11 @@ int value = reductor.reduce(queue, input).get();
 
 = UJMP Matrices =
 
-JavaCL's "javacl-blas" Maven package contains a lazy implementation of dense [http://www.ujmp.org/apidocs/ujmp-core/apidocs/org/ujmp/core/Matrix.html Matrix] for the [http://ujmp.org Universal Java Matrix Package (UJMP)] library.
+The [http://ujmp.org Universal Java Matrix Package (UJMP)] library is an amazing project that provides a comprehensive API that covers most if not all linear algebra needs, with default implementations as well as wrapper implementations for all existing prominent Java matrix packages on Earth (give a look at its [http://www.ujmp.org/java-matrix/feature-list/ features list], it's just mind-bloggling !).
+
+== Maven JavaCL Blas dependency ==
+
+JavaCL's "javacl-blas" Maven package contains a lazy implementation of dense [http://www.ujmp.org/apidocs/ujmp-core/apidocs/org/ujmp/core/Matrix.html Matrix] for the [UJMP] library.
 {{{
 <project>
   ...
