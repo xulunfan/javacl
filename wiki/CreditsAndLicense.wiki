@@ -3,7 +3,7 @@
 
 Long story short : 
   * JavaCL is licensed under the [http://code.google.com/p/bridj/wiki/CreditsAndLicense#BridJ_&_ScalaCL_License_(3-clauses_BSD-like) BSD license] (as [http://code.google.com/p/bridj/ BridJ])
-  * JavaCL/JNA is licensed under the LGPL license (as JNA).
+  * [MigratingFromJNAToBridJ JavaCL/JNA] is licensed under the LGPL license (as JNA).
   (the JNA version was the default one prior to version 1.0-RC1)
 
 [http://code.google.com/p/bridj/wiki/CreditsAndLicense Click here to see Credits & License details] (on BridJ's wiki).
