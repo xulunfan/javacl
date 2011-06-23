@@ -231,7 +231,7 @@ Saw that "javacl-generator" plugin configuration in the `pom.xml` file ?
 
 [JavaCLGenerator JavaCL Generator] is a tool that parses any `.cl` file present in `src/main/opencl` and creates a wrapper class that only accepts the correct argument types and numbers, instead of the all-forgiving [http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/CLKernel.html#setArgs(java.lang.Object...) CLKernel.setArgs(Object...)] that might make your program crash at runtime if you used an incorrect argument type (or missed an argument).
 
-You actually need nothing more than the `pom.xml` to use the generator, so you can modify the host code as follows (see `JavaCLTutorial2.java`):
+As the Maven `pom.xml` file you've got from the archetype already contains the correct configuration for the generator, you can simply modify the host code as follows (see `JavaCLTutorial2.java`):
 {{{
         /* 
         This code is no longer needed :
