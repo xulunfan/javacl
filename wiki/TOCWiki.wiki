@@ -20,3 +20,4 @@
     * [JavaCLGenerator JavaCL Generator]
     * [SharingDataWithOpenGL OpenGL Sharing]
     * [TroubleShootingJavaCLOnLinux Troubleshooting on Linux]
+    * [http://code.google.com/p/nativelibs4java/wiki/OpenCLContextPooling Context Pooling (advanced)]
