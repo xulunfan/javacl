@@ -267,7 +267,11 @@ See how we've chained dependent operations through events (operations are execut
 
 = Wrap up =
 
-That's it !
+That's it ! In this short tutorial, you've seen how to :
+  * setup a simple JavaCL project (in command-line, with Netbeans or IntelliJ IDEA)
+  * allocate OpenCL buffers
+  * call and chain executions of simple OpenCL kernels
+  * use the [JavaCLGenerator JavaCL Generator] to get free compile-time checks of OpenCL kernel arguments and less boilerplate code
 
 Want to see more ? Give a look a some [SamplesAndDemos samples and demos].
 
