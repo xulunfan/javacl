@@ -11,12 +11,11 @@
     * [MigratingFromJNAToBridJ Migrating from the JNA to the BridJ version]
   * Documentation
     * [Tutorials]
-    * OpenCL Runtime
-      * [CallingOpenCLKernelsFromJava Calling Kernels]
-      * [UnderstandOpenCLKernelArguments Understanding Arguments]
-      * [ReadFromAndWriteToBuffersAndImages Buffers IO]
-      * [UsingImages Images]
-      * [EnqueuingRanges Execution Finetuning]
+    * [CallingOpenCLKernelsFromJava Calling Kernels]
+    * [UnderstandOpenCLKernelArguments Understanding Arguments]
+    * [ReadFromAndWriteToBuffersAndImages Buffer reads/writes]
+    * [UsingImages Images]
+    * [EnqueuingRanges Execution Fine-tuning]
     * [IncludesInKernels Including files in kernels]
     * [JavaCLGenerator JavaCL Generator]
     * [SharingDataWithOpenGL OpenGL Sharing]
