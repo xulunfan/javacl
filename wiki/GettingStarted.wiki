@@ -80,7 +80,7 @@ It contains two parts :
 
 == The Maven `pom.xml` project file ==
 
-Any JavaCL Maven project must include the `javacl` artifact :
+This file contains a single cross-platform JavaCL dependency :
 {{{
   <repositories>
     <repository>
@@ -99,37 +99,7 @@ Any JavaCL Maven project must include the `javacl` artifact :
   </dependencies>
 }}}
 
-Additionally, the [JavaCLGenerator JavaCL Generator] is a powerful tool that can make your kernels programming experience a lot safer and more enjoyable (see below) :
-{{{
-  <build>
-  	<plugins>
-			<plugin>
-					<groupId>com.nativelibs4java</groupId>
-					<artifactId>javacl-generator</artifactId>
-					<version>1.0.0-RC1</version>
-					<executions>
-					  <execution>
-							<phase>generate-sources</phase>
-							<goals>
-							  <goal>compile</goal>
-							</goals>
-					  </execution>
-					</executions>
-			</plugin>
-			
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
-				<configuration>
-					<source>1.5</source>
-					<target>1.5</target>
-					<encoding>UTF-8</encoding>
-				</configuration>
-			</plugin>
-	</plugins>
-  </build>
-}}}
+It also contains the configuration needed by the [JavaCLGenerator JavaCL Generator] plugin, which will help make your kernels programming experience a lot (type-)safer and more enjoyable (see below).
 
 == The `add_floats` OpenCL kernel ==
 
