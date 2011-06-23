@@ -74,7 +74,7 @@ The [http://ujmp.org Universal Java Matrix Package (UJMP)] library is an amazing
 
 == Maven JavaCL Blas dependency ==
 
-JavaCL's "javacl-blas" Maven package contains a lazy implementation of dense [http://www.ujmp.org/apidocs/ujmp-core/apidocs/org/ujmp/core/Matrix.html Matrix] for the [UJMP] library.
+JavaCL's "javacl-blas" Maven package contains a lazy implementation of float and double 2D dense [http://www.ujmp.org/apidocs/ujmp-core/apidocs/org/ujmp/core/Matrix.html Matrix] for the [UJMP] library.
 {{{
 <project>
   ...
