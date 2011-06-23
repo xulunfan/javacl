@@ -4,6 +4,7 @@
   * [SamplesAndDemos]
   * [CreditsAndLicense Credits & License]
   * Project
+    * [ReleaseNotes Release Notes]
     * [Build]
     * [Maven]
     * [Sources]
