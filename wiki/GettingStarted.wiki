@@ -6,7 +6,7 @@ This quick tutorial will get you through setting up a JavaCL project.
 
 = Setup a JavaCL Maven project =
 
-== Open/create the tutorial project with Netbeans 7.0 ==
+== Create the tutorial project with Netbeans 7.0 ==
 
 You can either create a plain Maven project by hand and modify its `pom.xml` as below, or use the fully automated way that uses a Maven archetype :
   * Create a new project
@@ -21,6 +21,25 @@ You can either create a plain Maven project by hand and modify its `pom.xml` as 
   [http://javacl.googlecode.com/svn/wiki/images/NetbeansArchetype-AchetypeDetails.png]
   * Select the custom archetype you've just created and click on `Next`, then `Finish` :
   [http://javacl.googlecode.com/svn/wiki/images/NetbeansArchetype-CustomArchetype.png]
+
+== Create the tutorial project with IntelliJ IDEA ==
+
+This will work with the open source Community Edition as well as with the Ultimate Edition. If you haven't tried it yet, [http://www.jetbrains.com/idea/ IntelliJ IDEA] is a great IDE to work with...
+
+It's very easy to create the sources for this tutorial with IDEA :
+  * Create a new project
+  [http://javacl.googlecode.com/svn/wiki/images/IdeaArchetype-FileNewProject.png]
+  * Select `Create a project from scratch` :
+  [http://javacl.googlecode.com/svn/wiki/images/IdeaArchetype-NewProject.png]
+  * Choose a name for your tutorial project and select `Maven Module` for the type of the project, then click on `Next` :
+  [http://javacl.googlecode.com/svn/wiki/images/IdeaArchetype-NewMavenProject.png]
+  * Tick `Create from archetype` and click on `Add archetype`, then fill-in the details :
+    * Group Id = `com.nativelibs4java`
+    * Archetype Id = `javacl-simple-tutorial`
+    * Version = `1.0.0-RC1`
+    * Repository = `http://nativelibs4java.sourceforge.net/maven`
+  [http://javacl.googlecode.com/svn/wiki/images/IdeaArchetype-AddAchetype.png]
+  * Click `Ok` and `Finish` : you're done
 
 == Command-line setup ==
 
