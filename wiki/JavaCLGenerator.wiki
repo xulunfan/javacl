@@ -2,6 +2,8 @@
 
 <wiki:toc max_depth="3" />
 
+= What is it ? =
+
 If you're doing OpenCL stuff from Java, you don't want to miss out on the JavaCL Generator : it integrates your OpenCL code to your Java code seamlessly !
 
 The _JavaCL Generator_ is a Maven plugin that automatically parses any OpenCL source file present in `src/main/opencl` and generates a Java wrapper class that lets you call the kernel very easily from Java.
