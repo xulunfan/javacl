@@ -3,6 +3,7 @@
   * [http://nativelibs4java.sourceforge.net/javacl/api/stable/ API Documentation]
   * [GettingStarted Getting Started (Tutorial)]
   * [CreditsAndLicense Credits & License (BSD)]
+  * [WhoUsesJavaCL Who's using JavaCL ?]
   * Project
     * [ReleaseNotes Release Notes]
     * [Build]
