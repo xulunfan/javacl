@@ -2,6 +2,7 @@
   * [Usage Get / Install]
   * [GettingStarted Getting Started (Tutorial)]
   * [SamplesAndDemos]
+  * [CreditsAndLicense Credits & License]
   * Project
     * [http://code.google.com/p/bridj/wiki/CreditsAndLicense Credits and License]
     * [Build]
