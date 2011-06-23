@@ -9,3 +9,7 @@ The [http://gitorious.org/javaclpp/pages/Home JavaCL Parallel Primitives] (from 
 [http://code.google.com/p/scalacl/ ScalaCL] (BSD-licensed) is an optimizing Scala compiler plugin + GPU-backed collections.
 
 It uses JavaCL, which is still accessible directly if needed.
+
+== Academics ==
+
+The [http://www.scms.waikato.ac.nz/ Faculty of Computing and Mathematical Sciences] at Waikato is using JavaCL.
