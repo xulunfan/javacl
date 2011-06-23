@@ -1,7 +1,6 @@
   * [FAQ]
   * [Usage Get / Install]
   * [GettingStarted Getting Started (Tutorial)]
-  * [SamplesAndDemos]
   * [CreditsAndLicense Credits & License]
   * Project
     * [ReleaseNotes Release Notes]
@@ -12,6 +11,7 @@
     * [MigratingFromJNAToBridJ Migrating from the JNA to the BridJ version]
   * Documentation
     * [Tutorials]
+    * [SamplesAndDemos Samples and Demos]
     * [CallingOpenCLKernelsFromJava Calling Kernels]
     * [UnderstandOpenCLKernelArguments Understanding Arguments]
     * [ReadFromAndWriteToBuffersAndImages Buffer reads/writes]
