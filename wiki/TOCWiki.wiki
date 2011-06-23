@@ -2,7 +2,7 @@
   * [Usage Get / Install]
   * [http://nativelibs4java.sourceforge.net/javacl/api/stable/ API Documentation]
   * [GettingStarted Getting Started (Tutorial)]
-  * [CreditsAndLicense Credits & License]
+  * [CreditsAndLicense Credits & License (BSD)]
   * Project
     * [ReleaseNotes Release Notes]
     * [Build]
