@@ -4,5 +4,5 @@
 [http://code.google.com/p/bridj/wiki/CreditsAndLicense Click here to see Credits and License details]
 
 Long story short : 
-  * JavaCL/BridJ (the default JavaCL releases) is licensed under the BSD license (as is BridJ)
-  * JavaCL/JNA (the old JavaCL releases) is licensed under the LGPL license (as is JNA).
+  * JavaCL is licensed under the [http://code.google.com/p/bridj/wiki/CreditsAndLicense#BridJ_&_ScalaCL_License_(3-clauses_BSD-like) BSD license] (as [http://code.google.com/p/bridj/ BridJ])
+  * JavaCL/JNA (was the default release prior to version 1.0-RC1) is licensed under the LGPL license (as JNA).
