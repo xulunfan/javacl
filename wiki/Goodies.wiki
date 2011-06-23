@@ -9,7 +9,7 @@ JavaCL ships with ready-to-use FFT utility classes (Fourier transform and invers
 It is pretty similar to Apache Common's [http://commons.apache.org/math/api-2.1/org/apache/commons/math/transform/FastFourierTransformer.html FastFourierTransformer] class, except that :
   * It's *significantly faster* (even when run on a CPU OpenCL device)
   * It has floats and doubles variants (Apache's implementation only deals with doubles)
-  * It uses primitive arrays instead of arrays of Complex classes (for complex data, it interleaves real and imaginary values in an array that's twice as big)
+  * It uses primitive arrays instead of arrays of [http://commons.apache.org/math/api-2.1/org/apache/commons/math/complex/Complex.html Complex] for complex data (it interleaves real and imaginary values in an array that's twice as big)
 
 JavaCL even features a *slower* general Fourier Transform that works with input sizes that aren't powers of two :
   * [http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/util/fft/FloatDFT.html FloatDFT]
