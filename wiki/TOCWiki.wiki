@@ -20,6 +20,6 @@
     * [IncludesInKernels Including files in kernels]
     * [JavaCLGenerator JavaCL Generator]
     * [SharingDataWithOpenGL OpenGL Sharing]
-    * FFT, Reduction, Random...
+    * [Goodies FFT, Reduction, Random...]
     * [TroubleShootingJavaCLOnLinux Troubleshooting on Linux]
     * [http://code.google.com/p/nativelibs4java/wiki/OpenCLContextPooling Context Pooling (advanced)]
