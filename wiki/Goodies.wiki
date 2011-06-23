@@ -17,5 +17,15 @@ JavaCL even features a *slower* general Fourier Transform that works with input 
 
 The following code computes an FFT and the reverse FFT in a few lines :
 {{{
+int n = 1024; // power-of-two
+float[] complexInput = new float[2 * n]; // interleaved real and imag values
+for (int i = 0; i < n; i++) {
+    complexInput[i * 2] = i; // pure-real input
+}
+CLContext context = JavaCL.createBestContext(); // use createBestContext(DoubleSupport) for doubles
+CLQueue queue = context.createDefaultQueue();
 
+FloatFFTPow2 fft = new FloatFFTPow2(context); // use default OpenCL context
+float[] transformed = fft.transform(queue, complexInput, false);
+float[] transformedBack = fft.transform(queue, transformed, true);
 }}}
