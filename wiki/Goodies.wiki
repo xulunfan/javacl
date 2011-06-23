@@ -4,7 +4,7 @@
 
 = Fourier Transforms (DFT, power-of-two FFT) =
 
-JavaCL ships with ready-to-use FFT utility classes (Fourier transform and inverse transform) :
+JavaCL ships with ready-to-use [http://en.wikipedia.org/wiki/Fast_Fourier_transform FFT] utility classes (Fourier transform and inverse transform) :
   * [http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/util/fft/FloatFFTPow2.html FloatFFTPow2]
   * [http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/util/fft/DoubleFFTPow2.html DoubleFFTPow2]
 
