@@ -2,7 +2,7 @@
 
 = What's up ? =
 
-JavaCL 1.0-RC and later use BridJ as the underlying Java/C interoperability runtime, as opposed to previous 1.0-beta versions that used JNA.
+JavaCL 1.0-RC and later use [http://code.google.com/p/bridj/ BridJ] as the underlying Java/C interoperability runtime, as opposed to previous 1.0-beta versions that used [https://github.com/twall/jna JNA].
 
 The JNA-powered version of JavaCL is still available as a separate download (and as a Maven artifact that has the `-jna` suffix, like `javacl-jna` or `javacl-core-jna`), but you are advised to migrate for some key reasons :
   * Lower native call overhead (BridJ beats out JNA in performance)
