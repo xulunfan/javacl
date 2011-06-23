@@ -6,8 +6,38 @@ This quick tutorial will get you through setting up a JavaCL project.
 
 = Setup a JavaCL Maven project =
 
-The preferred way of creating a JavaCL project is using Maven.
-  * [http://maven.apache.org/ Install Maven]
+The preferred way of creating a JavaCL project is using [http://maven.apache.org/ Maven].
+
+== Using the Simple JavaCL Tutorial Maven archetype ==
+
+The easiest way to follow this tutorial is to use the Maven archetype we've prepared for you.
+
+Simply type the following commands in a shell (replace myGroupId and myArtifactId by your own group and artifact ids) :
+{{{
+mvn archetype:create -DarchetypeGroupId=com.nativelibs4java -DarchetypeArtifactId=javacl-simple-tutorial -DarchetypeVersion=1.0.0-RC1 -DremoteRepositories=http://nativelibs4java.sourceforge.net/maven -DgroupId=myGroupId  -DartifactId=myArtifactId
+}}}
+
+This will generate a directory with the following layout :
+  {{{
+myArtifactId
+|__ pom.xml
+|__ src/
+     |__ test 
+     |__ main/
+          |__ java/
+          |    |__ tutorial/
+          |         |__ JavaCLTutorial1.java
+          |         |__ JavaCLTutorial2.java
+          |         |__ JavaCLTutorial3.java
+          |__ opencl/
+               |__ tutorial/
+                    |__ TutorialKernels.cl
+}}}
+
+The three versions of the JavaCLTutorial class correspond to the progression of this tutorial, as you'll see below.
+
+== Creating the project by hand ==
+
   * Create a `JavaCLTutorial` directory 
   * Create the following `pom.xml` file in that directory :
   {{{
