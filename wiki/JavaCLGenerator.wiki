@@ -134,7 +134,7 @@ CLEvent addEvt = addFloatsKernel.enqueueNDRange(queue, globalSizes, fillEvt);
 
 = How does it work ? =
 
-Well, it's just a derivative of [http://code.google.com/p/jnaerator/ JNAerator], from the same original author as JavaCL ;-)
+Well, it's just a derivative of [http://code.google.com/p/jnaerator/ JNAerator] (which is written by the same [http://ochafik.com/ original author] as JavaCL ;-))
 
 
 = Legal details (no need to read that) =
