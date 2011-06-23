@@ -58,5 +58,12 @@ JavaCL ships with reduction utilities that can help you aggregate OpenCL data us
 
 Here's how :
 {{{
+CLContext context = JavaCL.createBestContext();
+CLQueue queue = context.createDefaultQueue();
+Reductor<Integer> reductor = ReductionUtils.createReductor(context, ReductionUtils.Operation.Min, OpenCLType.Int, 1);
 
+CLBuffer<Integer> input = context.createIntBuffer(Usage.Input, 1024);
+// < fill input with some data here... >
+
+int value = reductor.reduce(queue, input).get();
 }}}
