@@ -94,13 +94,16 @@ JavaCL's "javacl-blas" Maven package contains a lazy implementation of dense [ht
 </project>
 }}}
 
-[http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/blas/ujmp/CLDenseDoubleMatrix2D.html CLDenseDoubleMatrix2D] and [http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/blas/ujmp/CLDenseFloatMatrix2D.html CLDenseFloatMatrix2D] feature transparent asynchronism, powered by the OpenCL event model under the hood. The statement :
+== Transparently asynchronous operations ==
+
+[http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/blas/ujmp/CLDenseDoubleMatrix2D.html CLDenseDoubleMatrix2D] and [http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/blas/ujmp/CLDenseFloatMatrix2D.html CLDenseFloatMatrix2D] feature transparent asynchronicity, powered by the OpenCL event model under the hood. The statement :
 {{{
 Matrix abta = a.times(b).times(a.transpose());
 }}}
 Returns a matrix, `abta`, that's probably not finished yet. Any attempt to read a specific component of that matrix will wait for all its write computations to finish.
 
-Accelerated operations :
+== Accelerated matrix operations ==
+
   * times (matrix multiplication)
   * transpose (matrix transpose)
   * plus, minus, divide, mtimes (piece-wise binary operators)
@@ -110,10 +113,16 @@ Accelerated operations :
   * toDoubleArray
   * clear
 
+== Usage == 
+
 To use OpenCL for all double and float 2D dense matrices :
 {{{
 MatrixMapper.getInstance().setDenseDoubleMatrix2DClass(CLDenseDoubleMatrix2D.class);
 MatrixMapper.getInstance().setDenseFloatMatrix2DClass(CLDenseFloatMatrix2D.class);
+}}}
+You will then be able to create OpenCL-powered matrices with :
+{{{
+Matrix m = MatrixFactory.dense(10, 10);
 }}}
 
 Or you can instantiate your matrices with the direct type :
