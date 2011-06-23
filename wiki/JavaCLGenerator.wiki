@@ -8,9 +8,9 @@ If you're doing OpenCL stuff from Java, you don't want to miss out on the JavaCL
 
 The _JavaCL Generator_ is a Maven plugin that automatically parses any OpenCL source file present in `src/main/opencl` and generates a Java wrapper class that lets you call the kernel very easily from Java.
 
-== Licensing ==
+== Legal details ==
 
-The generated Java sources (OpenCL wrappers) are explicitly left free of any copyright/licensing bullshit from nativelibs4java, so you can do whatever you want with them. 
+The generated Java sources (OpenCL wrappers) are explicitly left free of any copyright/licensing bullshit from nativelibs4java, so you can do whatever you want with them (they mainly reflect your OpenCL code anyway).
 
 The generator itself, however, is currently licensed under the LGPL, as it is a derivative of [http://code.google.com/p/jnaerator/ JNAerator] (it is planned to switch it to the BSD license, [CreditsAndLicense as JavaCL itself], but JNAerator needs to decouple from JNA first so it may take a while...).
 
