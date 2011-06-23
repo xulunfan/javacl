@@ -30,4 +30,4 @@ float[] transformed = fft.transform(queue, complexInput, false);
 float[] transformedBack = fft.transform(queue, transformed, true);
 }}}
 
-These FFT classes can also operate directly on [http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/CLBuffer.html CLBuffer] instances, to avoid conversion back-and-forth from Java to OpenCL (useful if you're trying to do the FFT of data that was just transformed by OpenCL).
+These FFT classes can also operate directly on user-provided input and output [http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/CLBuffer.html CLBuffer] instances, to avoid back-and-forth conversions from Java primitive arrays to OpenCL memory (useful if you're trying to do the FFT of data that was just transformed by OpenCL).
