@@ -20,6 +20,7 @@ As you'll notice by changing the JavaCL JAR or Maven dependency from a 1.0-beta 
   * Replace `XXXBuffer.wrap(xxx[])` by [http://nativelibs4java.sourceforge.net/bridj/api/stable/org/bridj/Pointer.html Pointer].`pointerToXXXs(xxx[])`
   * Replace `XXXBuffer` by `Pointer<XXX>`
   * Replace `Reductor<XXXBuffer>` by `Reductor<XXX>`
+  * Replace `XXXBuffer.equals(...)` by `Pointer<XXX>.compareTo(...) == 0` ([http://nativelibs4java.sourceforge.net/bridj/api/stable/org/bridj/Pointer.html#equals(java.lang.Object) Pointer.equals] does not compare pointed memory contents as `XXXBuffer.equals` does)
   * Replace `import java.nio.*;` by `import `[http://nativelibs4java.sourceforge.net/bridj/api/stable/org/bridj/package-summary.html org.bridj]`.*;`
  
 = Mechanical changes =
