@@ -12,4 +12,5 @@ It uses JavaCL, which is still accessible directly if needed.
 
 == Academics ==
 
-The [http://www.scms.waikato.ac.nz/ Faculty of Computing and Mathematical Sciences] at Waikato is using JavaCL.
+  * The [http://wiki.cs.vu.nl/mp/index.php/OpenCL_Java_high-level_API Faculty of Sciences / Department of Computer Sciences] at the [http://www.cs.vu.nl/en/index.asp University of Amsterdam]
+  * The [http://www.scms.waikato.ac.nz/ Faculty of Computing and Mathematical Sciences] at Waikato
