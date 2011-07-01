@@ -13,4 +13,4 @@ It uses JavaCL, which is still accessible directly if needed.
 == Academics ==
 
   * The [http://www.cs.waikato.ac.nz/research/jstar/ JStar Research Group] from [http://www.waikato.ac.nz/ The University of Waikato]
-  * The [http://wiki.cs.vu.nl/mp/index.php/OpenCL_Java_high-level_API Faculty of Sciences / Department of Computer Sciences] at the [http://www.cs.vu.nl/en/index.asp University of Amsterdam]
+  * The [http://wiki.cs.vu.nl/mp/index.php/OpenCL_Java_high-level_API Faculty of Sciences / Department of Computer Sciences] from [http://www.cs.vu.nl/en/index.asp The University of Amsterdam]
