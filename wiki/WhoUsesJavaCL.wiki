@@ -14,7 +14,7 @@ It uses JavaCL, which is still accessible directly if needed.
 
 "[http://70.33.254.42/wiki/Main_Page Encog] is an advanced neural network and machine learning framework."
 
-It appears to be experimenting with [http://70.33.254.42/wiki/JavaCL JavaCL] to perform GPGPU.
+It [http://70.33.254.42/wiki/JavaCL appears to be experimenting with JavaCL] to perform GPGPU.
 
 == Academics ==
 
