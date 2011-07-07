@@ -10,6 +10,12 @@ The [http://gitorious.org/javaclpp/pages/Home JavaCL Parallel Primitives] (from 
 
 It uses JavaCL, which is still accessible directly if needed.
 
+== Encog ==
+
+[http://70.33.254.42/wiki/Main_Page Encog] is an advanced neural network and machine learning framework.
+
+It appears to be experimenting with [http://70.33.254.42/wiki/JavaCL JavaCL] to perform GPGPU.
+
 == Academics ==
 
   * The [http://www.cs.waikato.ac.nz/research/jstar/ JStar Research Group] from [http://www.waikato.ac.nz/ The University of Waikato]
