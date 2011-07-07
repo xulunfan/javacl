@@ -14,7 +14,7 @@ It uses JavaCL, which is still accessible directly if needed.
 
 "[http://www.heatonresearch.com/encog Encog] is an advanced neural network and machine learning framework."
 
-There appears to be [http://www.heatonresearch.com/wiki/JavaCL experimentations with JavaCL] to perform GPGPU.
+There appears to be [http://www.heatonresearch.com/wiki/JavaCL experimentations with JavaCL] (and other bindings) to perform GPGPU.
 
 == Academics ==
 
