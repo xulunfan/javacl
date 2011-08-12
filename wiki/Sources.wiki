@@ -1,8 +1,8 @@
 #summary Links to JavaCL's source code and build instructions
 #sidebar TOCWiki
 
-The source code for JavaCL, ScalaCL and OpenCL4Java is hosted on [http://code.google.com/p/nativelibs4java/ NativeLibs4Java]'s SVN repository :
-  * [http://code.google.com/p/nativelibs4java/source/browse/#svn/trunk/libraries/OpenCL JavaCL / BridJ] (default version, see [MigratingFromJNAToBridJ migration page] if you were using the JNA version before)
-  * [http://code.google.com/p/nativelibs4java/source/browse/#svn/trunk/libraries/OpenCL-JNA JavaCL / JNA]
+The source code for JavaCL, ScalaCL and OpenCL4Java is hosted on [https://github.com/ochafik/nativelibs4java/tree/master/libraries NativeLibs4Java]'s GitHub repository :
+  * [https://github.com/ochafik/nativelibs4java/tree/master/libraries/OpenCL JavaCL / BridJ] (default version, see [MigratingFromJNAToBridJ migration page] if you were using the JNA version before)
+  * [https://github.com/ochafik/nativelibs4java/tree/master/libraries/OpenCL-JNA JavaCL / JNA]
 
 Build instructions are on the [Build] page.
