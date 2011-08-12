@@ -57,7 +57,7 @@ Please refer to the OpenCL documentation :
 
 == Examples ==
 
-Please look at the [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/Core/src/test/java/com/nativelibs4java/opencl/ImageTest.java ImageTest] class.
+Please look at the [https://github.com/ochafik/nativelibs4java/tree/master/libraries/OpenCL/Core/src/test/java/com/nativelibs4java/opencl/ImageTest.java ImageTest] class.
 
 = Sample Image Transform Program =
 
@@ -95,4 +95,4 @@ public class ImageSample {
 }}}
 
 With `kernel.cl` being any of the samples at the following address : 
-[http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/InteractiveImageDemo/src/main/resources/#resources%2Fexamples JavaCL's Image Transform Kernel Samples]
+[https://github.com/ochafik/nativelibs4java/tree/master/libraries/OpenCL/InteractiveImageDemo/src/main/resources/#resources%2Fexamples JavaCL's Image Transform Kernel Samples]
