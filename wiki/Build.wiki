@@ -19,10 +19,10 @@ It will take some time, so you'll want to have a coffee during the build (if you
 Subsequent builds will be much quicker (see next section), and can be launched from your Maven-aware IDE of choice.
 
   * First, [http://maven.apache.org/download.html install Maven].
-  * Checkout [http://code.google.com/p/nativelibs4java/source/browse/#svn/trunk/libraries nativelibs4java files] :
+  * Checkout [https://github.com/ochafik/nativelibs4java/tree/master/libraries/ nativelibs4java files] :
     {{{
-svn checkout http://nativelibs4java.googlecode.com/svn/trunk/libraries nativelibs4java
-cd nativelibs4java
+git clone git@github.com:ochafik/nativelibs4java.git
+cd nativelibs4java/libraries
 }}}
   * Run the following Maven command :
     {{{
