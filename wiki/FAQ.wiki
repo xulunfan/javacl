@@ -31,7 +31,7 @@ CLKernel kernel = program.createKernel(
 );
 ...
 }}}
-  [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/JavaCL/src/test/java/com/nativelibs4java/opencl/OpenCL4JavaBasicTest.java See the complete example...]
+  [https://github.com/ochafik/nativelibs4java/tree/master/libraries/OpenCL/JavaCL/src/test/java/com/nativelibs4java/opencl/OpenCL4JavaBasicTest.java See the complete example...]
   * [http://code.google.com/p/scalacl/ ScalaCL] :
 {{{
 import scalacl._

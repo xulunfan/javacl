@@ -16,7 +16,7 @@ JavaCL provides two ways to include files easily from your OpenCL kernels :
 
 = LibCL : ready-to-use includes =
 
-Additionally, the JavaCL Project contains a new library called LibCL, which [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/LibCL/#LibCL%2Fsrc%2Fmain%2Fresources%2FLibCL gathers useful includes for OpenCL kernels]. It is bundled as a plain old JAR and contains resources that are includable using JavaCL's classpath inclusion mechanism.
+Additionally, the JavaCL Project contains a new library called LibCL, which [https://github.com/ochafik/nativelibs4java/tree/master/libraries/OpenCL/LibCL/#LibCL%2Fsrc%2Fmain%2Fresources%2FLibCL gathers useful includes for OpenCL kernels]. It is bundled as a plain old JAR and contains resources that are includable using JavaCL's classpath inclusion mechanism.
 
 If you use Maven, you just need to add the following dependency to get started :
 {{{
@@ -27,7 +27,7 @@ If you use Maven, you just need to add the following dependency to get started :
 	</dependency>
 }}}
 
-You can then include any of [http://code.google.com/p/nativelibs4java/source/browse/trunk/libraries/OpenCL/LibCL/#LibCL%2Fsrc%2Fmain%2Fresources%2FLibCL LibCL's files] in your kernels, say RGB `<->` HSL conversion functions, for instance :
+You can then include any of [https://github.com/ochafik/nativelibs4java/tree/master/libraries/OpenCL/LibCL/#LibCL%2Fsrc%2Fmain%2Fresources%2FLibCL LibCL's files] in your kernels, say RGB `<->` HSL conversion functions, for instance :
 {{{
 #include "LibCL/rgba2hsla.cl"
 #include "LibCL/hsla2rgba.cl"
