@@ -1,5 +1,6 @@
 #summary List of projects known to use JavaCL
-#sidebar TOCWiki
+
+<wiki:toc max_depth="3" />
 
 == JavaCL Parallel Primitives ==
 
