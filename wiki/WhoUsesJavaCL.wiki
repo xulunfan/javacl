@@ -1,4 +1,5 @@
 #summary List of projects known to use JavaCL
+#sidebar TOCWiki
 
 == JavaCL Parallel Primitives ==
 
@@ -9,6 +10,12 @@ The [http://gitorious.org/javaclpp/pages/Home JavaCL Parallel Primitives] (from 
 [http://code.google.com/p/scalacl/ ScalaCL] (BSD-licensed) is an optimizing Scala compiler plugin + GPU-backed collections.
 
 It uses JavaCL, which is still accessible directly if needed.
+
+== Calx (Clojure) ==
+
+[https://github.com/ztellman/calx Calx] is an idiomatic Clojure wrapper for OpenCL.
+
+It uses JavaCL underneath.
 
 == Encog ==
 
