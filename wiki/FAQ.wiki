@@ -124,6 +124,23 @@ Please read [IncludesInKernels] for more details.
 
 Please read [ReadFromAndWriteToBuffersAndImages]
 
+== What's up with double-precision floats ? Are they optional / supported ? ==
+
+Not all OpenCL devices support double-precision floats (a.k.a `double`s), but JavaCL will give you the most out of what is supported by the hardware : you can create and use double buffers, pass double parameters, and query whether an individual device has double support by calling [http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/CLDevice.html#isDoubleSupported() CLDevice.isDoubleSupported()].
+
+Please also note that there are two extensions for double support (they will yield different results for some built-in functions) : 
+  * [http://www.khronos.org/registry/cl/sdk/1.0/docs/man/xhtml/cl_khr_fp64.html cl_khr_fp64]
+  * [http://www.khronos.org/registry/cl/extensions/amd/cl_amd_fp64.txt cl_amd_fp64]
+
+[http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/CLDevice.html#isDoubleSupported() CLDevice.isDoubleSupported()] will return true if either of these extensions is supported, but you may query them separately with [http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/CLDevice.html#isDoubleSupportedKHR() isDoubleSupportedKHR()] and [http://nativelibs4java.sourceforge.net/javacl/api/stable/com/nativelibs4java/opencl/CLDevice.html#isDoubleSupportedAMD() isDoubleSupportedAMD()].
+
+Also, you'll need to enable one of these extensions explicitly in your OpenCL source code with something like :
+{{{
+#pragma OPENCL EXTENSION cl_khr_fp64 : enable
+}}}
+
+You can safely pick cl_khr_fp64, for *JavaCL will automatically convert the #pragma directive to the AMD variant* if the KHR extension is not present and the AMD extension is (you can turn off this behaviour by setting the property `javacl.adjustDoubleExtension` to `false` or the environment variable `JAVACL_ADJUST_DOUBLE_EXTENSION` to `0`).
+
 == My question is not here... How can I get some help ? ==
 
 JavaCL has a [http://groups.google.com/group/nativelibs4java user group / mailing-list] : you can search in its archive to find similar past questions or post a new message, we'll try to help the best we can.
