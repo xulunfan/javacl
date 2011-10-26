@@ -47,8 +47,13 @@ It's very easy to create the sources for this tutorial with IDEA :
 First, please make sure you've properly installed [http://maven.apache.org/ Maven].
 
 Then simply type the following commands in a shell :
+  * With Maven 3.0.3+ :
 {{{
-mvn archetype:generate -DarchetypeGroupId=com.nativelibs4java -DarchetypeArtifactId=javacl-simple-tutorial -DarchetypeVersion=1.0.0-RC1 -DremoteRepositories=http://nativelibs4java.sourceforge.net/maven
+mvn archetype:generate -DarchetypeGroupId=com.nativelibs4java -DarchetypeArtifactId=javacl-simple-tutorial -DarchetypeVersion=1.0-SNAPSHOT -DarchetypeRepository=http://nativelibs4java.sourceforge.net/maven
+}}}
+  * With previous versions of Maven :
+{{{
+mvn archetype:generate -DarchetypeGroupId=com.nativelibs4java -DarchetypeArtifactId=javacl-simple-tutorial -DarchetypeVersion=1.0-SNAPSHOT -DremoteRepositories=http://nativelibs4java.sourceforge.net/maven
 }}}
 
 This will generate a directory with the following layout :
