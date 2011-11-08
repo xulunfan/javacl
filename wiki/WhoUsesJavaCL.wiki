@@ -26,5 +26,6 @@ There appears to be [http://www.heatonresearch.com/wiki/JavaCL experimentations 
 
 == Academics ==
 
+  * [http://www.cs.ucl.ac.uk/staff/s.yoo/ Shin Yoo] used JavaCL in his paper [http://www.ssbse.org/2011/presentations/Session%207/ssbse11_shin_yoo.pdf Highly Scalable Multi Objective Test Suite Minimisation Using Graphics Cards] (won the [http://www.ssbse.org/2011/prizes.html best paper award at SSBSE 2011]).
   * The [http://www.cs.waikato.ac.nz/research/jstar/ JStar Research Group] from [http://www.waikato.ac.nz/ The University of Waikato]
   * The [http://wiki.cs.vu.nl/mp/index.php/OpenCL_Java_high-level_API Faculty of Sciences / Department of Computer Sciences] from [http://www.cs.vu.nl/en/index.asp The University of Amsterdam]
