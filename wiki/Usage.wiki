@@ -107,6 +107,8 @@ The JavaCL plugin can be used with [http://maven.apache.org/ Maven], simply edit
 </project>
 }}}
 
+Please read [JavaCLGenerator this wiki page] for more information about JavaCL Generator.
+
 == With sbt (simple-build-tool) ==
 
 Add these two lines to your project file :
