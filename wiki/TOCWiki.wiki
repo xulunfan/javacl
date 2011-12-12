@@ -23,6 +23,6 @@
     * [JavaCLGenerator JavaCL Generator]
     * [SharingDataWithOpenGL OpenGL Sharing]
     * [Goodies FFT, Reduction, Random...]
-    * [TroubleShootingJavaCLOnLinux Troubleshooting on Linux]
     * [DebuggingKernels Debugging Kernels with GDB]
+    * [TroubleShootingJavaCLOnLinux Troubleshooting on Linux]
     * [http://code.google.com/p/nativelibs4java/wiki/OpenCLContextPooling Context Pooling (advanced)]
