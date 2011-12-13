@@ -5,7 +5,7 @@ Official tutorials :
   * [http://ochafik.com/blog/?p=501 Write your first OpenCL Discrete Fourier Transform with JavaCL in 15 minutes] : uses the old JNA version of JavaCL (see the [MigratingFromJNAToBridJ migration page])
 
 Blog entries :
-  * [http://suhorukov.blogspot.com/2011/12/opencl-kernel-debugging-for-java-host.html OpenCL kernel debugging for java host code]
+  * [http://suhorukov.blogspot.com/2011/12/opencl-kernel-debugging-for-java-host.html OpenCL kernel debugging for java host code] (also see [DebuggingKernels this wiki page])
   * [http://mahadevangorti.blogspot.com/search/label/JavaCL GSS MAHADEVAN'S blog]
   * [http://www.pixelnerve.com/v/2009/10/30/opencl-4-java/ JavaCL from within Processing 1.0]
   * [http://bbboblog.blogspot.com/2009/10/gpgpu-mandelbrot-with-opencl-and-java.html GPGPU Mandelbrot with OpenCL and Java]
