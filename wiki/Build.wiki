@@ -21,7 +21,7 @@ Subsequent builds will be much quicker (see next section), and can be launched f
   * First, [http://maven.apache.org/download.html install Maven].
   * Checkout [https://github.com/ochafik/nativelibs4java/tree/master/libraries/ nativelibs4java files] :
     {{{
-git clone git@github.com:ochafik/nativelibs4java.git
+git clone git://github.com/ochafik/nativelibs4java.git
 cd nativelibs4java/libraries
 }}}
   * Run the following Maven command :
