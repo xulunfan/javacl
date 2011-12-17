@@ -4,6 +4,9 @@ Official tutorials :
   * Simple [GettingStarted Getting Started] tutorial : will guide you through calling OpenCL kernels with and without the [JavaCLGenerator JavaCL Generator]
   * [http://ochafik.com/blog/?p=501 Write your first OpenCL Discrete Fourier Transform with JavaCL in 15 minutes] : uses the old JNA version of JavaCL (see the [MigratingFromJNAToBridJ migration page])
 
+Books :
+  * [http://www.manning.com/scarpino2/ OpenCL in Action], written by Matthew Scarpino, is clearly the best OpenCL reference and hands-on guide out there, packed with amazing real-world examples ! (and it even covers JavaCL)
+
 Blog entries :
   * [http://suhorukov.blogspot.com/2011/12/opencl-kernel-debugging-for-java-host.html OpenCL kernel debugging for java host code] (also see [DebuggingKernels this wiki page])
   * [http://mahadevangorti.blogspot.com/search/label/JavaCL GSS MAHADEVAN'S blog]
