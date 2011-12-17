@@ -12,7 +12,7 @@
     * [HardwareRequirements]
     * [MigratingFromJNAToBridJ Migrating from the JNA to the BridJ version]
   * Documentation
-    * [Books and Tutorials]
+    * [Tutorials Books and Tutorials]
     * [SamplesAndDemos Samples and Demos]
     * [CallingOpenCLKernelsFromJava Calling Kernels]
     * [UnderstandOpenCLKernelArguments Understanding Arguments]
