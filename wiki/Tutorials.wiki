@@ -6,7 +6,7 @@ Official tutorials :
 
 Books :
   * [http://www.manning.com/scarpino2/ OpenCL in Action], written by Matthew Scarpino, is clearly the best OpenCL reference and hands-on guide out there, packed with amazing real-world examples ! (and it even covers JavaCL)
-[http://2.bp.blogspot.com/-Tk16qtGKxOo/TVxNqRZOw2I/AAAAAAAAAAU/QztUYmvmq-A/s272/OpenCL_new.gif]
+  [http://2.bp.blogspot.com/-Tk16qtGKxOo/TVxNqRZOw2I/AAAAAAAAAAU/QztUYmvmq-A/s272/OpenCL_new.gif]
 
 Blog entries :
   * [http://suhorukov.blogspot.com/2011/12/opencl-kernel-debugging-for-java-host.html OpenCL kernel debugging for java host code] (also see [DebuggingKernels this wiki page])
