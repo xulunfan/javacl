@@ -75,7 +75,9 @@ See [http://www.macresearch.org/opencl_episode4#comment-15801 this thread on mac
 
 == Which version of OpenCL does JavaCL support ? ==
 
-Since Apple hasn't bothered to go beyond OpenCL 1.0 yet, JavaCL mainly targets 1.0. It does however support some features of 1.1, that nicely throw NoSuchOperationException errors when leveraged :-)
+Since Apple hasn't bothered to go beyond OpenCL 1.0 yet, JavaCL mainly targets 1.0. 
+
+JavaCL does however support most features of 1.1, that nicely throw NoSuchOperationException errors when not available :-)
 
 And support of 1.2 is planned, any help is welcome.
 
