@@ -152,11 +152,11 @@ public class JavaCLTutorial1 {
 
         // Create OpenCL input buffers (using the native memory pointers aPtr and bPtr) :
         CLBuffer<Float> 
-            a = context.createFloatBuffer(Usage.Input, aPtr),
-            b = context.createFloatBuffer(Usage.Input, bPtr);
+            a = context.createBuffer(Usage.Input, aPtr),
+            b = context.createBuffer(Usage.Input, bPtr);
 
         // Create an OpenCL output buffer :
-        CLBuffer<Float> out = context.createFloatBuffer(Usage.Output, n);
+        CLBuffer<Float> out = context.createBuffer(Usage.Output, n);
 
         // Read the program sources and compile them :
         String src = IOUtils.readText(JavaCLTutorial1.class.getResource("TutorialKernels.cl"));
@@ -253,9 +253,9 @@ With the following changes in the Java code (see `JavaCLTutorial3.java`) :
 {{{
         // Create OpenCL input and output buffers :
         CLBuffer<Float> 
-            a = context.createFloatBuffer(Usage.InputOutput, n), // a and b are now read AND written to
-            b = context.createFloatBuffer(Usage.InputOutput, n),
-            out = context.createFloatBuffer(Usage.Output, n);
+            a = context.createBuffer(Usage.InputOutput, n), // a and b are now read AND written to
+            b = context.createBuffer(Usage.InputOutput, n),
+            out = context.createBuffer(Usage.Output, n);
 
         // Instantiate the auto-generated program wrapper and chain calls to the two kernel :
         TutorialKernels kernels = new TutorialKernels(context);
