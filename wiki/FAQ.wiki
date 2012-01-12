@@ -73,6 +73,12 @@ To see all errors, please set the environment variable `CL_LOG_ERRORS` to `stdou
 
 See [http://www.macresearch.org/opencl_episode4#comment-15801 this thread on macresearch.org] or [http://www.khronos.org/message_boards/viewtopic.php?f=28&t=2061 that thread on khronos.org] for more details.
 
+== Which version of OpenCL does JavaCL support ? ==
+
+Since Apple hasn't bothered to go beyond OpenCL 1.0 yet, JavaCL mainly targets 1.0. It does however support some features of 1.1, that nicely throw NoSuchOperationException errors when leveraged :-)
+
+And support of 1.2 is planned, any help is welcome.
+
 == Which platforms does JavaCL support ? ==
 
 Short answer is "all of them". Please [HardwareRequirements read details here...]
