@@ -149,6 +149,14 @@ Also, you'll need to enable one of these extensions explicitly in your OpenCL so
 
 You can safely pick cl_khr_fp64, for *JavaCL will automatically convert the #pragma directive to the AMD variant* if the KHR extension is not present and the AMD extension is (you can turn off this behaviour by setting the property `javacl.adjustDoubleExtension` to `false` or the environment variable `JAVACL_ADJUST_DOUBLE_EXTENSION` to `0`).
 
+== Is JavaCL thread-safe ? ==
+
+In general, JavaCL as thread-safe as the underlying OpenCL API.
+
+Unfortunately thread-safety is only guaranteed in OpenCL 1.1 onwards, even though _things just work_ in many cases in OpenCL 1.0 implementations.
+
+See [http://blogs.fau.de/pofh/2010/07/09/opencl-1-0-multithreading-and-multiqueueing/ this post] for more details.
+
 == My question is not here... How can I get some help ? ==
 
 JavaCL has a [http://groups.google.com/group/nativelibs4java user group / mailing-list] : you can search in its archive to find similar past questions or post a new message, we'll try to help the best we can.
