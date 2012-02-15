@@ -66,28 +66,36 @@ C:\Program Files\Java\jre-1.6.0\lib\ext
 The JavaCL plugin can be used with [http://maven.apache.org/ Maven], simply edit your `pom.xml` as follows :
 {{{
 <project>
-  ...
   <repositories>
-    ...
+
+    <repository>
+      <id>sonatype</id>
+      <name>Sonatype OSS Snapshots Repository</name>
+      <url>http://oss.sonatype.org/content/groups/public</url>
+    </repository>
+
     <repository>
       <id>nativelibs4java</id>
       <name>nativelibs4java Maven2 Repository</name>
       <url>http://nativelibs4java.sourceforge.net/maven</url>
     </repository>
+
   </repositories>
 
   <dependencies>
+
     <dependency>
       <groupId>com.nativelibs4java</groupId>
       <artifactId>javacl</artifactId>
       <!--version>1.0.0-RC1</version-->
       <version>1.0-SNAPSHOT</version>
     </dependency>
+
   </dependencies>
-  ...
+
   <build>
     <plugins>
-        ...
+
       <plugin>
         <groupId>com.nativelibs4java</groupId>
         <artifactId>maven-javacl-plugin</artifactId>
