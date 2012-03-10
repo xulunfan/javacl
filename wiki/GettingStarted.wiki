@@ -139,7 +139,7 @@ public class JavaCLTutorial1 {
     public static void main(String[] args) {
         CLContext context = JavaCL.createBestContext();
         CLQueue queue = context.createDefaultQueue();
-        ByteOrder byteOrder = context.getKernelsDefaultByteOrder();
+        ByteOrder byteOrder = context.getByteOrder();
         
         int n = 1024;
         Pointer<Float>
