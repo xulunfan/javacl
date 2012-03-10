@@ -73,6 +73,18 @@ To see all errors, please set the environment variable `CL_LOG_ERRORS` to `stdou
 
 See [http://www.macresearch.org/opencl_episode4#comment-15801 this thread on macresearch.org] or [http://www.khronos.org/message_boards/viewtopic.php?f=28&t=2061 that thread on khronos.org] for more details.
 
+== I get a weird InvalidValue exception, why ? ==
+
+If you are on MacOS X and have installed a utility to turn off your discrete GPU in order to optimize your battery life, you might want to make sure your GPU is indeed enabled when you run JavaCL : if not, you'll still see the GPU from OpenCL, but any attempt to use it will throw InvalidValue exceptions.
+
+== My kernel returns weird double / float values when run on ATI Radeo GPUs ==
+
+Radeon GPUs are big-endian, whereas most other GPUs and CPUs are little-endian.
+
+Some precautions need to be taken to ensure a little-endian host (such as x86) can exchange data with a big-endian device, otherwise you'll see some insanely huge values popping out of nowhere.
+
+Please read [ReadFromAndWriteToBuffersAndImages] for more information.
+
 == Which version of OpenCL does JavaCL support ? ==
 
 Since Apple hasn't bothered to go beyond OpenCL 1.0 yet, JavaCL mainly targets 1.0. 
