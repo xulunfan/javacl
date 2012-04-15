@@ -16,7 +16,7 @@ You can either create a plain Maven project by hand and modify its `pom.xml` as 
   * In the `Maven Archetype` screen, click on `Add`, fill-in the details then click on `Ok` :
     * Group Id = `com.nativelibs4java`
     * Archetype Id = `javacl-simple-tutorial`
-    * Version = `1.0-SNAPSHOT`
+    * Version = `1.0.0-RC2`
     * Repository = `http://oss.sonatype.org/content/groups/public`
   [http://javacl.googlecode.com/svn/wiki/images/NetbeansArchetype-AchetypeDetails.png]
   * Select the custom archetype you've just created and click on `Next`, then `Finish` :
@@ -37,7 +37,7 @@ It's very easy to create the sources for this tutorial with IDEA :
   * Tick `Create from archetype` and click on `Add archetype`, then fill-in the details :
     * Group Id = `com.nativelibs4java`
     * Archetype Id = `javacl-simple-tutorial`
-    * Version = `1.0-SNAPSHOT`
+    * Version = `1.0.0-RC2`
     * Repository = `http://oss.sonatype.org/content/groups/public`
   [http://javacl.googlecode.com/svn/wiki/images/IdeaArchetype-AddArchetype.png]
   * Click `Ok` and `Finish` : you're done
@@ -49,11 +49,11 @@ First, please make sure you've properly installed [http://maven.apache.org/ Mave
 Then simply type the following commands in a shell :
   * With Maven 3.0.3+ :
 {{{
-mvn archetype:generate -DarchetypeGroupId=com.nativelibs4java -DarchetypeArtifactId=javacl-simple-tutorial -DarchetypeVersion=1.0-SNAPSHOT -DarchetypeRepository=http://oss.sonatype.org/content/groups/public
+mvn archetype:generate -DarchetypeGroupId=com.nativelibs4java -DarchetypeArtifactId=javacl-simple-tutorial -DarchetypeVersion=1.0.0-RC2 -DarchetypeRepository=http://oss.sonatype.org/content/groups/public
 }}}
   * With previous versions of Maven :
 {{{
-mvn archetype:generate -DarchetypeGroupId=com.nativelibs4java -DarchetypeArtifactId=javacl-simple-tutorial -DarchetypeVersion=1.0-SNAPSHOT -DremoteRepositories=http://oss.sonatype.org/content/groups/public
+mvn archetype:generate -DarchetypeGroupId=com.nativelibs4java -DarchetypeArtifactId=javacl-simple-tutorial -DarchetypeVersion=1.0.0-RC2 -DremoteRepositories=http://oss.sonatype.org/content/groups/public
 }}}
 
 This will generate a directory with the following layout :
@@ -99,7 +99,7 @@ This file contains a single cross-platform JavaCL dependency :
 	<dependency>
 	  <groupId>com.nativelibs4java</groupId>
 	  <artifactId>javacl</artifactId>
-	  <version>1.0-SNAPSHOT</version>
+	  <version>1.0.0-RC2</version>
 	</dependency>
   </dependencies>
 }}}
