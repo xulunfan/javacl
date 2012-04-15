@@ -91,8 +91,7 @@ The JavaCL plugin can be used with [http://maven.apache.org/ Maven], simply edit
     <dependency>
       <groupId>com.nativelibs4java</groupId>
       <artifactId>javacl</artifactId>
-      <!--version>1.0.0-RC1</version-->
-      <version>1.0-SNAPSHOT</version>
+      <version>1.0.0-RC2</version>
     </dependency>
 
   </dependencies>
@@ -103,7 +102,7 @@ The JavaCL plugin can be used with [http://maven.apache.org/ Maven], simply edit
       <plugin>
         <groupId>com.nativelibs4java</groupId>
         <artifactId>maven-javacl-plugin</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0-RC1</version>
         <executions>
         <execution>
           <phase>generate-sources</phase>
@@ -128,9 +127,8 @@ Add these two lines to your project file :
 import sbt._
 class MyProject(info: ProjectInfo) extends DefaultProject(info)
 {
-//  val nativelibs4javaRepo = "NativeLibs4Java Repository" at "http://nativelibs4java.sourceforge.net/maven/"
   val sonatypeOSSRepo = "Sonatype OSS Repository" at "http://oss.sonatype.org/content/groups/public"
-  val javacl = "com.nativelibs4java" % "javacl" % "1.0.0-RC1"
+  val javacl = "com.nativelibs4java" % "javacl" % "1.0.0-RC2"
 }
 }}}
 
