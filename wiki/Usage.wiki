@@ -63,29 +63,9 @@ C:\Program Files\Java\jre-1.6.0\lib\ext
 
 == With Maven ==
 
-The JavaCL plugin can be used with [http://maven.apache.org/ Maven], simply edit your `pom.xml` as follows :
+JavaCL and its plugin can be used with [http://maven.apache.org/ Maven], simply edit your `pom.xml` as follows :
 {{{
 <project>
-  <repositories>
-    <repository>
-      <id>sonatype</id>
-      <name>Sonatype OSS Snapshots Repository</name>
-      <url>http://oss.sonatype.org/content/groups/public</url>
-    </repository>
-    <!--repository>
-      <id>nativelibs4java</id>
-      <name>nativelibs4java Maven2 Repository</name>
-      <url>http://nativelibs4java.sourceforge.net/maven</url>
-    </repository-->
-  </repositories>
-  <pluginRepositories>
-      <pluginRepository>
-          <id>sonatype</id>
-          <name>Sonatype OSS Snapshots Repository</name>
-          <url>http://oss.sonatype.org/content/groups/public</url>
-      </pluginRepository>
-  </pluginRepositories>
-
   <dependencies>
 
     <dependency>
@@ -118,6 +98,32 @@ The JavaCL plugin can be used with [http://maven.apache.org/ Maven], simply edit
 </project>
 }}}
 
+If you wish to use a previous release (1.0.0-RC1, for instance) or a snapshot (1.0-SNAPSHOT), you'll need the following repositories :
+{{{
+<project>
+  <repositories>
+    <repository>
+      <id>sonatype</id>
+      <name>Sonatype OSS Snapshots Repository</name>
+      <url>http://oss.sonatype.org/content/groups/public</url>
+    </repository>
+    <repository>
+      <id>nativelibs4java</id>
+      <name>nativelibs4java Maven2 Repository</name>
+      <url>http://nativelibs4java.sourceforge.net/maven</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+      <pluginRepository>
+          <id>sonatype</id>
+          <name>Sonatype OSS Snapshots Repository</name>
+          <url>http://oss.sonatype.org/content/groups/public</url>
+      </pluginRepository>
+  </pluginRepositories>
+
+</project>
+}}}
+
 Please read [JavaCLGenerator this wiki page] for more information about JavaCL Generator.
 
 == With sbt (simple-build-tool) ==
@@ -127,7 +133,8 @@ Add these two lines to your project file :
 import sbt._
 class MyProject(info: ProjectInfo) extends DefaultProject(info)
 {
-  val sonatypeOSSRepo = "Sonatype OSS Repository" at "http://oss.sonatype.org/content/groups/public"
+  // Repository for snapshots :
+  // val sonatypeOSSRepo = "Sonatype OSS Repository" at "http://oss.sonatype.org/content/groups/public"
   val javacl = "com.nativelibs4java" % "javacl" % "1.0.0-RC2"
 }
 }}}
