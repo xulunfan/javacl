@@ -94,7 +94,7 @@ JavaCL's "javacl-blas" Maven package contains a lazy implementation of float and
     <dependency>
       <groupId>com.nativelibs4java</groupId>
       <artifactId>javacl-blas</artifactId>
-      <version>1.0.0-RC1</version>
+      <version>1.0.0-RC2</version>
     </dependency>
   </dependencies>
   ...
