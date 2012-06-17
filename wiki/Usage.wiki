@@ -82,7 +82,7 @@ JavaCL and its plugin can be used with [http://maven.apache.org/ Maven], simply 
       <plugin>
         <groupId>com.nativelibs4java</groupId>
         <artifactId>maven-javacl-plugin</artifactId>
-        <version>1.0.0-RC1</version>
+        <version>1.0.0-RC2</version>
         <executions>
         <execution>
           <phase>generate-sources</phase>
