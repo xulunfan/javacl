@@ -2,6 +2,24 @@
 
 <wiki:toc max_depth="3" />
 
+== OpenWorm ==
+
+[http://www.openworm.org/ OpenWorm] is an ambitious life-simulation project that tackles "the greatest puzzle of our time - what are all the events that happen inside a living brain?".
+
+It [http://www.openworm.org/index.html#/tech uses JavaCL] to perform GPU-powered simulations.
+
+== Encog ==
+
+"[http://www.heatonresearch.com/encog Encog] is an advanced neural network and machine learning framework."
+
+There appears to be [http://www.heatonresearch.com/wiki/JavaCL experimentations with JavaCL] (and other bindings) to perform GPGPU.
+
+== Calx (Clojure) ==
+
+[https://github.com/ztellman/calx Calx] is an idiomatic Clojure wrapper for OpenCL.
+
+It uses JavaCL underneath.
+
 == JavaCL Parallel Primitives ==
 
 The [http://gitorious.org/javaclpp/pages/Home JavaCL Parallel Primitives] (from [http://kazocsaba.blogspot.com/ Kazó Csaba], who also [http://code.google.com/p/bridj/wiki/CreditsAndLicense contributes to JavaCL]) provides reduction and scan utilities that go beyond [Goodies those provided in JavaCL], and more...
@@ -11,18 +29,6 @@ The [http://gitorious.org/javaclpp/pages/Home JavaCL Parallel Primitives] (from 
 [http://code.google.com/p/scalacl/ ScalaCL] (BSD-licensed) is an optimizing Scala compiler plugin + GPU-backed collections.
 
 It uses JavaCL, which is still accessible directly if needed.
-
-== Calx (Clojure) ==
-
-[https://github.com/ztellman/calx Calx] is an idiomatic Clojure wrapper for OpenCL.
-
-It uses JavaCL underneath.
-
-== Encog ==
-
-"[http://www.heatonresearch.com/encog Encog] is an advanced neural network and machine learning framework."
-
-There appears to be [http://www.heatonresearch.com/wiki/JavaCL experimentations with JavaCL] (and other bindings) to perform GPGPU.
 
 == Academics ==
 
