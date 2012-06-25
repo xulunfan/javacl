@@ -61,6 +61,8 @@ For quite a few reasons:
   * Flexible kernel code management (as plain old Java resources that can include each other, straight from their JAR!)
   * Very competitive performance (see [https://groups.google.com/forum/#!msg/nativelibs4java/PxzVFpVclP0/YuTwy1er5XEJ this thread] for some figures)
   * [JavaCLGenerator Wrapper code generator] that prevents misuse of OpenCL kernels, providing typed interfaces that are regenerated at each build
+  * [Tutorials Books and Tutorials] are available to get you started
+  * [groups.google.com/group/nativelibs4java JavaCL] has passionate support from its author(s) and its community.
 
 == What does JavaCL offer in terms of memory management ? ==
 
