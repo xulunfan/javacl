@@ -72,6 +72,10 @@ OpenCL 1.1 drivers are guaranteed to be thread-safe, and JavaCL dynamically adds
 
 More specifically, if any OpenCL 1.0 platform is detected, JavaCL will force synchronization on low-level calls, so it will be faster if it only sees OpenCL 1.1 platforms.
 
+== What does JavaCL offer in terms of memory management ? ==
+
+JavaCL maps each OpenCL entity to a Java object. OpenCL entities are released whenever their corresponding Java object is garbage-collected, or when their `release()` method is called explicitly (which is strongly advised: please [ReadFromAndWriteToBuffersAndImages#Garbage_Collection_vs._Manual_Release read this wiki page]).
+
 == My old 1.0-beta code broke with 1.0-RC and later ! =
 
 Please read [MigratingFromJNAToBridJ].
