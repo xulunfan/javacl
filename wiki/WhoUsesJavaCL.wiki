@@ -4,7 +4,7 @@
 
 == `OpenWorm` ==
 
-[http://www.openworm.org/ OpenWorm] is an ambitious life-simulation project that tackles "the greatest puzzle of our time - what are all the events that happen inside a living brain?".
+[http://www.openworm.org/ OpenWorm] is an ambitious life-simulation project that tackles "the greatest puzzle of our time - what are all the events that happen inside a living brain?" (to achieve that long-term goal, it starts with a not-so-simple worm simulation that deals with neural networks, chemistry and physics simulation...)
 
 It [http://www.openworm.org/index.html#/tech uses JavaCL] to perform GPU-powered simulations.
 
