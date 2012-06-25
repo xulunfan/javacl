@@ -56,6 +56,22 @@ OpenCLLibrary.INSTANCE.clGetDeviceIDs(null, CL_DEVICE_TYPE_GPU | CL_DEVICE_TYPE_
 
 Please see the "Quick Start" section on the project's homepage.
 
+== How fast is JavaCL ? ==
+
+Pretty fast!
+
+The call overhead is usually negligible when compared to the execution time of kernels or the time to transfer buffer data between main memory and device memory.
+
+However, recent snapshots have been heavily optimized to reduce thread contention, GC activity and lower per-call overhead by a big factor: more details in [https://groups.google.com/forum/?fromgroups#!topic/nativelibs4java/PxzVFpVclP0 this thread].
+
+== Is JavaCL thread-safe ? ==
+
+Yes !
+
+OpenCL 1.1 drivers are guaranteed to be thread-safe, and JavaCL dynamically adds synchronization to its low-level bindings to guarantee thread-safety even with OpenCL 1.0.
+
+More specifically, if any OpenCL 1.0 platform is detected, JavaCL will force synchronization on low-level calls, so it will be faster if it only sees OpenCL 1.1 platforms.
+
 == My old 1.0-beta code broke with 1.0-RC and later ! =
 
 Please read [MigratingFromJNAToBridJ].
@@ -160,14 +176,6 @@ Also, you'll need to enable one of these extensions explicitly in your OpenCL so
 }}}
 
 You can safely pick cl_khr_fp64, for *JavaCL will automatically convert the #pragma directive to the AMD variant* if the KHR extension is not present and the AMD extension is (you can turn off this behaviour by setting the property `javacl.adjustDoubleExtension` to `false` or the environment variable `JAVACL_ADJUST_DOUBLE_EXTENSION` to `0`).
-
-== Is JavaCL thread-safe ? ==
-
-In general, JavaCL as thread-safe as the underlying OpenCL API.
-
-Unfortunately thread-safety is only guaranteed in OpenCL 1.1 onwards, even though _things just work_ in many cases in OpenCL 1.0 implementations.
-
-See [http://blogs.fau.de/pofh/2010/07/09/opencl-1-0-multithreading-and-multiqueueing/ this post] for more details.
 
 == My question is not here... How can I get some help ? ==
 
