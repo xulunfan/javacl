@@ -14,7 +14,7 @@ It [http://www.openworm.org/index.html#/tech uses JavaCL] to perform GPU-powered
 
 There appears to be [http://www.heatonresearch.com/wiki/JavaCL experimentations with JavaCL] (and other bindings) to perform GPGPU.
 
-== Calx (Clojure) ==
+== `Calx (Clojure)` ==
 
 [https://github.com/ztellman/calx Calx] is an idiomatic Clojure wrapper for OpenCL.
 
@@ -24,7 +24,7 @@ It uses JavaCL underneath.
 
 The [http://gitorious.org/javaclpp/pages/Home JavaCL Parallel Primitives] (from [http://kazocsaba.blogspot.com/ Kazó Csaba], who also [http://code.google.com/p/bridj/wiki/CreditsAndLicense contributes to JavaCL]) provides reduction and scan utilities that go beyond [Goodies those provided in JavaCL], and more...
 
-== ScalaCL ==
+== `ScalaCL` ==
 
 [http://code.google.com/p/scalacl/ ScalaCL] (BSD-licensed) is an optimizing Scala compiler plugin + GPU-backed collections.
 
