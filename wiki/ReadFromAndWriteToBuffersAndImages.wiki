@@ -155,10 +155,10 @@ NIO Buffers / BridJ Pointers given to all CLBuffer write methods should be order
 
 JavaCL maps OpenCL entities (allocated by the OpenCL driver, typically in the device memory) to Java objects (managed by the JVM's garbage collector).
 
-OpenCL entities are released when their Java objects counterparts are garbage collected.
+OpenCL entities are released when their Java object counterparts are garbage collected or when their release() method is called. 
 
-In many cases this can lead to serious issues : when the OpenCL driver runs out of memory, it does not tell Java to try and collect unused objects (which would release a few OpenCL entities in the process) and just fails, which makes JavaCL throw a CLException.MemObjectAllocationFailure or OutOfResources exception.
+In many cases, waiting for the GC to do the work can lead to serious issues : when the OpenCL driver runs out of memory, it does not tell Java to try and collect unused objects (which would release a few OpenCL entities in the process) and just fails, which makes JavaCL throw a `CLException.MemObjectAllocationFailure` or `CLException.OutOfResources` exception.
 
-To avoid that, one can manually release an unused buffer (or any JavaCL entity) by calling CLEntity.release() (CLEntity is a base class which is inherited by CLBuffer, CLImage2D, CLProgram, CLEvent... virtually all JavaCL classes of interest).
+To avoid that, one can manually release an unused buffer (or any JavaCL entity) by calling `CLAbstractEntity.release()` (`CLAbstractEntity` is a base class which is inherited by `CLBuffer`, `CLImage2D`, `CLProgram`, `CLEvent`... virtually all JavaCL classes of interest).
 
-JavaCL features a workaround for allocations that fail due to lack of OpenCL memory (it then calls the Java Garbage Collector and waits a while before retrying), but it is advised to call release() everytime possible (but only once on each object, of course).
+Fortunately, JavaCL features a workaround for allocations : whenever they fail by lack of OpenCL memory, JavaCL triggers a full GC, waits a little while and retries. This might have a terribly negative impact on your application's performance, though, so please call `release()` as soon as you can!
