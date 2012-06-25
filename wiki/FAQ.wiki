@@ -32,6 +32,19 @@ CLKernel kernel = program.createKernel(
 }}}
   [https://github.com/ochafik/nativelibs4java/tree/master/libraries/OpenCL/JavaCL/src/test/java/com/nativelibs4java/opencl/OpenCL4JavaBasicTest.java See the complete example...]
 
+== Why choose JavaCL over C+OpenCL ? ==
+
+For quite a few reasons:
+  * Write and compile once, run everywhere: one-jar for all platforms, and JavaCL takes care of some well-known platform discrepancies / bugs
+  * Programmer-friendly API with hassle-free memory management
+  * Helper code to load images, share data with OpenGL contexts, build contexts...
+  * Very competitive performance (see [https://groups.google.com/forum/#!msg/nativelibs4java/PxzVFpVclP0/YuTwy1er5XEJ this thread] for some figures)
+  * Powerful kernel code management:
+    * kernels are stored as plain old Java resources and can include each other straight from their JAR!
+    * [JavaCLGenerator JavaCL Generator] regenerates typed wrappers at each build to prevent misuse of kernel arguments
+  * [Tutorials Books and Tutorials] are available to get you started
+  * [groups.google.com/group/nativelibs4java JavaCL] has passionate support from its author(s) and its community.
+
 == How do I get started ? ==
 
 Please see the "Quick Start" section on the project's homepage.
@@ -51,18 +64,6 @@ Yes !
 OpenCL 1.1 drivers are guaranteed to be thread-safe, and JavaCL dynamically adds synchronization to its low-level bindings to guarantee thread-safety even with OpenCL 1.0.
 
 More specifically, if any OpenCL 1.0 platform is detected, JavaCL will force synchronization on low-level calls, so it will be faster if it only sees OpenCL 1.1 platforms.
-
-== Why choose JavaCL over C+OpenCL ? ==
-
-For quite a few reasons:
-  * Write and compile once, run everywhere: one-jar for all platforms, and JavaCL takes care of some well-known platform discrepancies / bugs
-  * Programmer-friendly API with powerful memory management
-  * Helper code to load a BufferedImage, share data with OpenGL contexts, build contexts...
-  * Flexible kernel code management (as plain old Java resources that can include each other, straight from their JAR!)
-  * Very competitive performance (see [https://groups.google.com/forum/#!msg/nativelibs4java/PxzVFpVclP0/YuTwy1er5XEJ this thread] for some figures)
-  * [JavaCLGenerator Wrapper code generator] that prevents misuse of OpenCL kernels, providing typed interfaces that are regenerated at each build
-  * [Tutorials Books and Tutorials] are available to get you started
-  * [groups.google.com/group/nativelibs4java JavaCL] has passionate support from its author(s) and its community.
 
 == What does JavaCL offer in terms of memory management ? ==
 
