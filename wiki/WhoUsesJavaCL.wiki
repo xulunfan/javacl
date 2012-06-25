@@ -2,13 +2,13 @@
 
 <wiki:toc max_depth="3" />
 
-== OpenWorm ==
+== `OpenWorm` ==
 
 [http://www.openworm.org/ OpenWorm] is an ambitious life-simulation project that tackles "the greatest puzzle of our time - what are all the events that happen inside a living brain?".
 
 It [http://www.openworm.org/index.html#/tech uses JavaCL] to perform GPU-powered simulations.
 
-== Encog ==
+== `Encog` ==
 
 "[http://www.heatonresearch.com/encog Encog] is an advanced neural network and machine learning framework."
 
