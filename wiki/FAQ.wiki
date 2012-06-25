@@ -74,7 +74,7 @@ More specifically, if any OpenCL 1.0 platform is detected, JavaCL will force syn
 
 == What does JavaCL offer in terms of memory management ? ==
 
-JavaCL maps each OpenCL entity to a Java object. OpenCL entities are released whenever their corresponding Java object is garbage-collected, or when their `release()` method is called explicitly (which is strongly advised: please [ReadFromAndWriteToBuffersAndImages#Garbage_Collection_vs._Manual_Release read this wiki page]).
+JavaCL maps each OpenCL entity to a Java object. OpenCL entities are released whenever their corresponding Java object is garbage-collected, or when their `release()` method is called explicitly (which is strongly advised: please [ReadFromAndWriteToBuffersAndImages#Garbage_Collection_vs._Manual_Release read this wiki page] for more information).
 
 == My old 1.0-beta code broke with 1.0-RC and later ! =
 
