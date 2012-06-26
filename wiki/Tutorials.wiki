@@ -12,11 +12,12 @@
 
 = Blog entries =
 
-  * Robert Boothby has written two very interesting posts about Mandelbrot sets with JavaCL :
+  * [http://www.blogger.com/profile/13504207507405859169 Robert Boothby] has written two very interesting posts about Mandelbrot sets with JavaCL :
     * [http://bbboblog.blogspot.co.uk/2012/04/towards-richer-gpgpu-mandelbrot-sets.html Towards a richer GPGPU Mandelbrot Sets and OpenCL example.]
     * [http://bbboblog.blogspot.com/2009/10/gpgpu-mandelbrot-with-opencl-and-java.html GPGPU Mandelbrot with OpenCL and Java]
-  * [http://suhorukov.blogspot.com/2011/12/opencl-kernel-debugging-for-java-host.html OpenCL kernel debugging for java host code] (also see [DebuggingKernels this wiki page])
-  * [http://mahadevangorti.blogspot.com/ GSS Mahadevan] wrote about some JavaCL experiments :
+  * [http://www.blogger.com/profile/14337861739229022768 Igor Suhorukov]
+    * [http://suhorukov.blogspot.com/2011/12/opencl-kernel-debugging-for-java-host.html OpenCL kernel debugging for java host code] (also see [DebuggingKernels this wiki page])
+  * [http://www.blogger.com/profile/04178543310367612494 GSS Mahadevan] wrote about some JavaCL experiments :
     * [http://mahadevangorti.blogspot.co.uk/2010/04/optimum-globallocal-work-size-for-given.html Optimum global/local work size for a given OpenCL kernel]
     * [http://mahadevangorti.blogspot.co.uk/2010/04/information-about-opencl-global-size.html Information about OpenCL Global size and Local size dimensions]
   * [http://developer.imagej.net/gpu-based-processing-techniques-and-imagej-architecture-draft-02 GPU Based Processing Techniques and the ImageJ Architecture (Draft 0.2)]
