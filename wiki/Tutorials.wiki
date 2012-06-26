@@ -25,5 +25,7 @@
     * [http://www.pixelnerve.com/v/2010/07/29/msaopencl-for-java-and-processing/ MSAOpenCL for Java and Processing]
     * [http://www.pixelnerve.com/v/2010/02/17/javacl-the-new-opencl4java/ JavaCL, the new OpenCL4Java]
     * [http://www.pixelnerve.com/v/2009/10/30/opencl-4-java/ JavaCL from within Processing 1.0]
-  * [http://ochafik.free.fr/blog/?p=190 OpenCL4Java: Build high-performance OpenCL code with Java (and stay calm)]
-  * [http://ochafik.free.fr/blog/?p=207 ScalaCL: Reap OpenCL’s benefits without learning its syntax (Scala DSL for transparently parallel computations)]
+  * Finally, [https://twitter.com/ochafik Olivier Chafik], JavaCL's author, wrote some outdated posts about the library :
+    * [http://ochafik.free.fr/blog/?p=190 OpenCL4Java: Build high-performance OpenCL code with Java (and stay calm)]
+    * [http://ochafik.free.fr/blog/?p=207 ScalaCL: Reap OpenCL’s benefits without learning its syntax (Scala DSL for transparently parallel computations)]
+    * [http://ochafik.com/blog/?s=javacl Search "javacl" on Olivier Chafik's blog (you'll find release notes there !)]
