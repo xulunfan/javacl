@@ -20,6 +20,9 @@
     * [http://mahadevangorti.blogspot.co.uk/2010/04/optimum-globallocal-work-size-for-given.html Optimum global/local work size for a given OpenCL kernel]
     * [http://mahadevangorti.blogspot.co.uk/2010/04/information-about-opencl-global-size.html Information about OpenCL Global size and Local size dimensions]
   * [http://developer.imagej.net/gpu-based-processing-techniques-and-imagej-architecture-draft-02 GPU Based Processing Techniques and the ImageJ Architecture (Draft 0.2)]
-  * [http://www.pixelnerve.com/v/2009/10/30/opencl-4-java/ JavaCL from within Processing 1.0]
+  * [http://www.pixelnerve.com/v/about/ Victor Martins] has published some very cool demos that leverage JavaCL :
+    * [http://www.pixelnerve.com/v/2010/07/29/msaopencl-for-java-and-processing/ MSAOpenCL for Java and Processing]
+    * [http://www.pixelnerve.com/v/2010/02/17/javacl-the-new-opencl4java/ JavaCL, the new OpenCL4Java]
+    * [http://www.pixelnerve.com/v/2009/10/30/opencl-4-java/ JavaCL from within Processing 1.0]
   * [http://ochafik.free.fr/blog/?p=190 OpenCL4Java: Build high-performance OpenCL code with Java (and stay calm)]
   * [http://ochafik.free.fr/blog/?p=207 ScalaCL: Reap OpenCL’s benefits without learning its syntax (Scala DSL for transparently parallel computations)]
