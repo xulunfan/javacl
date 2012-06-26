@@ -1,4 +1,4 @@
-#summary Tutorials available for JavaCL
+#summary Various JavaCL learning materials available on the net or in libraries
 
 Official tutorials :
   * Simple [GettingStarted Getting Started] tutorial : will guide you through calling OpenCL kernels with and without the [JavaCLGenerator JavaCL Generator]
