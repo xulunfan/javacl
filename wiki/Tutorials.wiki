@@ -9,9 +9,11 @@ Books :
    [http://2.bp.blogspot.com/-Tk16qtGKxOo/TVxNqRZOw2I/AAAAAAAAAAU/QztUYmvmq-A/s272/OpenCL_new.gif]
 
 Blog entries :
+  * Robert Boothby has written two very interesting posts about Mandelbrot sets with JavaCL :
+    * [http://bbboblog.blogspot.co.uk/2012/04/towards-richer-gpgpu-mandelbrot-sets.html Towards a richer GPGPU Mandelbrot Sets and OpenCL example.]
+    * [http://bbboblog.blogspot.com/2009/10/gpgpu-mandelbrot-with-opencl-and-java.html GPGPU Mandelbrot with OpenCL and Java]
   * [http://suhorukov.blogspot.com/2011/12/opencl-kernel-debugging-for-java-host.html OpenCL kernel debugging for java host code] (also see [DebuggingKernels this wiki page])
   * [http://mahadevangorti.blogspot.com/search/label/JavaCL GSS MAHADEVAN'S blog]
   * [http://www.pixelnerve.com/v/2009/10/30/opencl-4-java/ JavaCL from within Processing 1.0]
-  * [http://bbboblog.blogspot.com/2009/10/gpgpu-mandelbrot-with-opencl-and-java.html GPGPU Mandelbrot with OpenCL and Java]
   * [http://ochafik.free.fr/blog/?p=190 OpenCL4Java: Build high-performance OpenCL code with Java (and stay calm)]
   * [http://ochafik.free.fr/blog/?p=207 ScalaCL: Reap OpenCL’s benefits without learning its syntax (Scala DSL for transparently parallel computations)]
