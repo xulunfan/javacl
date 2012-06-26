@@ -15,7 +15,7 @@
   * [http://www.blogger.com/profile/13504207507405859169 Robert Boothby] has written two very interesting posts about Mandelbrot sets with JavaCL :
     * [http://bbboblog.blogspot.co.uk/2012/04/towards-richer-gpgpu-mandelbrot-sets.html Towards a richer GPGPU Mandelbrot Sets and OpenCL example.]
     * [http://bbboblog.blogspot.com/2009/10/gpgpu-mandelbrot-with-opencl-and-java.html GPGPU Mandelbrot with OpenCL and Java]
-  * [http://www.blogger.com/profile/14337861739229022768 Igor Suhorukov]
+  * [http://www.blogger.com/profile/14337861739229022768 Igor Suhorukov] has paved the way for debugging with JavaCL (JavaCL was updated subsequently to his post to ease up the process he describes)
     * [http://suhorukov.blogspot.com/2011/12/opencl-kernel-debugging-for-java-host.html OpenCL kernel debugging for java host code] (also see [DebuggingKernels this wiki page])
   * [http://www.blogger.com/profile/04178543310367612494 GSS Mahadevan] wrote about some JavaCL experiments :
     * [http://mahadevangorti.blogspot.co.uk/2010/04/optimum-globallocal-work-size-for-given.html Optimum global/local work size for a given OpenCL kernel]
