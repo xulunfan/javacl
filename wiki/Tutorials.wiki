@@ -1,16 +1,17 @@
 #summary Various JavaCL learning materials available on the net or in libraries
 
-{toc}
+<wiki:toc max_depth="3" />
 
-Official tutorials :
+= Official tutorials =
   * Simple [GettingStarted Getting Started] tutorial : will guide you through calling OpenCL kernels with and without the [JavaCLGenerator JavaCL Generator]
   * [http://ochafik.com/blog/?p=501 Write your first OpenCL Discrete Fourier Transform with JavaCL in 15 minutes] : uses the old JNA version of JavaCL (see the [MigratingFromJNAToBridJ migration page])
 
-Books :
+= Books =
   * [http://www.manning.com/scarpino2/ OpenCL in Action] is clearly the best OpenCL reference and hands-on guide out there, packed with amazing real-world examples ! (and it even covers JavaCL)
    [http://2.bp.blogspot.com/-Tk16qtGKxOo/TVxNqRZOw2I/AAAAAAAAAAU/QztUYmvmq-A/s272/OpenCL_new.gif]
 
-Blog entries :
+= Blog entries =
+
   * Robert Boothby has written two very interesting posts about Mandelbrot sets with JavaCL :
     * [http://bbboblog.blogspot.co.uk/2012/04/towards-richer-gpgpu-mandelbrot-sets.html Towards a richer GPGPU Mandelbrot Sets and OpenCL example.]
     * [http://bbboblog.blogspot.com/2009/10/gpgpu-mandelbrot-with-opencl-and-java.html GPGPU Mandelbrot with OpenCL and Java]
