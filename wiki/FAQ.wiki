@@ -77,7 +77,7 @@ Please read [MigratingFromJNAToBridJ].
 
 Please read [TroubleShootingJavaCLOnLinux] for a workaround.
 
-== I get a weird InvalidCommandQueue exception, why ? ==
+== I get a weird !InvalidCommandQueue exception, why ? ==
 
 Command queues can become invalid after some errors that can go unnoticed by default.
 To see all errors, please set the environment variable `CL_LOG_ERRORS` to `stdout` :
@@ -86,9 +86,9 @@ To see all errors, please set the environment variable `CL_LOG_ERRORS` to `stdou
 
 See [http://www.macresearch.org/opencl_episode4#comment-15801 this thread on macresearch.org] or [http://www.khronos.org/message_boards/viewtopic.php?f=28&t=2061 that thread on khronos.org] for more details.
 
-== I get a weird InvalidValue exception, why ? ==
+== I get a weird !InvalidValue exception, why ? ==
 
-If you are on MacOS X and have installed a utility to turn off your discrete GPU in order to optimize your battery life, you might want to make sure your GPU is indeed enabled when you run JavaCL : if not, you'll still see the GPU from OpenCL, but any attempt to use it will throw InvalidValue exceptions.
+If you are on MacOS X and have installed a utility to turn off your discrete GPU in order to optimize your battery life, you might want to make sure your GPU is indeed enabled when you run JavaCL : if not, you'll still see the GPU from OpenCL, but any attempt to use it will throw !InvalidValue exceptions.
 
 == My kernel returns weird double / float values when run on ATI Radeon GPUs ==
 
@@ -102,7 +102,7 @@ Please read [ReadFromAndWriteToBuffersAndImages] for more information.
 
 Since Apple hasn't bothered to go beyond OpenCL 1.0 yet, JavaCL mainly targets 1.0. 
 
-JavaCL does however support most features of 1.1, that nicely throw NoSuchOperationException errors when not available :-)
+JavaCL does however support most features of 1.1, that nicely throw !NoSuchOperationException errors when not available :-)
 
 And support of 1.2 is planned, any help is welcome.
 
