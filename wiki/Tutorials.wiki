@@ -12,6 +12,11 @@
 
 = Blog entries =
 
+  * [http://www.magicandlove.com/blog/about/ Bryan Chung] at [http://www.magicandlove.com/blog/ Magic & Love Interactive] has done some insane JavaCL-powered [http://processing.org/ Processing] demos:
+    * [http://www.magicandlove.com/blog/2012/05/01/opencl-particles-system-example-in-processing/ OpenCL Particles System Example in Processing]
+    * [http://www.magicandlove.com/blog/2012/04/30/paintings-from-the-opencl-particles-system/ Paintings from the OpenCL Particles System]
+    * [http://www.magicandlove.com/blog/2012/04/29/opencl-particles-system-with-processing/ OpenCL Particles System with Processing]
+    * [http://www.magicandlove.com/blog/2012/04/23/opencl-and-processing/ OpenCL and Processing]
   * [http://www.blogger.com/profile/13504207507405859169 Robert Boothby] has written two very interesting posts about Mandelbrot sets with JavaCL:
     * [http://bbboblog.blogspot.co.uk/2012/04/towards-richer-gpgpu-mandelbrot-sets.html Towards a richer GPGPU Mandelbrot Sets and OpenCL example.]
     * [http://bbboblog.blogspot.com/2009/10/gpgpu-mandelbrot-with-opencl-and-java.html GPGPU Mandelbrot with OpenCL and Java]
