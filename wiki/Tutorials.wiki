@@ -12,17 +12,18 @@
 
 = Blog entries =
 
-  * [http://www.blogger.com/profile/13504207507405859169 Robert Boothby] has written two very interesting posts about Mandelbrot sets with JavaCL :
+  * [http://www.blogger.com/profile/13504207507405859169 Robert Boothby] has written two very interesting posts about Mandelbrot sets with JavaCL:
     * [http://bbboblog.blogspot.co.uk/2012/04/towards-richer-gpgpu-mandelbrot-sets.html Towards a richer GPGPU Mandelbrot Sets and OpenCL example.]
     * [http://bbboblog.blogspot.com/2009/10/gpgpu-mandelbrot-with-opencl-and-java.html GPGPU Mandelbrot with OpenCL and Java]
-  * [http://www.blogger.com/profile/14337861739229022768 Igor Suhorukov] has detailed how to debug kernels with JavaCL :
+  * [http://www.blogger.com/profile/14337861739229022768 Igor Suhorukov] has detailed how to debug kernels with JavaCL:
     * [http://suhorukov.blogspot.com/2011/12/opencl-kernel-debugging-for-java-host.html OpenCL kernel debugging for java host code] (also see [DebuggingKernels this wiki page])
-  * [http://www.blogger.com/profile/04178543310367612494 GSS Mahadevan] wrote about some JavaCL experiments :
+  * [http://www.blogger.com/profile/04178543310367612494 GSS Mahadevan] wrote about some JavaCL experiments:
     * [http://mahadevangorti.blogspot.co.uk/2010/04/optimum-globallocal-work-size-for-given.html Optimum global/local work size for a given OpenCL kernel]
     * [http://mahadevangorti.blogspot.co.uk/2010/04/information-about-opencl-global-size.html Information about OpenCL Global size and Local size dimensions]
-  * [http://developer.imagej.net/gpu-based-processing-techniques-and-imagej-architecture-draft-02 GPU Based Processing Techniques and the ImageJ Architecture (Draft 0.2)]
-  * [http://www.pixelnerve.com/v/about/ Victor Martins] has published some very cool demos that leverage JavaCL :
+  * [http://developer.imagej.net/ ImageJDev] has explored GPU acceleration for ImageJ:
+    * [http://developer.imagej.net/gpu-based-processing-techniques-and-imagej-architecture-draft-02 GPU Based Processing Techniques and the ImageJ Architecture (Draft 0.2)]
+  * [http://www.pixelnerve.com/v/about/ Victor Martins] has published some very cool demos that leverage JavaCL:
     * [http://www.pixelnerve.com/v/2010/07/29/msaopencl-for-java-and-processing/ MSAOpenCL for Java and Processing]
     * [http://www.pixelnerve.com/v/2010/02/17/javacl-the-new-opencl4java/ JavaCL, the new OpenCL4Java]
     * [http://www.pixelnerve.com/v/2009/10/30/opencl-4-java/ JavaCL from within Processing 1.0]
-  * Finally, checkout [http://ochafik.com/blog/?s=javacl Olivier Chafik]'s blog : some contents refers to older version of JavaCL, but all the release notes are there :-)
+  * Finally, checkout [http://ochafik.com/blog/?s=javacl Olivier Chafik]'s blog: some contents refers to older version of JavaCL, but all the release notes are there :-)
