@@ -4,6 +4,7 @@
   * [GettingStarted Getting Started (Tutorial)]
   * [CreditsAndLicense Credits & License (BSD)]
   * [WhoUsesJavaCL Who's using JavaCL ?]
+  * [https://github.com/ochafik/nativelibs4java/blob/master/libraries/OpenCL/CHANGELOG CHANGELOG]
   * Project
     * [ReleaseNotes Release Notes]
     * [Build]
