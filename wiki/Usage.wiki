@@ -71,7 +71,7 @@ JavaCL and its plugin can be used with [http://maven.apache.org/ Maven], simply 
     <dependency>
       <groupId>com.nativelibs4java</groupId>
       <artifactId>javacl</artifactId>
-      <version>1.0.0-RC2</version>
+      <version>1.0.0-RC3</version>
     </dependency>
 
   </dependencies>
@@ -82,7 +82,7 @@ JavaCL and its plugin can be used with [http://maven.apache.org/ Maven], simply 
       <plugin>
         <groupId>com.nativelibs4java</groupId>
         <artifactId>maven-javacl-plugin</artifactId>
-        <version>1.0.0-RC2</version>
+        <version>1.0.0-RC3</version>
         <executions>
         <execution>
           <phase>generate-sources</phase>
@@ -135,17 +135,13 @@ class MyProject(info: ProjectInfo) extends DefaultProject(info)
 {
   // Repository for snapshots :
   // val sonatypeOSSRepo = "Sonatype OSS Repository" at "http://oss.sonatype.org/content/groups/public"
-  val javacl = "com.nativelibs4java" % "javacl" % "1.0.0-RC2"
+  val javacl = "com.nativelibs4java" % "javacl" % "1.0.0-RC3"
 }
 }}}
 
 == With OSGi ==
 
 JavaCL is compatible with OSGi _a minima_, which means it should now load fine in any OSGi container but you might find some OSGi features missing : [https://github.com/ochafik/nativelibs4java/issues/new please report any issue] you find.
-
-OSGi-enabled packages are currently only available as snapshots, so you'll have to find the latest .jar file here :
-
-[https://oss.sonatype.org/content/groups/public/com/nativelibs4java/javacl-osgi/1.0-SNAPSHOT/ JavaCL-OSGi 1.0-SNAPSHOT in Maven repository]
 
 == Raw download ==
 
