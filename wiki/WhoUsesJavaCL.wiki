@@ -32,7 +32,7 @@ It uses JavaCL.
 
 It uses JavaCL underneath.
 
-== JavaCL Parallel Primitives ==
+== `JavaCL Parallel Primitives` ==
 
 The [http://gitorious.org/javaclpp/pages/Home JavaCL Parallel Primitives] (from [http://kazocsaba.blogspot.com/ Kazó Csaba], who also [http://code.google.com/p/bridj/wiki/CreditsAndLicense contributes to JavaCL]) provides reduction and scan utilities that go beyond [Goodies those provided in JavaCL], and more...
 
