@@ -15,6 +15,12 @@ It [http://www.openworm.org/index.html#/tech uses JavaCL] to perform GPU-powered
 
 There appears to be [http://www.heatonresearch.com/wiki/JavaCL experimentations with JavaCL] (and other bindings) to perform GPGPU.
 
+== `CellProfiler`
+
+[http://cellprofiler.org/ CellProfiler] is free open-source software designed to enable biologists without training in computer vision or programming to quantitatively measure phenotypes from thousands of images automatically.
+
+It uses JavaCL.
+
 == `Jama` ==
 
 [http://math.nist.gov/javanumerics/jama/ Jama] is a public-domain Java Matrix Library.
