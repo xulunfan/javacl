@@ -19,7 +19,7 @@ There appears to be [http://www.heatonresearch.com/wiki/JavaCL experimentations 
 
 [http://cellprofiler.org/ CellProfiler] is free open-source software designed to enable biologists without training in computer vision or programming to quantitatively measure phenotypes from thousands of images automatically.
 
-It uses JavaCL.
+Its OpenCL backend uses JavaCL.
 
 == `Jama` ==
 
