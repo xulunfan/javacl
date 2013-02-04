@@ -15,6 +15,11 @@ It [http://www.openworm.org/index.html#/tech uses JavaCL] to perform GPU-powered
 
 There appears to be [http://www.heatonresearch.com/wiki/JavaCL experimentations with JavaCL] (and other bindings) to perform GPGPU.
 
+== `Jama` ==
+
+[http://math.nist.gov/javanumerics/jama/ Jama] is a public-domain Java Matrix Library.
+[http://muuki88.github.com/jama-osgi/project-summary.html mukis.de] maintains a port that uses JavaCL for GPU-accelerated operations, available in Maven Central.
+
 == `Calx (Clojure)` ==
 
 [https://github.com/ztellman/calx Calx] is an idiomatic Clojure wrapper for OpenCL.
