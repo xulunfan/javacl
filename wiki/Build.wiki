@@ -33,14 +33,12 @@ After the build is finished, you'll find JavaCL's full self-contained JAR in `Op
 
 = Incremental builds (after a first full build) =
 
-Note that if you want JavaCL's tests to pass, you'll need to install JOGL 2.x on your system  first (see next section)
-
 To build JavaCL Demos, just cd to the libraries/OpenCL/Demos directory and run the following command (works the same for any other sub-project) :
 {{{
 mvn clean install
 }}}
 
-To avoid launching tests, you can append a `-Dmaven.test.skip=true` argument to that command.
+To avoid launching tests, you can append a `-DskipTests` argument to that command.
 
 = Regenerating low-level bindings =
 
