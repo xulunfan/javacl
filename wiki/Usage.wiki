@@ -27,37 +27,11 @@ The excellent [http://lwjgl.org/ Lightweight Java Game Library (LWJGL)] is a pre
 
 It [http://www.lwjgl.org/wiki/index.php?title=Main_Page#Getting_started can be installed in many various ways, including Maven].
 
+Note that it also provides OpenCL bindings, but they are much closer to the metal and might be substantially harder to use than JavaCL for beginners and advanced users alike.
+
 === Jogamp JOGL ===
 
-After a long radio silence, fresh forces are injected again into JOGL (now hosted at [http://jogamp.org/ jogamp.org]), with even alternative OpenCL bindings.
-
-As the jogamp OpenGL bindings are still a bit uneasy to install, here's a simplified install procedure to get the latest version of JOGL : 
-  * Download the `NativeLibs4Java-assembled` JOGL package for your architecture + operating system :
-    * Windows [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-windows-i586-latest.zip 32 bits] | [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-windows-amd64-latest.zip 64 bits]
-    * Linux [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-linux-i586-latest.zip 32 bits] | [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-linux-amd64-latest.zip 64 bits]
-    * [http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-macosx-universal-latest.zip MacOS X]
-  * Extract the zip and put its content in your Java Runtime Environment "lib/ext" directory
-    * On Linux, this is a path like one of these :
-{{{
-/usr/lib/jvm/java-6-sun/jre/lib/ext/
-/usr/lib/jvm/java-6-openjdk/jre/lib/ext/
-}}}
-      So you might install JOGL like this (download included, shown here for i586 architecture) :
-{{{
-cd /usr/lib/jvm/java-6-openjdk/jre/lib/ext/
-sudo wget http://nativelibs4java.sourceforge.net/thirdparty/jogl/jogl-linux-i586-latest.zip
-sudo unzip jogl-linux*.zip
-sudo rm jogl-linux*.zip
-}}}
-    * On Windows, this looks like :
-{{{
-C:\Program Files\Java\jre-1.6.0\lib\ext
-}}}
-    * On MacOS X this is :
-{{{
-~/Library/Java/Extensions
-}}}
-    (the `~` is your user home directory ; you can create these directories if they don't exist, but make sure to do it in a Terminal, as there might be translations in the Finder, for instance `~/Library` being visible as `Bibliothèque` in French)
+[https://jogamp.org/jogl/www/ Jogamp JOGL] is probably the most feature-full OpenGL binding library.
 
 = Use JavaCL in a project =
 
