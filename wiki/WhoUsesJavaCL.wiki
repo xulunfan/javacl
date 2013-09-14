@@ -50,6 +50,7 @@ It uses JavaCL, which is still accessible directly if needed.
 
 === Papers and Theses ===
 
+  * [http://tel.archives-ouvertes.fr/docs/00/85/87/35/PDF/phd_thesis_jonathan_passerat-palmbach--reviewers_version.pdf Contributions to parallel stochastic simulation: Application of good software engineering practices to the distribution of pseudorandom streams in hybrid Monte-Carlo simulations], PhD Thesis by Jonathan Passerat-Palmbach, analyses in good detail JavaCL and ScalaCL.
   * [http://www.cs.ucl.ac.uk/staff/s.yoo/ Shin Yoo] used JavaCL in his paper [http://www.ssbse.org/2011/presentations/Session%207/ssbse11_shin_yoo.pdf Highly Scalable Multi Objective Test Suite Minimisation Using Graphics Cards] (won the [http://www.ssbse.org/2011/prizes.html best paper award at SSBSE 2011]).
   * [http://www.csc.kth.se/utbildning/kandidatexjobb/datateknik/2011/rapport/karlsson_john_OCH_lofquist_lars_K11057.pdf The use of GPU with OpenCL for simulation of a flocking model] (in Swedish, with an English abstract) by John Karlsson, Lars Löfquist
   * [http://digitalcommons.trinity.edu/cgi/viewcontent.cgi?article=1027&context=compsci_honors The Design and Implementation of a Bytecode for Optimization on Heterogeneous Systems], by Kerry A. Seitz
