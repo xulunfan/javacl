@@ -22,15 +22,17 @@ JavaCL comprises the following parts :
   {{{
 CLContext context = JavaCL.createBestContext();
 CLProgram program = context.createProgram(myKernelSource).build();
+CLBuffer<Integer> input = context.createIntBuffer(Usage.Input, inputBuffer, true);
+CLBuffer<Float> output = context.createFloatBuffer(Usage.Output, resultsBuffer, false);
 CLKernel kernel = program.createKernel(
    	"myKernel", 
     	new float[] { u, v },
-    	context.createIntBuffer(Usage.Input, inputBuffer, true),
-    	context.createFloatBuffer(Usage.Output, resultsBuffer, false)
+    	input,
+    	output
 );
 ...
 }}}
-  [https://github.com/ochafik/nativelibs4java/tree/master/libraries/OpenCL/JavaCL/src/test/java/com/nativelibs4java/opencl/OpenCL4JavaBasicTest.java See the complete example...]
+  [https://github.com/ochafik/nativelibs4java/tree/master/libraries/OpenCL/Core/src/test/java/com/nativelibs4java/opencl/OpenCL4JavaBasicTest.java See the complete example...]
 
 == Why choose JavaCL over C+OpenCL ? ==
 
