@@ -119,7 +119,7 @@ JavaCL is compatible with OSGi _a minima_, which means it should now load fine i
 
 == Raw download ==
 
-If you're not using Maven, Gradle, sbt or any other build manager, you can grab the latest snapshot from the [https://oss.sonatype.org/content/groups/public/com/nativelibs4java/javacl/1.0-SNAPSHOT/ Sonatype OSS Repository] (or the latest release from the [http://code.google.com/p/javacl/downloads/list downloads section]) and add `javacl-x.x.x-shaded.jar` to your classpath manually :
+If you're not using Maven, Gradle, sbt or any other build manager, please proceed to [Downloads] and add `javacl-x.x.x-shaded.jar` to your classpath manually :
 
 Compile some code :
 {{{
