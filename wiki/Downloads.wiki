@@ -7,4 +7,4 @@ Please make sure to download the artifact with a `-shaded.jar` suffix:
   * Latest release: [http://search.maven.org/#artifactdetails%7Ccom.nativelibs4java%7Cjavacl%7C1.0.0-RC3%7Cbundle 1.0.0-RC3]
   * [https://code.google.com/p/jnaerator/downloads/list Previous releases]
 
-Please also read [Usage] for Maven / IDE instructions, and don't miss the [SamplesAndDemos Samples and Demos] out!
+Please also read [Usage] (includes Maven / IDE instructions), and don't miss the [SamplesAndDemos Samples and Demos] out!
