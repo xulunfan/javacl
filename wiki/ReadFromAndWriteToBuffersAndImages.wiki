@@ -137,6 +137,22 @@ try {
 }}}
 </td></tr></table>
 
+== Copying buffers and images ==
+
+Copying a buffer to another one:
+{{{
+CLBuffer<Float> original = ... ;
+CLBuffer<Float> copy = context.createFloatBuffer(CLMem.Usage.Input, original.getElementCount());
+CLEvent e = original.copyTo(queue, copy);
+}}}
+
+Copying an image to another one:
+{{{
+CLImage2D original = ... ;
+CLImage2D copy = context.createImage2D(CLMem.Usage.Input, original.getWidth(), original.getHeight());
+CLEvent e = original.copyTo(queue, copy);
+}}}
+
 = Important Note on Endianness =
 
 Each OpenCL device can have a different [http://en.wikipedia.org/wiki/Endianness endianness].
