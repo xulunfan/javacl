@@ -32,7 +32,7 @@ While OpenCL defines buffers as arrays of bytes, JavaCL provides support for typ
 
 If you use a `__global float*` argument in a kernel of yours, you can either choose to use a `CLBuffer<Byte>` and do the `float <-> byte` conversion and offsets calculations on your own or directly use a `CLBuffer<Float>` that will take care of everything.
 
-== Host-allocated pointers ==
+=== Host-allocated pointers ===
 
 <table><tr><th>JavaCL / BridJ</th><th>JavaCL / JNA</th></tr><tr><td>
 {{{
@@ -58,7 +58,7 @@ CLBuffer<FloatBuffer> clBuffer = context.createBuffer(CLMem.Usage.InputOutput, p
 }}}
 </td></tr></table>
 
-== Device-allocated pointers ==
+=== Device-allocated pointers ===
 
 Allocate a zeroed-out buffer :
 {{{
@@ -73,7 +73,9 @@ Allocate a buffer as a copy of existing data :
 CLBuffer<Float> clBuffer = context.createBuffer(CLMem.Usage.InputOutput, ptr, true);
 }}}
 
-= Reading from / Writing to a buffer =
+= Copying memory around =
+
+== Reading from / Writing to a buffer ==
 
 {{{
 CLContext context = ... ; // e.g. JavaCL.getBestContext()
@@ -107,7 +109,7 @@ clBuffer.read(queue, 3, 7, data, true); // 'true' : blocking operation
 }}}
 </td></tr></table>
 
-= Mapping a buffer for read / write operations =
+== Mapping a buffer for read / write operations ==
 
 Mapping a buffer is only guaranteed to work for buffers allocated from host-pointers.
 
@@ -137,7 +139,7 @@ try {
 }}}
 </td></tr></table>
 
-= Copying buffers and images =
+== Copying buffers and images ==
 
 Copying a buffer to another one:
 {{{
