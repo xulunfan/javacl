@@ -4,7 +4,7 @@
 
 Please make sure to download the artifact with a `-shaded.jar` suffix:
   * Latest snapshot: [https://oss.sonatype.org/content/groups/public/com/nativelibs4java/javacl/1.0-SNAPSHOT/ 1.0-SNAPSHOT]
-  * Latest release: [http://search.maven.org/#artifactdetails%7Ccom.nativelibs4java%7Cjavacl%7C1.0.0-RC3%7Cbundle 1.0.0-RC3]
+  * Latest release: [http://search.maven.org/#artifactdetails%7Ccom.nativelibs4java%7Cjavacl%7C1.0.0-RC4%7Cbundle 1.0.0-RC4]
   * [https://code.google.com/p/jnaerator/downloads/list Previous releases]
 
 Please also read [Usage] (includes Maven / IDE instructions), and don't miss the [SamplesAndDemos Samples and Demos] out!
