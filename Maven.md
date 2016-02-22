@@ -1,0 +1,1 @@
+Please read the [NativeLibs4Java's Maven page](http://code.google.com/p/nativelibs4java/wiki/Maven)
